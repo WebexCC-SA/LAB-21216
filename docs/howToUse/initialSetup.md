@@ -5,7 +5,7 @@
 
 ## Prerequisite Software to Install
 1. Python
-2. Visual Studio Code
+2. Visual Studio Code (Cursor works too!)
 3. Git
 
 ---
