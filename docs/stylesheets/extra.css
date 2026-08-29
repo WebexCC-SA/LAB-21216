@@ -13,6 +13,10 @@
     max-width: 1440px;
 }
 
+.md-typeset ol ol {
+    list-style-type: lower-alpha;
+}
+
 :root {
     --md-primary-fg-color: #051C2C;
     --md-accent-fg-color: #00bdeb;
@@ -51,4 +55,174 @@ form#info button{
 }
 form#info button:hover{
     background-color:rgb(195, 193, 201);
+}
+
+.devicefx-activation-card {
+    background: var(--md-code-bg-color);
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 12px;
+    box-shadow: var(--md-shadow-z1);
+    display: grid;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    padding: clamp(1rem, 3vw, 1.75rem);
+}
+
+.devicefx-form-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.devicefx-form-group {
+    display: grid;
+    gap: 0.4rem;
+}
+
+.devicefx-form-group label,
+.devicefx-result-label {
+    font-weight: 700;
+}
+
+.devicefx-activation-card input,
+.devicefx-activation-card select {
+    background: var(--md-default-bg-color);
+    border: 1px solid var(--md-default-fg-color--lighter);
+    border-radius: 6px;
+    color: var(--md-default-fg-color);
+    font: inherit;
+    min-height: 2.5rem;
+    padding: 0.5rem 0.65rem;
+    width: 100%;
+}
+
+.devicefx-activation-card input:focus,
+.devicefx-activation-card select:focus,
+.devicefx-button:focus-visible {
+    outline: 3px solid var(--md-accent-fg-color--transparent);
+    outline-offset: 2px;
+}
+
+.devicefx-input-actions {
+    align-items: stretch;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.devicefx-input-actions input {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.devicefx-button {
+    border: 1px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+    min-height: 2.5rem;
+    padding: 0.5rem 0.85rem;
+    width: fit-content;
+}
+
+.devicefx-button-primary {
+    background: var(--md-primary-fg-color);
+    color: var(--md-primary-bg-color);
+}
+
+.devicefx-button-secondary {
+    background: var(--md-default-bg-color);
+    border-color: var(--md-default-fg-color--lighter);
+    color: var(--md-default-fg-color);
+}
+
+.devicefx-button:hover:not(:disabled) {
+    filter: brightness(1.12);
+}
+
+.devicefx-button:disabled,
+.devicefx-activation-card select:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+.devicefx-help,
+.devicefx-status {
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.devicefx-status {
+    min-height: 1.3rem;
+}
+
+.devicefx-status-error {
+    color: var(--md-typeset-del-color);
+    font-weight: 700;
+}
+
+.devicefx-result {
+    border-top: 1px solid var(--md-default-fg-color--lightest);
+    display: grid;
+    gap: 1rem;
+    padding-top: 0.75rem;
+}
+
+.devicefx-result[hidden] {
+    display: none;
+}
+
+.devicefx-result h4 {
+    margin: 0;
+}
+
+.devicefx-result-row {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.devicefx-result-row > div {
+    min-width: 0;
+}
+
+.devicefx-result-label {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.devicefx-url-row a {
+    overflow-wrap: anywhere;
+}
+
+.devicefx-qr-code {
+    background: #fff;
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 8px;
+    justify-self: center;
+    padding: 12px;
+}
+
+.devicefx-qr-code canvas {
+    display: block;
+    height: auto;
+    image-rendering: pixelated;
+    max-width: min(100%, 280px);
+}
+
+@media screen and (max-width: 44.984375em) {
+    .devicefx-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .devicefx-input-actions,
+    .devicefx-result-row {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .devicefx-button {
+        width: 100%;
+    }
 }

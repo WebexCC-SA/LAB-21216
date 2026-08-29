@@ -2,13 +2,13 @@
 
 ## Section 1
 
-Please use the following credentials to connect to device:
+Use the following details to access Collaboration Control Hub:
 
-| <!-- -->         | <!-- -->         |
-| ---------------- | ---------------- |
-| `IP Address`     | 1.1.1.1          |
-| `Username`       | admin            |
-| `Password`       | C1sco123         |
+| <!-- -->                  | <!-- -->                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| `Collaboration Control Hub` | <copy>https://admin.webex.com/</copy>                                   |
+| `Username`                | <copy><w class="ControlHubUsername">Complete Getting Started first</w></copy> |
+| `Password`                | <copy><w class="ControlHubPassword">Complete Getting Started first</w></copy> |
 
 
 My content
