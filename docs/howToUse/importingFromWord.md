@@ -6,8 +6,11 @@ Use `scripts/docx_to_markdown.py` to convert a DOCX lab guide into markdown file
 
 - Reads one `.docx` input file
 - Extracts all embedded images into `docs/assets/` (or a custom assets directory)
+- Reuses identical existing image files instead of creating duplicates
+- Preserves ordered-list continuation and nested-list indentation
 - Splits each Heading 1/Heading 2 that starts with `Lab` into its own markdown file in `docs/`
 - Writes all non-lab content to `docs/non-lab.md`
+- Renames existing output files with a timestamp before writing replacements
 
 
 !!! Important
@@ -46,7 +49,6 @@ Optional arguments:
 
 - `--docs-dir` (default: `docs`)
 - `--assets-dir` (default: `<docs-dir>/assets`)
-
 
 ### After your files are created
 - Add your files to the mkdocs.yml file in the **nav** section and save the file.

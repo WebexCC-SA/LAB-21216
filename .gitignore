@@ -400,3 +400,19 @@ tmp/
 
 # Rendered Documentation
 site/
+
+# Local image editor backups
+/_image_size_editor_backups/
+
+# Local source documents and generated archives
+/Archive/
+/Cursor-requirements/
+~$*.docx
+
+# Generated Markdown snapshots and non-published converter output
+/docs/*-[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9].md
+/docs/non-lab.md
+
+# Extracted images not referenced by the published lab pages
+/docs/assets/docx-image-02[3-9].png
+/docs/assets/docx-image-03[0-3].png
