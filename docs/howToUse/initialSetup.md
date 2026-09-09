@@ -50,9 +50,10 @@
     > 
     > <copy>pip3 install -r requirements_dev.txt</copy>
     >
-    > <copy>mkdocs serve --livereload</copy>
+    > <copy>python scripts/image_size_editor.py</copy>
     >
-    > Open a browser to [http://127.0.0.1:8000](http://127.0.0.1:8000){:target="_blank"}
+    > The local Lab service starts MkDocs, enables Webex API access from the
+    > local preview, and opens [http://127.0.0.1:8000](http://127.0.0.1:8000){:target="_blank"}.
     >
 
 
@@ -67,9 +68,10 @@
     >     
     > <copy>pip3 install -r requirements_dev.txt</copy>
     >
-    > <copy>mkdocs serve --livereload</copy>
+    > <copy>python scripts/image_size_editor.py</copy>
     >
-    > Open a browser to [http://127.0.0.1:8000](http://127.0.0.1:8000){:target="_blank"}
+    > The local Lab service starts MkDocs, enables Webex API access from the
+    > local preview, and opens [http://127.0.0.1:8000](http://127.0.0.1:8000){:target="_blank"}.
 
 
 ---

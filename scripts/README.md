@@ -16,8 +16,12 @@ Start the local editor:
 python scripts/image_size_editor.py
 ```
 
-The script starts MkDocs, opens the **Lab (edit)** view, and runs a local-only
-API on `127.0.0.1:8765`. Resize an image by dragging its lower-right corner.
+Use this command instead of plain `mkdocs serve` for local previews. The
+script starts MkDocs, opens the **Lab (edit)** view, and runs a local-only API
+on `127.0.0.1:8765`. That API is required for the DeviceFX workflow because
+Webex does not allow browser requests from a localhost origin.
+
+Resize an image by dragging its lower-right corner.
 When the drag ends, the script updates that image's `width` and `height`
 attributes in the existing Lab Markdown file. MkDocs then refreshes both the
 normal **Lab** view and **Lab (edit)** view.
@@ -28,8 +32,8 @@ position horizontally in 16-pixel steps. The editor stores a bounded
 `margin-left` value in that image's Markdown attributes, so the alignment also
 appears in the normal **Lab** view.
 
-The same local service proxies the two fixed Webex API endpoints used by the
-DeviceFX activation form during local preview because Webex does not permit
+The same local service proxies the fixed, allow-listed Webex API operations
+used by the DeviceFX form during local preview because Webex does not permit
 browser CORS requests from `localhost`. The proxy validates request fields,
 does not store or log bearer tokens, and is not used on the published GitHub
 Pages site.
@@ -87,4 +91,7 @@ Run its dependency-free Node.js tests from the project root:
 
 ```bash
 node scripts/test_devicefx_activation.js
+node scripts/test_dcloud_storage.js
+node scripts/test_webex_access.js
+venv/bin/python scripts/test_webex_proxy.py
 ```

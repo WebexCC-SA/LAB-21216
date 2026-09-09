@@ -1,5 +1,6 @@
 {
   "markdown.copyFiles.destination": {
     "**/*": "assets/${fileName}"
-  }
+  },
+  "editor.pasteAs.enabled": true
 }

@@ -30,6 +30,8 @@ Optional arguments:
 
 ## Edit Lab formatting
 
-Run `python scripts/image_size_editor.py`, then use the temporary
+For local preview, run `python scripts/image_size_editor.py` instead of
+`mkdocs serve`. This starts both MkDocs and the loopback Webex API helper
+required by the DeviceFX workflow. Then use the temporary
 **Lab (edit)** tab to resize images or indent consecutive numbered list items.
 See `scripts/README.md` for usage, backups, and removal instructions.

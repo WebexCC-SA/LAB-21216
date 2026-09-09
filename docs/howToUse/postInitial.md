@@ -13,9 +13,10 @@
     >
     > <copy>venv\Scripts\activate.ps1</copy>
     > 
-    > <copy>mkdocs serve --livereload</copy>
+    > <copy>python scripts/image_size_editor.py</copy>
     >
-    > Open a browser to [http://127.0.0.1:8000](http://127.0.0.1:8000){:target="_blank"}
+    > This starts both MkDocs and the local Webex API helper, then opens
+    > [http://127.0.0.1:8000](http://127.0.0.1:8000){:target="_blank"}.
 
 
 
@@ -24,8 +25,9 @@
     >
     > <copy>source venv/bin/activate</copy>
     > 
-    > <copy>mkdocs serve --livereload</copy>
+    > <copy>python scripts/image_size_editor.py</copy>
     >
-    > Open a browser to [http://127.0.0.1:8000](http://127.0.0.1:8000){:target="_blank"}
+    > This starts both MkDocs and the local Webex API helper, then opens
+    > [http://127.0.0.1:8000](http://127.0.0.1:8000){:target="_blank"}.
 
 ---
