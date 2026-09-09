@@ -407,6 +407,7 @@ site/
 # Local source documents and generated archives
 /Archive/
 /Cursor-requirements/
+/Original-lab-docs/
 ~$*.docx
 
 # Generated Markdown snapshots and non-published converter output
@@ -416,3 +417,11 @@ site/
 # Extracted images not referenced by the published lab pages
 /docs/assets/docx-image-02[3-9].png
 /docs/assets/docx-image-03[0-3].png
+
+# Superseded Lab 9 conversion and its unreferenced extracted images
+/docs/lab-9-webex-meetings-captions-and-ai-assistant.md
+/docs/assets/docx-image-06[3-6].png
+/docs/assets/docx-image-06[8-9].png
+/docs/assets/docx-image-07[0-3].png
+/docs/assets/docx-image-08[4-6].png
+/docs/assets/image-4.png
