@@ -1,6 +1,6 @@
 # Lab 1: Setup
 
-9800 Series devices use PhoneOS. PhoneOS is a single operating system for both CUCM and Cloud deployed Phones. All you have to do is to Factory reset the device to migrate from one to another. This eliminates the need for migrating the firmware on the device and eases the process of switching the device from CUCM to Webex Calling or to any other SIP based calling platforms. This also helps in retaining the user experience across the platforms.
+9800 Series devices run PhoneOS. PhoneOS is a single operating system for both CUCM and Cloud deployed Phones. All you have to do is to Factory reset the device to migrate from one to another. This eliminates the need for migrating the firmware on the device and eases the process of switching the device from CUCM to Webex Calling or to any other SIP based calling platforms. This also helps in retaining the user experience across the platforms.
 
 In this module we will walk you through initial setup including a desk phone onboarding.
 
@@ -75,6 +75,9 @@ Lets setup Webex location PSTN connection type and order PSTN DID numbers for us
 
 ### **Module 1c: Assing Webex Calling Licenses and PSTN Numbers to users in Webex Calling**
 
+Use the following Control Hub steps to assign Webex Calling licenses, PSTN
+numbers, extensions, and outbound calling access to both users.
+
 1. Continuing on Workstation 1, on the browser tab where you have Webex CH logged in. Go to **MANAGEMENT** > **Users** and choose **Charles Holland** from the list**.**
 2. Scroll down on the summary page, click **Edit Licenses**
 
@@ -89,8 +92,9 @@ Lets setup Webex location PSTN connection type and order PSTN DID numbers for us
 
 **![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-015.png)**
 
-6. Take note of the phone number assigned to **Charles Holland** in the note pad. You will need this number later to make calls.
-7. Go back to **MANAGEMENT** > **Users** again and on users page choose **Anita Perez** and repeat steps 2 through 6, assign Webex Calling license and one of the DID numbers.
+6. Return to the user's **Calling** tab. Under **Cisco Calling Plan**, enable the option that allows the user to utilize the outbound calling plan, then save the change.
+7. Take note of the phone number assigned to **Charles Holland** in the note pad. You will need this number later to make calls.
+8. Go back to **MANAGEMENT** > **Users** again and on users page choose **Anita Perez** and repeat steps 2 through 7, assign the Webex Calling license and DID number, and enable the Cisco Calling Plan.
 
 ### **Module 1d: Adding 98XX devices to users**
 
@@ -103,21 +107,22 @@ UnifiedFX developed an application, called **DeviceFX NFC App,** that can be use
 Use the workflow below to generate a Webex activation code and transfer it to a Cisco Desk Phone 9800 Series device with the **DeviceFX NFC App**.
 
 1. Install the DeviceFX NFC App from the Google Play Store or Apple App Store. For more information, visit [DeviceFX NFC](https://nfc.devicefx.com/){ target="_blank" rel="noopener noreferrer" }.
-2. Click [Device Activation Code API reference](https://developer.webex.com/calling/docs/api/v1/devices/create-a-device-activation-code){ target="_blank" rel="noopener noreferrer" } link to open it in a new browser tab and sign in with the credentials below if required by cliking the sign in button at the top right corner.
-    - **Username:** <copy><w class="ControlHubUsername">Complete the Overview step first</w></copy>
-    - **Password:** <copy><w class="ControlHubPassword">Complete the Overview step first</w></copy>
-3. In the API page's right-side panel, copy the bearer token and paste it in the form below. The token remains only in this browser tab and is not saved by the lab guide.
-4. Click on "Load calling users" button and then select a calling user. **Charles Holland** is selected automatically when available.
-5. Select **Desk Phone 9871** or **Desk Phone 9861** depending on which phone model you have on your desk, then click **Generate activation code**.
+2. Make sure you saved your bearer token under **Lab > Overview > Lab Access**.
+3. Click **Load calling users**, then select a calling user. **Charles Holland** is selected automatically when available.
+4. Select **Desk Phone 9871** or **Desk Phone 9861** depending on which phone model you have on your desk, then click **Generate activation code**.
 
 
 <div id="devicefx-activation-app" class="devicefx-activation-card">
-  <div class="devicefx-form-group">
+  <p class="devicefx-help">Use the bearer token from <strong>Lab &gt; Overview &gt; Lab Access</strong>, or enter it here.</p>
+
+  <div class="webex-inline-token lab-access-field" data-webex-token-entry>
     <label for="devicefx-token">Webex bearer token</label>
-    <div class="devicefx-input-actions">
-      <input id="devicefx-token" type="password" autocomplete="off" spellcheck="false" maxlength="8192" aria-describedby="devicefx-token-help" placeholder="Paste the bearer token">
-      <button id="devicefx-toggle-token" type="button" class="devicefx-button devicefx-button-secondary" aria-pressed="false">Show</button>
+    <div class="lab-access-token-row">
+      <input id="devicefx-token" type="password" autocomplete="off" spellcheck="false" maxlength="8192" placeholder="Paste the bearer token" data-webex-token-input>
+      <button type="button" class="lab-access-button lab-access-button-secondary" aria-pressed="false" data-webex-token-toggle>Show</button>
+      <button type="button" class="lab-access-button lab-access-button-primary" data-webex-token-use>Use token</button>
     </div>
+    <p class="lab-access-status" role="status" aria-live="polite" data-webex-token-status></p>
   </div>
 
   <button id="devicefx-load-users" type="button" class="devicefx-button devicefx-button-primary">Load calling users</button>
@@ -162,9 +167,9 @@ Use the workflow below to generate a Webex activation code and transfer it to a 
   </section>
 </div>
 
-6. Scan the displayed QR code with your mobile phone. The DeviceFX onboarding link opens the DeviceFX NFC App and supplies the activation code.
-7. Follow the instructions in the app. When prompted, tap and hold the mobile phone over the desk phone's NFC area until the transfer completes.
-8. Wait 2–3 minutes for the phone to register. In Webex Control Hub, navigate to **MANAGEMENT > Devices** and verify that the phone shows **Online**.
+5. Scan the displayed QR code with your mobile phone. The DeviceFX onboarding link opens the DeviceFX NFC App and supplies the activation code.
+6. Follow the instructions in the app. When prompted, tap and hold the mobile phone over the desk phone's NFC area until the transfer completes.
+7. Wait 2–3 minutes for the phone to register. In Webex Control Hub, navigate to **MANAGEMENT > Devices** and verify that the phone shows **Online**.
 
 **NOTE:** The phone may upgrade its firmware and restart if a newer version is available from the Webex cloud.
 

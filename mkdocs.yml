@@ -42,6 +42,7 @@ extra_css:
 extra_javascript:
   - template_assets/js/newLoad.js
   - template_assets/js/setInfo.js
+  - template_assets/js/webexAccess.js
   - template_assets/js/vendor/qrcode-generator-2.0.4.js
   - template_assets/js/devicefxActivation.js
 plugins:
@@ -95,17 +96,24 @@ nav:
       #- Lab 1 - Getting Started: lab1_getting_started.md
       - Lab 1 - Setup: lab-1-setup.md
       - Lab 2 - Action button: lab-2-configure-the-action-button-using-webex-calling.md
-      - Conclusion: conclusion.md
-  - Topologies: topologies.md
-  - How to use this guide:
-      - Setting up and using the tool:
-        - Initial Setup: howToUse/initialSetup.md
-        - Using the tool after the initial setup: howToUse/postInitial.md
-        - Publishing your changes: howToUse/syncChanges.md
-      - Useful Tools and Resources: howToUse/usefulTools.md
-      - Importing from Word (docx): howToUse/importingFromWord.md
-      - Styling and Advanced Features:
-        - Custom Features: howToUse/customFeatures.md
-        - Custom Admonitions: howToUse/admonition.md
-      - Looking for Inspiration: howToUse/previousEventLabs.md
-      - Before the Event: howToUse/beforeTheEvent.md
+      - Lab 3 - Favorite button: lab-3-configure-the-favorite-button-on-webex-calling.md
+      - Lab 4 - Always use the multi-line layout: lab-4-always-use-the-multi-line-layout.md
+      - Lab 5 - Customize the settings menu: lab-5-customize-the-settings-menu.md
+      - Lab 6 - Custom wallpaper: lab-6-custom-wallpaper-on-cisco-9800-series-phones.md
+      - Lab 7 - Pagination: lab-7-pagination-on-cisco-desk-phone-9851-and-9861.md
+      - Lab 8 - Smart audio: lab-8-smart-audio-in-webex-calling.md
+      - Lab 9 - Closed captions: lab-9-closed-captions.md
+      - Learn more: learn-more.md
+  #- Topologies: topologies.md
+  #- How to use this guide:
+      #- Setting up and using the tool:
+        #- Initial Setup: howToUse/initialSetup.md
+        #- Using the tool after the initial setup: howToUse/postInitial.md
+        #- Publishing your changes: howToUse/syncChanges.md
+      #- Useful Tools and Resources: howToUse/usefulTools.md
+      #- Importing from Word (docx): howToUse/importingFromWord.md
+      #- Styling and Advanced Features:
+        #- Custom Features: howToUse/customFeatures.md
+        #- Custom Admonitions: howToUse/admonition.md
+      #- Looking for Inspiration: howToUse/previousEventLabs.md
+      #- Before the Event: howToUse/beforeTheEvent.md

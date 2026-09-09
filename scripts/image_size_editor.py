@@ -67,6 +67,7 @@ ORDERED_LIST_RE = re.compile(
     r"^(?P<indent>[ \t]*)(?P<number>\d+)\.(?P<spacing>\s+)(?P<text>.*)$"
 )
 BEARER_TOKEN_RE = re.compile(r"^[A-Za-z0-9._~+/=-]{20,8192}$")
+WEBEX_ID_RE = re.compile(r"^[A-Za-z0-9._~+/=-]{1,512}$")
 WEBEX_PEOPLE_URL = (
     "https://webexapis.com/v1/people?callingData=true&max=100"
 )
@@ -223,8 +224,7 @@ def proxy_webex_request(
         model = payload.get("model")
         if (
             not isinstance(person_id, str)
-            or not 1 <= len(person_id) <= 512
-            or any(ord(character) < 32 for character in person_id)
+            or not WEBEX_ID_RE.fullmatch(person_id)
         ):
             raise ValueError("Invalid Webex person ID.")
         if model not in WEBEX_MODELS:
@@ -265,6 +265,8 @@ def proxy_webex_request(
             HTTPStatus.BAD_GATEWAY,
             {"error": "The Webex API response exceeded the size limit."},
         )
+    if status == HTTPStatus.NO_CONTENT and not response_body:
+        return status, {}
     if content_type != "application/json":
         return (
             HTTPStatus.BAD_GATEWAY,

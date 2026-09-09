@@ -24,8 +24,6 @@
             return element;
         };
         return {
-            token: byId("devicefx-token"),
-            toggleToken: byId("devicefx-toggle-token"),
             loadUsers: byId("devicefx-load-users"),
             person: byId("devicefx-person"),
             model: byId("devicefx-model"),
@@ -41,8 +39,8 @@
         };
     }
 
-    function bearerToken(input) {
-        return input.value.trim().replace(/^Bearer\s+/i, "");
+    function bearerToken() {
+        return window.labWebexAccess?.getToken() || "";
     }
 
     function setStatus(elements, message, isError = false) {
@@ -162,7 +160,7 @@
             });
         } catch {
             throw new Error(
-                "Local preview requires the Lab editor service. Run python scripts/image_size_editor.py --no-mkdocs and try again."
+                "Local preview requires the Lab service. Run python scripts/image_size_editor.py --no-mkdocs alongside the current MkDocs server, then try again."
             );
         }
         if (!response.ok) {
@@ -202,20 +200,27 @@
             });
         }
 
-        const editorToken = await getLocalEditorToken();
-        return apiRequest(`${LOCAL_EDITOR_API}/webex-proxy/${operation}`, {
-            method: "POST",
-            headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json",
-                "X-Image-Editor-Token": editorToken
-            },
-            body: JSON.stringify({
-                bearer_token: token,
-                person_id: requestData.personId,
-                model: requestData.model
-            })
+        const requestBody = JSON.stringify({
+            bearer_token: token,
+            person_id: requestData.personId,
+            model: requestData.model
         });
+        const sendRequest = async () =>
+            apiRequest(`${LOCAL_EDITOR_API}/webex-proxy/${operation}`, {
+                method: "POST",
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                    "X-Image-Editor-Token": await getLocalEditorToken()
+                },
+                body: requestBody
+            });
+        let response = await sendRequest();
+        if (response.status === 403) {
+            localEditorToken = "";
+            response = await sendRequest();
+        }
+        return response;
     }
 
     function callingPeople(items) {
@@ -367,30 +372,14 @@
         app.dataset.initialized = "true";
         let loadedToken = "";
 
-        elements.toggleToken.addEventListener("click", () => {
-            const showing = elements.token.type === "text";
-            elements.token.type = showing ? "password" : "text";
-            elements.toggleToken.textContent = showing ? "Show" : "Hide";
-            elements.toggleToken.setAttribute(
-                "aria-pressed",
-                String(!showing)
-            );
-            elements.token.focus();
-        });
-
-        elements.token.addEventListener("input", () => {
-            if (bearerToken(elements.token) !== loadedToken) {
-                resetPeople(elements);
-                resetResult(elements);
-                setStatus(elements, "");
-            }
-        });
-
         elements.loadUsers.addEventListener("click", async () => {
-            const token = bearerToken(elements.token);
+            const token = bearerToken();
             if (!token) {
-                setStatus(elements, "Paste a Webex bearer token first.", true);
-                elements.token.focus();
+                setStatus(
+                    elements,
+                    "Enter the Webex bearer token above, then select Use token.",
+                    true
+                );
                 return;
             }
             resetPeople(elements);
@@ -421,7 +410,7 @@
         });
 
         elements.generate.addEventListener("click", async () => {
-            const token = bearerToken(elements.token);
+            const token = bearerToken();
             const personId = elements.person.value;
             const model = elements.model.value;
             if (!token || token !== loadedToken) {
@@ -497,7 +486,6 @@
         window.addEventListener(
             "pagehide",
             () => {
-                elements.token.value = "";
                 loadedToken = "";
             },
             { once: true }

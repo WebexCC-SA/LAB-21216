@@ -45,16 +45,137 @@ copy::after, .copy::after {
 copy:hover::after, .copy:hover::after {
   color: #00bdeb;
 }
-form#info input{
-  border: solid 1px;
+
+.lab-access-card {
+    background:
+        linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 7%, transparent), transparent 55%),
+        var(--md-code-bg-color);
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 12px;
+    box-shadow: var(--md-shadow-z1);
+    display: grid;
+    gap: 1rem;
+    margin: 1.25rem 0;
+    padding: clamp(1rem, 3vw, 1.5rem);
 }
-form#info button{
-    border:solid 2px;
-    border-radius: 25px;
-    padding: 10px;
+
+.lab-access-card-header h3 {
+    margin: 0.15rem 0 0.35rem;
 }
-form#info button:hover{
-    background-color:rgb(195, 193, 201);
+
+.lab-access-card-header p {
+    margin: 0;
+}
+
+.lab-access-step {
+    color: var(--md-accent-fg-color);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.lab-access-form,
+.lab-access-field {
+    display: grid;
+    gap: 0.45rem;
+}
+
+.lab-access-form-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+}
+
+.lab-access-field label {
+    font-weight: 700;
+}
+
+.lab-access-field input {
+    background: var(--md-default-bg-color);
+    border: 1px solid var(--md-default-fg-color--lighter);
+    border-radius: 7px;
+    color: var(--md-default-fg-color);
+    font: inherit;
+    min-height: 2.65rem;
+    padding: 0.55rem 0.7rem;
+    width: 100%;
+}
+
+.lab-access-field input:focus {
+    border-color: var(--md-accent-fg-color);
+    box-shadow: 0 0 0 3px var(--md-accent-fg-color--transparent);
+    outline: none;
+}
+
+.lab-access-field-hint {
+    color: var(--md-default-fg-color--light);
+    font-size: 0.78rem;
+}
+
+.lab-access-token-row {
+    align-items: stretch;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.lab-access-token-row input {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.webex-inline-token {
+    border-block: 1px solid var(--md-default-fg-color--lightest);
+    margin-block: 0.2rem;
+    padding-block: 0.85rem;
+}
+
+.lab-access-actions {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+}
+
+.lab-access-button {
+    border: 1px solid transparent;
+    border-radius: 7px;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+    min-height: 2.5rem;
+    padding: 0.5rem 0.9rem;
+}
+
+.lab-access-button-primary {
+    background: var(--md-primary-fg-color);
+    color: var(--md-primary-bg-color);
+}
+
+.lab-access-button-secondary {
+    background: var(--md-default-bg-color);
+    border-color: var(--md-default-fg-color--lighter);
+    color: var(--md-default-fg-color);
+}
+
+.lab-access-button:hover:not(:disabled) {
+    filter: brightness(1.12);
+}
+
+.lab-access-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+.lab-access-status {
+    font-size: 0.85rem;
+    margin: 0;
+    min-height: 1.3rem;
+}
+
+.lab-access-status-error {
+    color: var(--md-typeset-del-color);
+    font-weight: 700;
 }
 
 .devicefx-activation-card {
@@ -212,6 +333,19 @@ form#info button:hover{
 }
 
 @media screen and (max-width: 44.984375em) {
+    .lab-access-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lab-access-token-row {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .lab-access-button {
+        width: 100%;
+    }
+
     .devicefx-form-grid {
         grid-template-columns: 1fr;
     }
