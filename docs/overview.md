@@ -106,13 +106,13 @@ Your Control Hub credentials:
 The username is `cholland@` followed by your dCloud domain. The password is `dCloud`, followed by the last four digits of your session ID, followed by `!`.
 
 6. Open the [Webex for Developers Getting Started page](https://developer.webex.com/messaging/docs/getting-started){ target="_blank" rel="noopener noreferrer" }. Select **Log in** at the top right and use the Control Hub credentials shown above.
-7. On the Getting Started page, copy your personal bearer token and enter it below. The DeviceFX workflow in Module 1d.1 can reuse it while this lab-guide session remains open.
+7. On the Getting Started page, copy your personal bearer token and enter it below. The DeviceFX workflow in Module 1d.1 can reuse it for up to 12 hours.
 
 <section id="webex-access-card" class="lab-access-card" aria-labelledby="webex-access-heading">
   <div class="lab-access-card-header">
     <span class="lab-access-step">Webex API access</span>
     <h3 id="webex-access-heading">Bearer token</h3>
-    <p>Paste the temporary token from Webex for Developers. For security, it is kept in memory and is not written to browser storage.</p>
+    <p>Paste the temporary sandbox token from Webex for Developers. It is saved in this browser for up to 12 hours so it remains available after refreshes, direct navigation, and browser restarts.</p>
   </div>
 
   <div class="lab-access-field">
@@ -125,13 +125,13 @@ The username is `cholland@` followed by your dCloud domain. The password is `dCl
   </div>
 
   <div class="lab-access-actions">
-    <button id="webex-token-save" type="button" class="lab-access-button lab-access-button-primary">Use token for this session</button>
+    <button id="webex-token-save" type="button" class="lab-access-button lab-access-button-primary">Save token for 12 hours</button>
     <button id="webex-token-clear" type="button" class="lab-access-button lab-access-button-secondary">Clear token</button>
   </div>
   <p id="webex-token-status" class="lab-access-status" role="status" aria-live="polite"></p>
 </section>
 
-The dCloud details, Smart Audio DID, and derived Control Hub credentials remain
-available in this browser for up to 12 hours. The administrator bearer token is
-intentionally excluded from persistent browser storage. Use both clear buttons
-when working on a shared computer.
+The dCloud details, Smart Audio DID, derived Control Hub credentials, and
+sandbox bearer token remain available in this browser for up to 12 hours.
+Select **Clear saved values** before leaving a shared computer to remove all
+saved Lab Access values.

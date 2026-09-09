@@ -120,7 +120,7 @@ Use the workflow below to generate a Webex activation code and transfer it to a 
     <div class="lab-access-token-row">
       <input id="devicefx-token" type="password" autocomplete="off" spellcheck="false" maxlength="8192" placeholder="Paste the bearer token" data-webex-token-input>
       <button type="button" class="lab-access-button lab-access-button-secondary" aria-pressed="false" data-webex-token-toggle>Show</button>
-      <button type="button" class="lab-access-button lab-access-button-primary" data-webex-token-use>Use token</button>
+      <button type="button" class="lab-access-button lab-access-button-primary" data-webex-token-use>Save token</button>
     </div>
     <p class="lab-access-status" role="status" aria-live="polite" data-webex-token-status></p>
   </div>
