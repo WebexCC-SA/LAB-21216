@@ -1,5 +1,6 @@
 ---
 site_name: "LAB-21216: Cisco phone 9800 series: Setup, customize and manage" # This must begin with the session ID, e.g. LABXXX-1234 This is my Cisco Live Lab
+site_url: https://webexcc-sa.github.io/LAB-21216/
 site_description: "LAB-21216: Cisco phone 9800 series: Setup, customize and manage" # must be same as "site_name"
 site_author: Nehal Mehta
 copyright: Copyright &copy; 2026 Cisco
