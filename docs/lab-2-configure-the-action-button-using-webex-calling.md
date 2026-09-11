@@ -133,7 +133,7 @@ You can customize action button for a specific needs to fit into your requiremen
 2. It will bring up **Device Configuration** page. Scroll down on the page, go to **Phone** > **Action Button.** On the Action Button configuration page, populate the following values and click **Next**.
     1. **Action Button Function** > **Cisco 98XX** > drop down and choose **Custom**
     2. **Action Button Service Destination** > **Cisco 98XX >**  use the URL: **<copy><https://webexcc-sa.github.io/LAB-21216/lab-assets/cisco-phone-services/tornado.xml></copy>** (Tornado alert).
-    3. **Action Button Service Name** > anything descriptive (like Tornado Alert)
+    3. **Action Button Service Name** > anything descriptive (like Evacuation map)
 
 ![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-045.png)
 
@@ -141,13 +141,13 @@ You can customize action button for a specific needs to fit into your requiremen
 4. Once the configuration is applied observe that on Cisco 98XX phone, **Action button guide** pops up in blue. Press **Got it**. This pop up will appear only once after any configuration changes to the Action button.
 5. Click the **Action Button** (the red button on top of the device) on Cisco 98XX, and observe that there is pop up in red “**Sending** <**Service Name> in 5 seconds**”. That 5 seconds will count down to 1 and the evacuation map will be displayed as shown below.
 
-![A screenshot of a computer screen AI-generated content may be incorrect.](assets/docx-image-046.png)
+    ![alt text](assets/image-21.png)
 
 6. Once verified, click **Back** softkey on the phone to go back to phone Home screen.
 
 You can trigger multiple events with single trigger as well. Like when you press action button you want to both: Call a phone number (like emergency services) as well services display the evacuation map on the phone.
 
-7. Continuing on Workstation 1, on the browser tab where you have Webex CH logged in. Navigate to **MANAGEMENT > Devices.** It will list both the phones you registered above. Select the **Cisco 98XX** phone you configured Custom service above**.** On the device Overview page go to **Configuration** > **All configurations.**
+7. On the browser tab where you have Webex CH logged in, navigate to **MANAGEMENT > Devices.** It will list the phone you registered above. Select the **Cisco 98XX** phone you configured Custom service above**.** On the device Overview page go to **Configuration** > **All configurations.**
 8. It will bring up **Device Configuration** page. Scroll down on the page, go to **Phone** > **Action Button.** On the Action Button configuration page, update the following value and click **Next**. In this example we are using Evacuation map.
     1. **Action Button Service Destination** > **Cisco 98XX >**
 
