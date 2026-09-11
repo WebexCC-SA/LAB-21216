@@ -1,4 +1,4 @@
-# Lab 9: Closed Captions
+# Lab 11: Closed Captions
 
 You can turn on and view closed captions real-time transcription on Cisco 98XX phone (9861 and 9871) during phone calls and Webex meetings.
 

@@ -1,4 +1,4 @@
-# Lab 7: Pagination on Cisco Desk Phone 9851 and 9861
+# Lab 6: Pagination on Cisco Desk Phone 9851 and 9861
 
 Pagination allows you to navigate through multiple screens of extension lines, speed dials, and other configured features on line keys. This feature is only available on Cisco Desk Phone 9851 and 9861 registered to Webex Calling or Cisco BroadWorks.
 

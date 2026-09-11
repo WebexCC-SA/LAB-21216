@@ -1,4 +1,4 @@
-# Lab 5: Customize the Settings Menu
+# Lab 7: Customize the Settings Menu
 
 The menu customization feature allows administrators to enhance usability by displaying only relevant settings to users, and to improve control and security by restricting access to sensitive settings.
 

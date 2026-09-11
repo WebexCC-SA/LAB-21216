@@ -99,11 +99,14 @@ nav:
       - Lab 2 - Action button: lab-2-configure-the-action-button-using-webex-calling.md
       - Lab 3 - Favorite button: lab-3-configure-the-favorite-button-on-webex-calling.md
       - Lab 4 - Always use the multi-line layout: lab-4-always-use-the-multi-line-layout.md
-      - Lab 5 - Customize the settings menu: lab-5-customize-the-settings-menu.md
-      - Lab 6 - Custom wallpaper: lab-6-custom-wallpaper-on-cisco-9800-series-phones.md
-      - Lab 7 - Pagination: lab-7-pagination-on-cisco-desk-phone-9851-and-9861.md
-      - Lab 8 - Smart audio: lab-8-smart-audio-in-webex-calling.md
-      - Lab 9 - Closed captions: lab-9-closed-captions.md
+      - Lab 5 - User added speed dials: lab-5-user-added-speed-dials.md
+      - Lab 6 - Pagination: lab-6-pagination-on-cisco-desk-phone-9851-and-9861.md
+      - Lab 7 - Customize the settings menu: lab-7-customize-the-settings-menu.md
+      - Lab 8 - Custom wallpaper: lab-8-custom-wallpaper-on-cisco-9800-series-phones.md
+      - Lab 9 - Custom ringtone: lab-9-custom-ringtone.md
+      - Lab 10 - Smart audio: lab-10-smart-audio-in-webex-calling.md
+      - Lab 11 - Closed captions: lab-11-closed-captions.md
+      - Lab 12 - Device statuses on Control Hub: lab-12-control-hub-statuses.md
       - Learn more: learn-more.md
   #- Topologies: topologies.md
   #- How to use this guide:

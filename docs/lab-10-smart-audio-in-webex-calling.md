@@ -1,4 +1,4 @@
-# Lab 8: Smart Audio in Webex Calling
+# Lab 10: Smart Audio in Webex Calling
 
 Smart Audio features provides multiple ways to remove the noise from the phone microphone and from the remote caller’s side, providing the best experience for both the parties in the call.
 

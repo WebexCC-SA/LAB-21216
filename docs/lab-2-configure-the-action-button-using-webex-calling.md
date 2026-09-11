@@ -4,7 +4,7 @@ The Desk Phone 9800 Series is the first desk phone in the industry to have a red
 
 ### **Module 2a: Configuring the Action Button as an Emergency call**
 
-1. Continuing on Workstation 1, on the browser tab where you have Webex CH logged in. Navigate to **MANAGEMENT > Devices.** It will list both the phones you registered above. Select one of the **Cisco 98XX.** On the device Overview page, go to **Configuration** > **All configurations.**
+1. On the browser tab where you have Webex CH logged in. Navigate to **MANAGEMENT > Devices.** It will list the phone you registered above. Select the **Cisco 98XX** phone from the list. On the device Overview page, go to **Configuration** > **All configurations.**
 
 ![A screenshot of a computer Description automatically generated](assets/docx-image-034.png)
 
@@ -84,9 +84,20 @@ In the above steps, when you pressed **Action Button** on **Cisco 98XX** Phone y
 
 If the Dial Out Delay is set to 0, then there is no red pop and the device dials the configured number immediately.
 
-If you want to try out Dial Out Delay, go back to browser tab where you have Webex Control Hub opened. Go to **MANAGEMENT** > **Devices**. Select Either of **Cisco 98XX** phones. Go to **All Configurations** > **Action Button** > **Dial Out Delay**. Use the slider bar (0 through 30) to change the value to desired value. Click **Next**. Click **Apply**, on next page. Click **Close**, on next page. Once the applied the configuration, observe that on selected Cisco 98XX device **Action button guide** pops up in blue. Press **Got it**. Press the action button on the phone and make sure that the configured **Dial Out Delay** works. Answer the call on other phone and hangup after few seconds.
+If you want to try out Dial Out Delay:
 
-![A screenshot of a computer Description automatically generated](assets/docx-image-043.png)
+- Go back to browser tab where you have Webex Control Hub opened.
+- Go to **MANAGEMENT** > **Devices**. Select the **Cisco 98XX** phone from the list.
+- Go to **All Configurations** > **Action Button** > **Dial Out Delay**. Use the slider bar (0 through 30) to change the value to desired value.
+
+    ![A screenshot of a computer Description automatically generated](assets/docx-image-043.png)
+
+- Click **Next**. Click **Apply**, on next page. Click **Close**, on next page.
+- Once the configuration is applied, observe that on selected Cisco 98XX device **Action button guide** pops up in blue. Press **Got it**.
+- Press the action button on the phone and make sure that the configured **Dial Out Delay** works.
+- Hangup the call after few seconds.
+
+
 
 
 
@@ -99,23 +110,30 @@ In the above steps, when you pressed **Action Button** on **Cisco 98XX** Phone y
 2. Long Press
 3. Press 3 times
 
-If you want to try out a different service trigger, go back to browser tab where you have Webex Control Hub opened. Go to **MANAGEMENT** > **Devices**. Select Either **Cisco 9861** or **Cisco 9871**. Go to **All Configurations** > **Action Button** > **Service Trigger**. Drop down option for Cisco 98XX phone and choose desired option (either **Long Press** or **Press 3 times**) . Click **Next**. Click **Apply**, on next page. Click **Close**, on next page. Once the applied the configuration, observe that on selected Cisco 98XX device **Action button guide** pops up in blue. Press **Got it**. Press the action button (the way you configured either **Long Press** or **Press 3 times**), on the phone and make sure that it works. Answer the call on other phone and hangup after few seconds.
+If you want to try out a different service trigger:
 
-![A screenshot of a computer Description automatically generated](assets/docx-image-044.png)
+- Go back to browser tab where you have Webex Control Hub opened.
+- Go to **MANAGEMENT** > **Devices**. Select the **Cisco 98XX** phone from the list.
+- Go to **All Configurations** > **Action Button** > **Service Trigger**.
+- Drop down option for Cisco 98XX phone and choose desired option (either **Long Press** or **Press 3 times**) .
+
+    ![A screenshot of a computer Description automatically generated](assets/docx-image-044.png)
+
+- Click **Next**. Click **Apply**, on next page. Click **Close**, on next page.
+- Once the applied the configuration, observe that on selected Cisco 98XX device **Action button guide** pops up in blue. Press **Got it**.
+- Press the action button (the way you configured either **Long Press** or **Press 3 times**), on the phone and make sure that it works. Hangup the call after few seconds.
 
 Thus, you have options such as **Dial Out Delay** and **Service Trigger** configurations to avoid the accidental press of Action button to avoid unnecessary trigger of alerts.
 
 ### **Module 2d: Configuring the Action button for a *custom service***
 
-You can customize action button for a specific needs to fit into your requirement. Like sending to an URL to display some office/evacuation/route/directory/custom message etc.,
+You can customize action button for a specific needs to fit into your requirement. Like sending to an URL to display some office evacuation route / directory / custom message etc.,
 
-1. Continuing on Workstation 1, on the browser tab where you have Webex CH logged in. Navigate to **MANAGEMENT > Devices.** It will list both the phones you registered above. Select one of your **Cisco 98XX** phones**.** On the device Overview page go to **Configuration** > **All configurations.**
+1. On the browser tab where you have Webex CH logged in, navigate to **MANAGEMENT > Devices.** It will list the phone you registered above. Select your **Cisco 98XX** phone. On the device Overview page go to **Configuration** > **All configurations.**
 2. It will bring up **Device Configuration** page. Scroll down on the page, go to **Phone** > **Action Button.** On the Action Button configuration page, populate the following values and click **Next**.
     1. **Action Button Function** > **Cisco 98XX** > drop down and choose **Custom**
-    2. **Action Button Service Destination** > **Cisco 98XX >**  use the URL: <copy><https://www.tmedemo.com/quiz/www/evacuate.xml></copy> (evacuation map).
-    3. **Action Button Service Name** > anything descriptive (like Evacuation map or Corp Directory)
-
-<!--**Option 2:** <https://www.tmedemo.com/quiz/www/menu.xml> (Corporate Directory) -->
+    2. **Action Button Service Destination** > **Cisco 98XX >**  use the URL: **<copy><https://webexcc-sa.github.io/LAB-21216/lab-assets/cisco-phone-services/tornado.xml></copy>** (Tornado alert).
+    3. **Action Button Service Name** > anything descriptive (like Tornado Alert)
 
 ![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-045.png)
 
@@ -133,7 +151,7 @@ You can trigger multiple events with single trigger as well. Like when you press
 8. It will bring up **Device Configuration** page. Scroll down on the page, go to **Phone** > **Action Button.** On the Action Button configuration page, update the following value and click **Next**. In this example we are using Evacuation map.
     1. **Action Button Service Destination** > **Cisco 98XX >**
 
-    <copy>tel:+1<w class="SmartAudioDid">Enter the Smart Audio DID in Overview > Lab Access</w> + https://www.tmedemo.com/quiz/www/evacuate.xml</copy>
+    **<copy>tel:+1<w class="SmartAudioDid">Enter the Smart Audio DID in Overview > Lab Access</w> + https://webexcc-sa.github.io/LAB-21216/lab-assets/cisco-phone-services/tornado.xml</copy>**
 
     (We are using Smart Audio external DID number in this example.)
 
@@ -174,7 +192,7 @@ You can configure the Action button to connect to multiple services and assign e
 
 8. On the **PressThreeTimes** configuration page, update the following values and click **Next**.
     1.  **Action Button Function** > **Cisco 98XX** > drop down the option and set **Custom**
-    2.  **Action Button Service Destination** > **Cisco 98XX >**  Enter below URL <copy><https://www.tmedemo.com/quiz/www/menu.xml></copy>
+    2.  **Action Button Service Destination** > **Cisco 98XX >**  Enter below URL <copy><https://webexcc-sa.github.io/LAB-21216/lab-assets/cisco-phone-services/menu.xml></copy>
     3.  **Action Button Service Name > Cisco 98XX >** Enter any description (Like Corporate Directory)
 
     ![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-053.png)
@@ -183,7 +201,7 @@ You can configure the Action button to connect to multiple services and assign e
 10. It will bring up **Device Configuration** page. Scroll down on the page, go to **Phone** > **Action Button > ServiceTriggerMultiTrigger > LongPress.**
 11. On the **PressThreeTimes** configuration page, update the following values and click **Next**.
     1.  **Action Button Function** > **Cisco 98XX** > drop down the option and set **Custom**
-    2.  **Action Button Service Destination** > **Cisco 98XX >**  Enter below URL <copy><https://www.tmedemo.com/quiz/www/evacuate.xml></copy>
+    2.  **Action Button Service Destination** > **Cisco 98XX >**  Enter below URL <copy><https://webexcc-sa.github.io/LAB-21216/lab-assets/cisco-phone-services/tornado.xml></copy>
     3.  **Action Button Service Name > Cisco 98XX >** Enter any description (Like Evacuation Map)
 
     ![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-054.png)

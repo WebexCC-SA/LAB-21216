@@ -1,4 +1,4 @@
-# Lab 6: Custom Wallpaper on Cisco 9800 Series Phones
+# Lab 8: Custom Wallpaper on Cisco 9800 Series Phones
 
 The custom wallpaper feature allows you to customize and consistently display your brand identity across all corporate phones using personalized images and logos.
 
