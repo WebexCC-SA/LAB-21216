@@ -31,7 +31,7 @@ API_HOST = "127.0.0.1"
 API_PORT = 8765
 SITE_PORT = 8000
 MAX_REQUEST_BYTES = 16 * 1024
-MAX_WEBEX_RESPONSE_BYTES = 2 * 1024 * 1024
+MAX_WEBEX_RESPONSE_BYTES = 6 * 1024 * 1024
 MAX_UNDO_HISTORY = 100
 MIN_DIMENSION = 1
 MAX_DIMENSION = 10000
@@ -73,6 +73,10 @@ WEBEX_PEOPLE_URL = (
 )
 WEBEX_ACTIVATION_URL = (
     "https://webexapis.com/v1/devices/activationCode"
+)
+WEBEX_DEVICES_URL = "https://webexapis.com/v1/devices?max=100"
+WEBEX_XAPI_SCREENSHOT_URL = (
+    "https://webexapis.com/v1/xapi/command/Ui.GetDeviceScreenshot"
 )
 WEBEX_MODELS = {"Cisco 9871", "Cisco 9861"}
 
@@ -219,6 +223,15 @@ def proxy_webex_request(
                 "Authorization": f"Bearer {token}",
             },
         )
+    elif operation == "devices":
+        request = Request(
+            WEBEX_DEVICES_URL,
+            method="GET",
+            headers={
+                "Accept": "application/json",
+                "Authorization": f"Bearer {token}",
+            },
+        )
     elif operation == "activation":
         person_id = payload.get("person_id")
         model = payload.get("model")
@@ -234,6 +247,24 @@ def proxy_webex_request(
         ).encode("utf-8")
         request = Request(
             WEBEX_ACTIVATION_URL,
+            data=body,
+            method="POST",
+            headers={
+                "Accept": "application/json",
+                "Authorization": f"Bearer {token}",
+                "Content-Type": "application/json",
+            },
+        )
+    elif operation == "xapi-screenshot":
+        device_id = payload.get("device_id")
+        if (
+            not isinstance(device_id, str)
+            or not WEBEX_ID_RE.fullmatch(device_id)
+        ):
+            raise ValueError("Invalid Webex device ID.")
+        body = json.dumps({"deviceId": device_id}).encode("utf-8")
+        request = Request(
+            WEBEX_XAPI_SCREENSHOT_URL,
             data=body,
             method="POST",
             headers={
@@ -742,7 +773,9 @@ def build_handler(
                 "/move-list",
                 "/undo",
                 "/webex-proxy/people",
+                "/webex-proxy/devices",
                 "/webex-proxy/activation",
+                "/webex-proxy/xapi-screenshot",
             }:
                 self._send_json(HTTPStatus.NOT_FOUND, {"error": "Not found."})
                 return

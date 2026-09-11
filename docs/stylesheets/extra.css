@@ -332,6 +332,199 @@ copy:hover::after, .copy:hover::after {
     max-width: min(100%, 280px);
 }
 
+.xapi-playground-card {
+    background: var(--md-code-bg-color);
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 12px;
+    box-shadow: var(--md-shadow-z1);
+    display: grid;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    padding: clamp(1rem, 3vw, 1.75rem);
+}
+
+.xapi-playground-header h2,
+.xapi-action-card h3,
+.xapi-result h4 {
+    margin: 0;
+}
+
+.xapi-playground-header p,
+.xapi-action-card p {
+    margin-bottom: 0;
+}
+
+.playground-setup-only[hidden],
+#playground-setup-toggle[hidden] {
+    display: none;
+}
+
+#playground-setup-toggle {
+    margin-top: 0.75rem;
+}
+
+.xapi-prerequisites,
+.xapi-action-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.xapi-prerequisites {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.xapi-action-grid {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.xapi-prerequisite,
+.xapi-action-card {
+    background: var(--md-default-bg-color);
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 8px;
+    padding: 0.85rem;
+}
+
+.xapi-prerequisite span,
+.xapi-prerequisite strong {
+    display: block;
+}
+
+.xapi-prerequisite span {
+    color: var(--md-default-fg-color--light);
+    font-size: 0.78rem;
+    margin-bottom: 0.2rem;
+}
+
+.xapi-prerequisite-error {
+    color: var(--md-typeset-del-color);
+}
+
+.xapi-device-controls {
+    align-items: end;
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: minmax(14rem, 1fr) auto auto;
+}
+
+.xapi-field {
+    display: grid;
+    gap: 0.4rem;
+}
+
+.xapi-field label {
+    font-weight: 700;
+}
+
+.xapi-field select {
+    background: var(--md-default-bg-color);
+    border: 1px solid var(--md-default-fg-color--lighter);
+    border-radius: 6px;
+    color: var(--md-default-fg-color);
+    font: inherit;
+    min-height: 2.5rem;
+    padding: 0.5rem 0.65rem;
+    width: 100%;
+}
+
+.xapi-action-card {
+    align-content: start;
+    display: grid;
+    gap: 0.85rem;
+    min-width: 0;
+}
+
+.xapi-button {
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    font-weight: 700;
+    justify-content: center;
+    min-height: 2.5rem;
+    padding: 0.5rem 0.85rem;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.xapi-button-primary {
+    background: var(--md-primary-fg-color);
+    color: var(--md-primary-bg-color);
+}
+
+.xapi-button-secondary {
+    background: var(--md-default-bg-color);
+    border-color: var(--md-default-fg-color--lighter);
+    color: var(--md-default-fg-color);
+}
+
+.xapi-button:hover:not(:disabled) {
+    filter: brightness(1.12);
+}
+
+.xapi-button:disabled,
+.xapi-field select:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+.xapi-status {
+    font-size: 0.85rem;
+    margin: 0;
+    min-height: 1.3rem;
+}
+
+.xapi-status-error {
+    color: #b71c1c;
+    font-weight: 700;
+}
+
+[data-md-color-scheme="slate"] .xapi-status-error {
+    color: #ff8a80;
+}
+
+.xapi-result {
+    border-top: 1px solid var(--md-default-fg-color--lightest);
+    display: grid;
+    gap: 0.75rem;
+    padding-top: 0.75rem;
+}
+
+.xapi-result[hidden] {
+    display: none;
+}
+
+.xapi-result img {
+    border: 1px solid var(--md-default-fg-color--lightest);
+    height: auto;
+    max-width: 100%;
+}
+
+.xapi-details {
+    border-top: 1px solid var(--md-default-fg-color--lightest);
+    min-width: 0;
+    overflow: hidden;
+    padding-top: 0.75rem;
+    width: 100%;
+}
+
+.xapi-details summary {
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.xapi-details pre {
+    box-sizing: border-box;
+    margin-bottom: 0;
+    max-height: 22rem;
+    max-width: 100%;
+    overflow: auto;
+    width: 100%;
+}
+
 @media screen and (max-width: 44.984375em) {
     .lab-access-form-grid {
         grid-template-columns: 1fr;
@@ -357,6 +550,16 @@ copy:hover::after, .copy:hover::after {
     }
 
     .devicefx-button {
+        width: 100%;
+    }
+
+    .xapi-prerequisites,
+    .xapi-action-grid,
+    .xapi-device-controls {
+        grid-template-columns: 1fr;
+    }
+
+    .xapi-button {
         width: 100%;
     }
 }

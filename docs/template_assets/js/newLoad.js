@@ -30,6 +30,11 @@ function clearDCloudAccess(storage = globalThis.localStorage) {
     } catch {
         // Bearer token storage may be unavailable.
     }
+    try {
+        globalThis.labXapiPlayground?.clearSelectedDevice();
+    } catch {
+        // xAPI device selection storage may be unavailable.
+    }
 }
 
 function readSessionDCloudAccess() {

@@ -1,10 +1,13 @@
 INHERIT: mkdocs.yml
 
 # Local-only authoring features. GitHub Pages builds mkdocs.yml directly.
+site_url: http://127.0.0.1:8000/
+
 extra_javascript:
   - template_assets/js/newLoad.js
   - template_assets/js/setInfo.js
   - template_assets/js/webexAccess.js
+  - template_assets/js/xapiPlayground.js
   - template_assets/js/vendor/qrcode-generator-2.0.4.js
   - template_assets/js/devicefxActivation.js
   - template_assets/js/imageEditor.js

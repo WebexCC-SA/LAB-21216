@@ -121,7 +121,7 @@ The username is `cholland@` followed by your dCloud domain. The password is `dCl
       <input id="webex-admin-token" type="password" autocomplete="off" spellcheck="false" maxlength="8192" placeholder="Paste the bearer token">
       <button id="webex-token-toggle" type="button" class="lab-access-button lab-access-button-secondary" aria-pressed="false">Show</button>
     </div>
-    <span class="lab-access-field-hint">Required administrator access includes people, devices, and one-time activation codes.</span>
+    <span class="lab-access-field-hint">Required administrator access includes people, devices, one-time activation codes, and supported remote phone actions.</span>
   </div>
 
   <div class="lab-access-actions">
