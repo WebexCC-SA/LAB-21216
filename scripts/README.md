@@ -19,7 +19,9 @@ python scripts/image_size_editor.py
 Use this command instead of plain `mkdocs serve` for local previews. The
 script starts MkDocs, opens the **Lab (edit)** view, and runs a local-only API
 on `127.0.0.1:8765`. That API is required for the DeviceFX workflow because
-Webex does not allow browser requests from a localhost origin.
+Webex does not allow browser requests from a localhost origin. It also proxies
+the fixed device-list and PhoneOS screenshot operations used by Utilities
+during local preview.
 
 Resize an image by dragging its lower-right corner.
 When the drag ends, the script updates that image's `width` and `height`
@@ -81,6 +83,47 @@ pip install -r requirements_dev.txt
 The converter's direct dependencies are pinned in `scripts/requirements.txt`
 for reproducibility.
 
+## Lab filename numbering
+
+Synchronize the Lab 5–12 Markdown filename prefixes with the numbers shown in
+the site navigation:
+
+```bash
+python scripts/renumber_lab_files.py
+```
+
+The script is idempotent, updates `mkdocs.yml`, and creates
+`mkdocs.yml.backup.yml` before its first configuration change.
+
+## Cisco phone service assets
+
+Download the approved Cisco phone XML examples and their static dependencies:
+
+```bash
+python scripts/download_cisco_phone_assets.py
+```
+
+The script starts with Cisco's `menu.xml` and `tornado.xml`, recursively
+downloads same-directory XML and PNG dependencies, and stores the hosted copies
+under `docs/lab-assets/cisco-phone-services/`. Cisco asset references are
+rewritten to the project's GitHub Pages URLs. `manifest.json` records source
+URLs, content types, sizes, and SHA-256 checksums.
+
+The **Input** menu entry and `CiscoIPPhoneInput.xml` are intentionally excluded.
+That example submits its form to `http://127.0.0.1/admin/addContact`, a dynamic
+callback that GitHub Pages cannot provide. Phone actions such as
+`Softkey:Update` remain unchanged.
+
+The downloader is idempotent, validates the source host, file types, XML, and
+PNG signatures, and backs up changed hosted assets under
+`_cisco_phone_assets_backups/`.
+
+Run its local validation tests with:
+
+```bash
+venv/bin/python scripts/test_download_cisco_phone_assets.py
+```
+
 ## DeviceFX activation workflow tests
 
 The DeviceFX NFC activation workflow uses the locally vendored
@@ -93,5 +136,6 @@ Run its dependency-free Node.js tests from the project root:
 node scripts/test_devicefx_activation.js
 node scripts/test_dcloud_storage.js
 node scripts/test_webex_access.js
+node scripts/test_xapi_playground.js
 venv/bin/python scripts/test_webex_proxy.py
 ```
