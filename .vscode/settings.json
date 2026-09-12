@@ -2,5 +2,15 @@
   "markdown.copyFiles.destination": {
     "**/*": "assets/${fileName}"
   },
-  "editor.pasteAs.enabled": true
+  "editor.pasteAs.enabled": true,
+  "cSpell.words": [
+    "CUCM",
+    "devicefx",
+    "narrowband",
+    "PSTN",
+    "serv",
+    "softkey",
+    "softkeys",
+    "wideband"
+  ]
 }

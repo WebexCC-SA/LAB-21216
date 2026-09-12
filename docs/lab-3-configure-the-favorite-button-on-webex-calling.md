@@ -5,7 +5,7 @@ The Desk Phone 9800 Series has a new Favorite Button. The Favorite Button can be
 1. On the browser tab where you have Webex CH logged in, navigate to **MANAGEMENT > Devices.** It will list the phone you registered above. Select your **Cisco 98XX** device. On the device Overview page, go to **Configuration** > **All configurations.**
 2. It will bring up **Device Configurations** page. Scroll down on the page, go to **Phone** > **Help Desk.**
 
-![A screenshot of a computer Description automatically generated](assets/docx-image-055.png)
+    ![A screenshot of a computer Description automatically generated](assets/docx-image-055.png)
 
 3. Drop down **Custom Menu Name > Cisco 98XX** and change it to **Quick Dials.** Drop down the option for **Enable > Cisco 98XX** and choose **Yes**.
 

@@ -18,7 +18,7 @@ In this module we will walk you through initial setup including a desk phone onb
 
 Lets setup Webex location PSTN connection type and order PSTN DID numbers for users/phones.
 
-1. Continuing on Workstaiton 1, on the browser tab where you have Webex CH logged in.
+1. Continuing on Workstation 1, on the browser tab where you have Webex CH logged in.
 2. Go to **SERVICES** > **PSTN & Routing**. Click + **Add Numbers**.
 
 ![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-004.png)
@@ -52,7 +52,7 @@ Lets setup Webex location PSTN connection type and order PSTN DID numbers for us
 ![A screenshot of a computer Description automatically generated](assets/docx-image-008.png)
 
 8. Under **Emergency Services Address**, leave everything default and click **Save**.
-9. If promoted for **Suggested Addres**, click **Appy**. Click **Save** again.
+9. If promoted for **Suggested Address**, click **Apply**. Click **Save** again.
 10. It will save all the information for PSTN connection we entered and take you summary page. On the following page, click **Add numbers.**
 
 ![A screenshot of a computer Description automatically generated](assets/docx-image-009.png)
@@ -73,7 +73,7 @@ Lets setup Webex location PSTN connection type and order PSTN DID numbers for us
 
 ![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-012.png)
 
-### **Module 1c: Assing Webex Calling Licenses and PSTN Numbers to users in Webex Calling**
+### **Module 1c: Assigning Webex Calling Licenses and PSTN Numbers to users in Webex Calling**
 
 Use the following Control Hub steps to assign Webex Calling licenses, PSTN
 numbers, extensions, and outbound calling access to both users.
@@ -100,7 +100,7 @@ numbers, extensions, and outbound calling access to both users.
 
 Cisco 9800 phones come with  built-in Near-Field Communication (NFC) feature used primarily for streamlined device provisioning and management. It allows for rapid out-of-box (OOB) setup by scanning an NFC tag with a mobile device.
 
-UnifiedFX developed an application, called **DeviceFX NFC App,** that can be used to provision Cisco 9800 devices using NFC. Continue with the steps below (**Module 1d.1**) to provision the desk phone using this app. If you would like to provision the phones manually via Collaboration Control Hub, skip the below steps and go to **Module 1d.2** direclty.
+UnifiedFX developed an application, called **DeviceFX NFC App,** that can be used to provision Cisco 9800 devices using NFC. Continue with the steps below (**Module 1d.1**) to provision the desk phone using this app. If you would like to provision the phones manually via Collaboration Control Hub, skip the below steps and go to **Module 1d.2** directly.
 
 ### **Module 1d.1: Adding 98XX devices to users using DeviceFX NFC App**
 

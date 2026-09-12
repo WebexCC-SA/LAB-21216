@@ -12,4 +12,4 @@ The available pages are represented as ellipsis at the bottom of the screen. A b
 
 ![The graphic showing how to navigate through screen pages](assets/docx-image-081.png)
 
-To configure multiple lines, go back to browser tab on Workstation 1 wher you have logged into Webex Control Hub. Go to MANAGEMENT > Devices and select one of your 98XX devices (must be either 9851 or 9861). On the device page go to **Device Management** > **Configure Lines**. Add additional lines to explore the feature.
+To configure multiple lines, go back to browser tab on Workstation 1 where you have logged into Webex Control Hub. Go to MANAGEMENT > Devices and select one of your 98XX devices (must be either 9851 or 9861). On the device page go to **Device Management** > **Configure Lines**. Add additional lines to explore the feature.

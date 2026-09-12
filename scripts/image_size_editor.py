@@ -26,6 +26,7 @@ from urllib.request import Request, urlopen
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DOCS_ROOT = (PROJECT_ROOT / "docs").resolve()
 MKDOCS_CONFIG = PROJECT_ROOT / "mkdocs.yml"
+EDITOR_SCRIPT = PROJECT_ROOT / "scripts" / "assets" / "imageEditor.js"
 BACKUP_ROOT = PROJECT_ROOT / "_image_size_editor_backups"
 API_HOST = "127.0.0.1"
 API_PORT = 8765
@@ -748,6 +749,9 @@ def build_handler(
             self.end_headers()
 
         def do_GET(self) -> None:
+            if self.path == "/imageEditor.js":
+                self._send_javascript(EDITOR_SCRIPT.read_bytes())
+                return
             if self.path != "/config":
                 self._send_json(HTTPStatus.NOT_FOUND, {"error": "Not found."})
                 return
@@ -879,6 +883,16 @@ def build_handler(
             self.send_header("Content-Length", str(len(encoded)))
             self.end_headers()
             self.wfile.write(encoded)
+
+        def _send_javascript(self, content: bytes) -> None:
+            self.send_response(HTTPStatus.OK)
+            self._send_common_headers()
+            self.send_header(
+                "Content-Type", "text/javascript; charset=utf-8"
+            )
+            self.send_header("Content-Length", str(len(content)))
+            self.end_headers()
+            self.wfile.write(content)
 
         def log_message(self, format_string: str, *args: object) -> None:
             print(f"[editor-api] {format_string % args}")
