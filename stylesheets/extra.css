@@ -1,0 +1,565 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+@import "admonition.css";
+
+.md-typeset__table {
+    min-width: 100%;
+}
+
+.md-typeset table:not([class]) {
+    display: table;
+}
+
+.md-grid {
+    max-width: 1440px;
+}
+
+.md-typeset ol ol {
+    list-style-type: lower-alpha;
+}
+
+:root {
+    --md-primary-fg-color: #051C2C;
+    --md-accent-fg-color: #00bdeb;
+}
+
+[data-md-color-scheme="default"] {
+    --md-typeset-a-color: #3a7fff;
+    --md-accent-fg-color: #00bdeb;
+}
+
+[data-md-color-scheme="slate"] {
+    --md-typeset-a-color: #3a7fff;
+    --md-accent-fg-color: #00bdeb;
+}
+copy::after, .copy::after {
+  content: "\f0c5"; /* Font Awesome code for the copy icon */
+  font-family: "Font Awesome 5 Free"; /* The font-family may vary, ensure it matches the imported version */
+  font-weight: 900; /* Ensure the weight matches the icon style */
+  font-style: normal;
+  text-decoration: inherit;
+  display: inline-block; /* Ensure the icon is visible */
+  margin-left: 5px; /* Optional: Add space between text and icon */
+
+}
+
+copy:hover::after, .copy:hover::after {
+  color: #00bdeb;
+}
+
+.lab-access-card {
+    background:
+        linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 7%, transparent), transparent 55%),
+        var(--md-code-bg-color);
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 12px;
+    box-shadow: var(--md-shadow-z1);
+    display: grid;
+    gap: 1rem;
+    margin: 1.25rem 0;
+    padding: clamp(1rem, 3vw, 1.5rem);
+}
+
+.lab-access-card-header h3 {
+    margin: 0.15rem 0 0.35rem;
+}
+
+.lab-access-card-header p {
+    margin: 0;
+}
+
+.lab-access-step {
+    color: var(--md-accent-fg-color);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.lab-access-form,
+.lab-access-field {
+    display: grid;
+    gap: 0.45rem;
+}
+
+.lab-access-form-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+}
+
+.lab-access-field label {
+    font-weight: 700;
+}
+
+.lab-access-field input {
+    background: var(--md-default-bg-color);
+    border: 1px solid var(--md-default-fg-color--lighter);
+    border-radius: 7px;
+    color: var(--md-default-fg-color);
+    font: inherit;
+    min-height: 2.65rem;
+    padding: 0.55rem 0.7rem;
+    width: 100%;
+}
+
+.lab-access-field input:focus {
+    border-color: var(--md-accent-fg-color);
+    box-shadow: 0 0 0 3px var(--md-accent-fg-color--transparent);
+    outline: none;
+}
+
+.lab-access-field-hint {
+    color: var(--md-default-fg-color--light);
+    font-size: 0.78rem;
+}
+
+.lab-access-token-row {
+    align-items: stretch;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.lab-access-token-row input {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.webex-inline-token {
+    border-block: 1px solid var(--md-default-fg-color--lightest);
+    margin-block: 0.2rem;
+    padding-block: 0.85rem;
+}
+
+.lab-access-actions {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+}
+
+.lab-access-button {
+    border: 1px solid transparent;
+    border-radius: 7px;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+    min-height: 2.5rem;
+    padding: 0.5rem 0.9rem;
+}
+
+.lab-access-button-primary {
+    background: var(--md-primary-fg-color);
+    color: var(--md-primary-bg-color);
+}
+
+.lab-access-button-secondary {
+    background: var(--md-default-bg-color);
+    border-color: var(--md-default-fg-color--lighter);
+    color: var(--md-default-fg-color);
+}
+
+.lab-access-button:hover:not(:disabled) {
+    filter: brightness(1.12);
+}
+
+.lab-access-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+.lab-access-status {
+    font-size: 0.85rem;
+    margin: 0;
+    min-height: 1.3rem;
+}
+
+.lab-access-status-error {
+    color: var(--md-typeset-del-color);
+    font-weight: 700;
+}
+
+.devicefx-activation-card {
+    background: var(--md-code-bg-color);
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 12px;
+    box-shadow: var(--md-shadow-z1);
+    display: grid;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    padding: clamp(1rem, 3vw, 1.75rem);
+}
+
+.devicefx-form-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.devicefx-form-group {
+    display: grid;
+    gap: 0.4rem;
+}
+
+.devicefx-form-group label,
+.devicefx-result-label {
+    font-weight: 700;
+}
+
+.devicefx-activation-card input,
+.devicefx-activation-card select {
+    background: var(--md-default-bg-color);
+    border: 1px solid var(--md-default-fg-color--lighter);
+    border-radius: 6px;
+    color: var(--md-default-fg-color);
+    font: inherit;
+    min-height: 2.5rem;
+    padding: 0.5rem 0.65rem;
+    width: 100%;
+}
+
+.devicefx-activation-card input:focus,
+.devicefx-activation-card select:focus,
+.devicefx-button:focus-visible {
+    outline: 3px solid var(--md-accent-fg-color--transparent);
+    outline-offset: 2px;
+}
+
+.devicefx-input-actions {
+    align-items: stretch;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.devicefx-input-actions input {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.devicefx-button {
+    border: 1px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+    min-height: 2.5rem;
+    padding: 0.5rem 0.85rem;
+    width: fit-content;
+}
+
+.devicefx-button-primary {
+    background: var(--md-primary-fg-color);
+    color: var(--md-primary-bg-color);
+}
+
+.devicefx-button-secondary {
+    background: var(--md-default-bg-color);
+    border-color: var(--md-default-fg-color--lighter);
+    color: var(--md-default-fg-color);
+}
+
+.devicefx-button:hover:not(:disabled) {
+    filter: brightness(1.12);
+}
+
+.devicefx-button:disabled,
+.devicefx-activation-card select:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+.devicefx-help,
+.devicefx-status {
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.devicefx-status {
+    min-height: 1.3rem;
+}
+
+.devicefx-status-error {
+    color: var(--md-typeset-del-color);
+    font-weight: 700;
+}
+
+.devicefx-result {
+    border-top: 1px solid var(--md-default-fg-color--lightest);
+    display: grid;
+    gap: 1rem;
+    padding-top: 0.75rem;
+}
+
+.devicefx-result[hidden] {
+    display: none;
+}
+
+.devicefx-result h4 {
+    margin: 0;
+}
+
+.devicefx-result-row {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.devicefx-result-row > div {
+    min-width: 0;
+}
+
+.devicefx-result-label {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.devicefx-url-row a {
+    overflow-wrap: anywhere;
+}
+
+.devicefx-qr-code {
+    background: #fff;
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 8px;
+    justify-self: center;
+    padding: 12px;
+}
+
+.devicefx-qr-code canvas {
+    display: block;
+    height: auto;
+    image-rendering: pixelated;
+    max-width: min(100%, 280px);
+}
+
+.xapi-playground-card {
+    background: var(--md-code-bg-color);
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 12px;
+    box-shadow: var(--md-shadow-z1);
+    display: grid;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    padding: clamp(1rem, 3vw, 1.75rem);
+}
+
+.xapi-playground-header h2,
+.xapi-action-card h3,
+.xapi-result h4 {
+    margin: 0;
+}
+
+.xapi-playground-header p,
+.xapi-action-card p {
+    margin-bottom: 0;
+}
+
+.playground-setup-only[hidden],
+#playground-setup-toggle[hidden] {
+    display: none;
+}
+
+#playground-setup-toggle {
+    margin-top: 0.75rem;
+}
+
+.xapi-prerequisites,
+.xapi-action-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.xapi-prerequisites {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.xapi-action-grid {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.xapi-prerequisite,
+.xapi-action-card {
+    background: var(--md-default-bg-color);
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 8px;
+    padding: 0.85rem;
+}
+
+.xapi-prerequisite span,
+.xapi-prerequisite strong {
+    display: block;
+}
+
+.xapi-prerequisite span {
+    color: var(--md-default-fg-color--light);
+    font-size: 0.78rem;
+    margin-bottom: 0.2rem;
+}
+
+.xapi-prerequisite-error {
+    color: var(--md-typeset-del-color);
+}
+
+.xapi-device-controls {
+    align-items: end;
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: minmax(14rem, 1fr) auto auto;
+}
+
+.xapi-field {
+    display: grid;
+    gap: 0.4rem;
+}
+
+.xapi-field label {
+    font-weight: 700;
+}
+
+.xapi-field select {
+    background: var(--md-default-bg-color);
+    border: 1px solid var(--md-default-fg-color--lighter);
+    border-radius: 6px;
+    color: var(--md-default-fg-color);
+    font: inherit;
+    min-height: 2.5rem;
+    padding: 0.5rem 0.65rem;
+    width: 100%;
+}
+
+.xapi-action-card {
+    align-content: start;
+    display: grid;
+    gap: 0.85rem;
+    min-width: 0;
+}
+
+.xapi-button {
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    font-weight: 700;
+    justify-content: center;
+    min-height: 2.5rem;
+    padding: 0.5rem 0.85rem;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.xapi-button-primary {
+    background: var(--md-primary-fg-color);
+    color: var(--md-primary-bg-color);
+}
+
+.xapi-button-secondary {
+    background: var(--md-default-bg-color);
+    border-color: var(--md-default-fg-color--lighter);
+    color: var(--md-default-fg-color);
+}
+
+.xapi-button:hover:not(:disabled) {
+    filter: brightness(1.12);
+}
+
+.xapi-button:disabled,
+.xapi-field select:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+.xapi-status {
+    font-size: 0.85rem;
+    margin: 0;
+    min-height: 1.3rem;
+}
+
+.xapi-status-error {
+    color: #b71c1c;
+    font-weight: 700;
+}
+
+[data-md-color-scheme="slate"] .xapi-status-error {
+    color: #ff8a80;
+}
+
+.xapi-result {
+    border-top: 1px solid var(--md-default-fg-color--lightest);
+    display: grid;
+    gap: 0.75rem;
+    padding-top: 0.75rem;
+}
+
+.xapi-result[hidden] {
+    display: none;
+}
+
+.xapi-result img {
+    border: 1px solid var(--md-default-fg-color--lightest);
+    height: auto;
+    max-width: 100%;
+}
+
+.xapi-details {
+    border-top: 1px solid var(--md-default-fg-color--lightest);
+    min-width: 0;
+    overflow: hidden;
+    padding-top: 0.75rem;
+    width: 100%;
+}
+
+.xapi-details summary {
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.xapi-details pre {
+    box-sizing: border-box;
+    margin-bottom: 0;
+    max-height: 22rem;
+    max-width: 100%;
+    overflow: auto;
+    width: 100%;
+}
+
+@media screen and (max-width: 44.984375em) {
+    .lab-access-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lab-access-token-row {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .lab-access-button {
+        width: 100%;
+    }
+
+    .devicefx-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .devicefx-input-actions,
+    .devicefx-result-row {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .devicefx-button {
+        width: 100%;
+    }
+
+    .xapi-prerequisites,
+    .xapi-action-grid,
+    .xapi-device-controls {
+        grid-template-columns: 1fr;
+    }
+
+    .xapi-button {
+        width: 100%;
+    }
+}

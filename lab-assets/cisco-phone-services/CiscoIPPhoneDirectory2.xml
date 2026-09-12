@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<CiscoIPPhoneDirectory>
+  <Title>SECURITY</Title>
+  <Prompt>Directory</Prompt>
+  <DirectoryEntry>
+    <Name>Main Security</Name>
+    <Telephone>+18005532447</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Security Front Lobby</Name>
+    <Telephone>+18005532447</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Security Parking</Name>
+    <Telephone>+18005532447</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Security Buiding 5</Name>
+    <Telephone>+18005532447</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Security DownTown</Name>
+    <Telephone>+18005532447</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Security Management</Name>
+    <Telephone>+18005532447</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Entry12</Name>
+    <Telephone>+18005532447</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Entry13</Name>
+    <Telephone>+18005532447</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Entry14</Name>
+    <Telephone>+18005532447</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Entry15</Name>
+    <Telephone>+18005532447</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Entry16</Name>
+    <Telephone>+18005532447</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Entry17</Name>
+    <Telephone>+18005532447</Telephone>
+  </DirectoryEntry>
+</CiscoIPPhoneDirectory>

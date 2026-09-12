@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='utf-8'?>
+<CiscoIPPhoneDirectory>
+  <Title>Welcome to ACME Corp!</Title>
+  <Prompt>Sample Office Directory</Prompt>
+  <DirectoryEntry>
+    <Name>Cisco Europe</Name>
+    <Telephone>+3227045555</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Cisco UK</Name>
+    <Telephone>08004047778</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Cisco USA</Name>
+    <Telephone>+18005532447</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Denver</Name>
+    <Telephone>+18005532447</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Chicago</Name>
+    <Telephone>+18005532447</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Entry06</Name>
+    <Telephone>+18005532447</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Entry07</Name>
+    <Telephone>+18005532447</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Entry08</Name>
+    <Telephone>+18005532447</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Entry09</Name>
+    <Telephone>+18005532447</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Entry10</Name>
+    <Telephone>+18005532447</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Entry11</Name>
+    <Telephone>+18005532447</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Entry12</Name>
+    <Telephone>+18005532447</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Entry13</Name>
+    <Telephone>+18005532447</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Entry14</Name>
+    <Telephone>+18005532447</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Entry15</Name>
+    <Telephone>+18005532447</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Entry16</Name>
+    <Telephone>+18005532447</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Entry17</Name>
+    <Telephone>+18005532447</Telephone>
+  </DirectoryEntry>
+</CiscoIPPhoneDirectory>

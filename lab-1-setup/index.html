@@ -1,0 +1,1367 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="LAB-21216: Cisco phone 9800 series: Setup, customize and manage">
+      
+      
+        <meta name="author" content="Nehal Mehta">
+      
+      
+        <link rel="canonical" href="https://webexcc-sa.github.io/LAB-21216/lab-1-setup/">
+      
+      
+        <link rel="prev" href="../overview/">
+      
+      
+        <link rel="next" href="../lab-2-configure-the-action-button-using-webex-calling/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../template_assets/webex75.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Lab 1 - Setup - LAB-21216: Cisco phone 9800 series: Setup, customize and manage</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lab-1-setup" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="LAB-21216: Cisco phone 9800 series: Setup, customize and manage" class="md-header__button md-logo" aria-label="LAB-21216: Cisco phone 9800 series: Setup, customize and manage" data-md-component="logo">
+      
+  <img src="../template_assets/webexLogo91.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LAB-21216: Cisco phone 9800 series: Setup, customize and manage
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lab 1 - Setup
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../welcome/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Lab
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../utilities/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Utilities
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="LAB-21216: Cisco phone 9800 series: Setup, customize and manage" class="md-nav__button md-logo" aria-label="LAB-21216: Cisco phone 9800 series: Setup, customize and manage" data-md-component="logo">
+      
+  <img src="../template_assets/webexLogo91.png" alt="logo">
+
+    </a>
+    LAB-21216: Cisco phone 9800 series: Setup, customize and manage
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../welcome/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lab
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1 - Setup
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1 - Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#module-1a-logging-into-webex-control-hub" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 1a: Logging into Webex Control Hub
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-1b-setup-webex-calling-location-and-pstn-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 1b: Setup Webex Calling Location and PSTN Numbers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-1c-assigning-webex-calling-licenses-and-pstn-numbers-to-users-in-webex-calling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 1c: Assigning Webex Calling Licenses and PSTN Numbers to users in Webex Calling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-1d-adding-98xx-devices-to-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 1d: Adding 98XX devices to users
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-1d1-adding-98xx-devices-to-users-using-devicefx-nfc-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 1d.1: Adding 98XX devices to users using DeviceFX NFC App
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-1d2-adding-98xx-devices-to-users-using-webex-control-hub" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 1d.2: Adding 98XX devices to users using Webex Control Hub
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-2-configure-the-action-button-using-webex-calling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2 - Action button
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-3-configure-the-favorite-button-on-webex-calling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3 - Favorite button
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-4-always-use-the-multi-line-layout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 4 - Always use the multi-line layout
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-5-user-added-speed-dials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 5 - User added speed dials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-6-pagination-on-cisco-desk-phone-9851-and-9861/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 6 - Pagination
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-7-customize-the-settings-menu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 7 - Customize the settings menu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-8-custom-wallpaper-on-cisco-9800-series-phones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 8 - Custom wallpaper
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-9-custom-ringtone/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 9 - Custom ringtone
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-10-smart-audio-in-webex-calling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 10 - Smart audio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-11-closed-captions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 11 - Closed captions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-12-control-hub-statuses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 12 - Device statuses on Control Hub
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../learn-more/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learn more
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utilities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Utilities
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="lab-1-setup">Lab 1: Setup</h1>
+<p>9800 Series devices run PhoneOS. PhoneOS is a single operating system for both CUCM and Cloud deployed Phones. All you have to do is to Factory reset the device to migrate from one to another. This eliminates the need for migrating the firmware on the device and eases the process of switching the device from CUCM to Webex Calling or to any other SIP based calling platforms. This also helps in retaining the user experience across the platforms.</p>
+<p>In this module we will walk you through initial setup including a desk phone onboarding.</p>
+<h3 id="module-1a-logging-into-webex-control-hub"><strong>Module 1a: Logging into Webex Control Hub</strong></h3>
+<ol>
+<li>Click <a href="https://admin.webex.com" target="_blank">Collaboration Control Hub</a> link to open it in a new browser tab.</li>
+<li>Login using following credentials:<ul>
+<li>Username / Email address: <copy><w class="ControlHubUsername">Go to Overview section and enter your dCloud session details to auto populate this field</w></copy></li>
+<li>Password: <copy><w class="ControlHubPassword">Go to Overview section and enter your dCloud session details to auto populate this field</w></copy></li>
+</ul>
+</li>
+<li>For security reasons, <strong>Webex Control Hub</strong> signs out every 20 minutes (Idle timeout) by default. For this lab, let’s make the idle time out longer so the Control Hub does not sign you out often during this lab. Go to <strong>MANAGEMENT &gt; Organization Settings &gt; Control Hub’s idle timeout.</strong> Drop down the option for <strong>Control Hub idle timeout</strong> and select <strong>12 hours</strong> or <strong>no timeout</strong>. Click <strong>Save</strong>.</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-003.png" data-title="A screenshot of a computer Description automatically generated" data-desc-position="top"><img alt="A screenshot of a computer Description automatically generated" src="../assets/docx-image-003.png"></a></p>
+<h3 id="module-1b-setup-webex-calling-location-and-pstn-numbers"><strong>Module 1b: Setup Webex Calling Location and PSTN Numbers</strong></h3>
+<p>Lets setup Webex location PSTN connection type and order PSTN DID numbers for users/phones.</p>
+<ol>
+<li>Continuing on Workstation 1, on the browser tab where you have Webex CH logged in.</li>
+<li>Go to <strong>SERVICES</strong> &gt; <strong>PSTN &amp; Routing</strong>. Click + <strong>Add Numbers</strong>.</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-004.png" data-title="A screenshot of a computer AI-generated content may be incorrect." data-desc-position="top"><img alt="A screenshot of a computer AI-generated content may be incorrect." src="../assets/docx-image-004.png"></a></p>
+<ol start="3">
+<li>On the <strong>Add Numbers</strong> page, drop down the option for Location and choose <strong>dCloud.</strong> Since we are setting up this location for the first time, first we need to select the <strong>PSTN Connection</strong> for this location. Click <strong>Edit</strong> <strong>PSTN</strong>.</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-005.png" data-title="A screenshot of a computer Description automatically generated" data-desc-position="top"><img alt="A screenshot of a computer Description automatically generated" src="../assets/docx-image-005.png"></a></p>
+<ol start="4">
+<li>You will be taken to <strong>Edit PSTN connection for dCloud</strong> (Location) and under the connection type choose <strong>Cisco Calling Plans</strong> and click <strong>Next</strong>.</li>
+</ol>
+<p><strong>NOTE:</strong> <em>If you do not see the option Cisco Calling Plans, close the page and repeat steps 2 through</em></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-006.png" data-title="A screenshot of a computer Description automatically generated" data-desc-position="top"><img alt="A screenshot of a computer Description automatically generated" src="../assets/docx-image-006.png"></a></p>
+<ol start="5">
+<li>Enter the following information and leave rest of the fields blank and click <strong>Next</strong>.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><em>Parameter</em></strong></td>
+<td><strong><em>Value</em></strong></td>
+</tr>
+<tr>
+<td>First Name</td>
+<td><copy>Charles</copy></td>
+</tr>
+<tr>
+<td>Last Name</td>
+<td><copy>Holland</copy></td>
+</tr>
+<tr>
+<td>Email Address and Confirm Email Address</td>
+<td><copy><w class="ControlHubUsername">Go to Overview section and enter your dCloud session details to auto populate this field</w></copy></td>
+</tr>
+</tbody>
+</table>
+<p><strong>NOTE:</strong> <em>Following is just an example. You need to use the email from the table above for the domain assigned to your session</em>.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-007.png" data-title="A screenshot of a contact form Description automatically generated" data-desc-position="top"><img alt="A screenshot of a contact form Description automatically generated" src="../assets/docx-image-007.png"></a></p>
+<ol start="6">
+<li>On the pop up window click <strong>Yes, Change</strong>.</li>
+<li>Under the <strong>Emergency disclaimer</strong>, read and scroll the disclaimer information all the way down. Enter Authorized Contact as <copy><strong>Charles Holland</strong></copy> and title as <copy><strong>Engineer</strong></copy> and Click <strong>Agree and Continue</strong>.</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-008.png" data-title="A screenshot of a computer Description automatically generated" data-desc-position="top"><img alt="A screenshot of a computer Description automatically generated" src="../assets/docx-image-008.png"></a></p>
+<ol start="8">
+<li>Under <strong>Emergency Services Address</strong>, leave everything default and click <strong>Save</strong>.</li>
+<li>If promoted for <strong>Suggested Address</strong>, click <strong>Apply</strong>. Click <strong>Save</strong> again.</li>
+<li>It will save all the information for PSTN connection we entered and take you summary page. On the following page, click <strong>Add numbers.</strong></li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-009.png" data-title="A screenshot of a computer Description automatically generated" data-desc-position="top"><img alt="A screenshot of a computer Description automatically generated" src="../assets/docx-image-009.png"></a></p>
+<ol start="11">
+<li>On the <strong>Add Numbers</strong> page, make sure location is selected as <strong>dCloud</strong> and the number type is selected as <strong>PSTN number</strong>. Keep the option <strong>Order New Numbers</strong> is selected and click <strong>Next.</strong></li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-010.png" data-title="A screenshot of a computer Description automatically generated" data-desc-position="top"><img alt="A screenshot of a computer Description automatically generated" src="../assets/docx-image-010.png"></a></p>
+<ol start="12">
+<li>On the <strong>Specify numbers you want to order</strong> page, drop down the option for <strong>State/Province/Region</strong> and choose any of the available states in United States (In this lab we support Cisco PSTN <strong>ONLY</strong> for <strong>United States</strong>).</li>
+<li>Keep the search by option as <strong>Area Code</strong> and drop down the option for <strong>Area Code</strong> and choose any of area code of your choice. For <strong>How may numbers do you want auto-selected for you?</strong> Enter <strong>4</strong> and click <strong>Search.</strong></li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-011.png" data-title="A screenshot of a computer AI-generated content may be incorrect." data-desc-position="top"><img alt="A screenshot of a computer AI-generated content may be incorrect." src="../assets/docx-image-011.png"></a></p>
+<ol start="14">
+<li>On the next page, it will show you list of available number in that area code that you specified above. It will auto select three numbers. If you like any specific number from list that is not auto selected, you can unselect one of the auto selected number and select that number you like. For now, just keep the auto selected numbers as is and click <strong>Order</strong>.</li>
+<li>Order will be submitted for these numbers. On the following page, click <strong>View orders</strong>. The status will read <strong>Pending</strong> then change to <strong>Provisioned</strong> in few seconds. You may need to refresh the page to see the correct/accurate state or select the order number.</li>
+<li>Click on the <strong>Order</strong> you placed (<strong>Order ID</strong>) &gt; <strong>Phone Numbers</strong> to verify all phone numbers are provisioned.</li>
+<li>Let's assign one of the phone numbers to location (dCloud) as Main number. Navigate to <strong>MANAGEMENT</strong> &gt; <strong>Location</strong>. Select location <strong>dCloud.</strong> On the dCloud location page go to <strong>PSTN</strong> tab. Drop down option for <strong>PSTN Configuration</strong> &gt; <strong>Main Number</strong> and choose one of the number we ordered above. Click <strong>Save</strong>.</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-012.png" data-title="A screenshot of a computer AI-generated content may be incorrect." data-desc-position="top"><img alt="A screenshot of a computer AI-generated content may be incorrect." src="../assets/docx-image-012.png"></a></p>
+<h3 id="module-1c-assigning-webex-calling-licenses-and-pstn-numbers-to-users-in-webex-calling"><strong>Module 1c: Assigning Webex Calling Licenses and PSTN Numbers to users in Webex Calling</strong></h3>
+<p>Use the following Control Hub steps to assign Webex Calling licenses, PSTN
+numbers, extensions, and outbound calling access to both users.</p>
+<ol>
+<li>Continuing on Workstation 1, on the browser tab where you have Webex CH logged in. Go to <strong>MANAGEMENT</strong> &gt; <strong>Users</strong> and choose <strong>Charles Holland</strong> from the list<strong>.</strong></li>
+<li>Scroll down on the summary page, click <strong>Edit Licenses</strong></li>
+</ol>
+<p><strong><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-013.png" data-title="A screenshot of a computer Description automatically generated" data-desc-position="top"><img alt="A screenshot of a computer Description automatically generated" src="../assets/docx-image-013.png"></a></strong></p>
+<ol start="3">
+<li>On the <strong>Edit services for cholland@cbXXX.dc-YY.com</strong> page, click <strong>Edit Licenses</strong> again.</li>
+<li>On the next page go to <strong>Calling tab</strong>. Check mark both options for <strong>Webex Calling</strong> and <strong>Professional</strong>. Click <strong>Save</strong>.</li>
+</ol>
+<p><strong><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-014.png" data-title="A screenshot of a computer Description automatically generated" data-desc-position="top"><img alt="A screenshot of a computer Description automatically generated" src="../assets/docx-image-014.png"></a></strong></p>
+<ol start="5">
+<li>On the next page, drop down the option for location and choose <strong>dCloud</strong> and drop down the option for <strong>Phone Number</strong> and choose one of the available numbers (that we ordered in above section). For <strong>Extension</strong> enter the last 4 digits of the number you chose for user. Click <strong>Save</strong>. Click <strong>Close</strong>.</li>
+</ol>
+<p><strong><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-015.png" data-title="A screenshot of a computer AI-generated content may be incorrect." data-desc-position="top"><img alt="A screenshot of a computer AI-generated content may be incorrect." src="../assets/docx-image-015.png"></a></strong></p>
+<ol start="6">
+<li>Return to the user's <strong>Calling</strong> tab. Under <strong>Cisco Calling Plan</strong>, enable the option that allows the user to utilize the outbound calling plan, then save the change.</li>
+<li>Take note of the phone number assigned to <strong>Charles Holland</strong> in the note pad. You will need this number later to make calls.</li>
+<li>Go back to <strong>MANAGEMENT</strong> &gt; <strong>Users</strong> again and on users page choose <strong>Anita Perez</strong> and repeat steps 2 through 7, assign the Webex Calling license and DID number, and enable the Cisco Calling Plan.</li>
+</ol>
+<h3 id="module-1d-adding-98xx-devices-to-users"><strong>Module 1d: Adding 98XX devices to users</strong></h3>
+<p>Cisco 9800 phones come with&nbsp; built-in Near-Field Communication (NFC) feature used primarily for streamlined device provisioning and management.&nbsp;It allows for rapid out-of-box (OOB) setup by scanning an NFC tag with a mobile device.</p>
+<p>UnifiedFX developed an application, called <strong>DeviceFX NFC App,</strong> that can be used to provision Cisco 9800 devices using NFC. Continue with the steps below (<strong>Module 1d.1</strong>) to provision the desk phone using this app. If you would like to provision the phones manually via Collaboration Control Hub, skip the below steps and go to <strong>Module 1d.2</strong> directly.</p>
+<h3 id="module-1d1-adding-98xx-devices-to-users-using-devicefx-nfc-app"><strong>Module 1d.1: Adding 98XX devices to users using DeviceFX NFC App</strong></h3>
+<p>Use the workflow below to generate a Webex activation code and transfer it to a Cisco Desk Phone 9800 Series device with the <strong>DeviceFX NFC App</strong>.</p>
+<ol>
+<li>Install the DeviceFX NFC App from the Google Play Store or Apple App Store. For more information, visit <a href="https://nfc.devicefx.com/" rel="noopener noreferrer" target="_blank">DeviceFX NFC</a>.</li>
+<li>Make sure you saved your bearer token under <strong>Lab &gt; Overview &gt; Lab Access</strong>.</li>
+<li>Click <strong>Load calling users</strong>, then select a calling user. <strong>Charles Holland</strong> is selected automatically when available.</li>
+<li>Select <strong>Desk Phone 9871</strong> or <strong>Desk Phone 9861</strong> depending on which phone model you have on your desk, then click <strong>Generate activation code</strong>.</li>
+</ol>
+<div id="devicefx-activation-app" class="devicefx-activation-card">
+  <p class="devicefx-help">Use the bearer token from <strong>Lab &gt; Overview &gt; Lab Access</strong>, or enter it here.</p>
+
+  <div class="webex-inline-token lab-access-field" data-webex-token-entry="">
+    <label for="devicefx-token">Webex bearer token</label>
+    <div class="lab-access-token-row">
+      <input id="devicefx-token" type="password" autocomplete="off" spellcheck="false" maxlength="8192" placeholder="Paste the bearer token" data-webex-token-input="">
+      <button type="button" class="lab-access-button lab-access-button-secondary" aria-pressed="false" data-webex-token-toggle="">Show</button>
+      <button type="button" class="lab-access-button lab-access-button-primary" data-webex-token-use="">Save token</button>
+    </div>
+    <p class="lab-access-status" role="status" aria-live="polite" data-webex-token-status=""></p>
+  </div>
+
+  <button id="devicefx-load-users" type="button" class="devicefx-button devicefx-button-primary">Load calling users</button>
+
+  <div class="devicefx-form-grid">
+    <div class="devicefx-form-group">
+      <label for="devicefx-person">Calling user</label>
+      <select id="devicefx-person" disabled="">
+        <option value="">Load calling users first</option>
+      </select>
+    </div>
+    <div class="devicefx-form-group">
+      <label for="devicefx-model">Phone model</label>
+      <select id="devicefx-model">
+        <option value="Cisco 9871" selected="">Desk Phone 9871</option>
+        <option value="Cisco 9861">Desk Phone 9861</option>
+      </select>
+    </div>
+  </div>
+
+  <button id="devicefx-generate-code" type="button" class="devicefx-button devicefx-button-primary" disabled="">Generate activation code</button>
+  <p id="devicefx-status" class="devicefx-status" role="status" aria-live="polite"></p>
+
+  <section id="devicefx-result" class="devicefx-result" aria-labelledby="devicefx-result-heading" hidden="">
+    <h4 id="devicefx-result-heading">DeviceFX activation</h4>
+    <div class="devicefx-result-row">
+      <div>
+        <span class="devicefx-result-label">Activation code</span>
+        <code id="devicefx-activation-code"></code>
+      </div>
+      <button id="devicefx-copy-code" type="button" class="devicefx-button devicefx-button-secondary">Copy code</button>
+    </div>
+    <div class="devicefx-result-row devicefx-url-row">
+      <div>
+        <span class="devicefx-result-label">DeviceFX onboarding URL</span>
+        <a id="devicefx-onboarding-url" target="_blank" rel="noopener noreferrer"></a>
+      </div>
+      <button id="devicefx-copy-url" type="button" class="devicefx-button devicefx-button-secondary">Copy URL</button>
+    </div>
+    <div id="devicefx-qr-code" class="devicefx-qr-code" role="img" aria-label="QR code for the DeviceFX onboarding URL"></div>
+    <p id="devicefx-expiry" class="devicefx-help"></p>
+  </section>
+</div>
+
+<ol start="5">
+<li>Scan the displayed QR code with your mobile phone. The DeviceFX onboarding link opens the DeviceFX NFC App and supplies the activation code.</li>
+<li>Follow the instructions in the app. When prompted, tap and hold the mobile phone over the desk phone's NFC area until the transfer completes.</li>
+<li>Wait 2–3 minutes for the phone to register. In Webex Control Hub, navigate to <strong>MANAGEMENT &gt; Devices</strong> and verify that the phone shows <strong>Online</strong>.</li>
+</ol>
+<p><strong>NOTE:</strong> The phone may upgrade its firmware and restart if a newer version is available from the Webex cloud.</p>
+<h3 id="module-1d2-adding-98xx-devices-to-users-using-webex-control-hub"><strong>Module 1d.2: Adding 98XX devices to users using Webex Control Hub</strong></h3>
+<p><strong>NOTE:</strong> Only continue these steps if you skipped adding 98XX phone via NFC app in Module 1d.1.</p>
+<ol>
+<li>Continue on the browser tab where you have Collaboration Control Hub logged in. Go back to <strong>MANAGEMENT</strong> &gt; <strong>Devices</strong>. On the <strong>Devices</strong> page drop down <strong>Add device</strong> option and choose <strong>Add device</strong>.</li>
+<li>In the <strong>Add device</strong> page, select <strong>Personal Usage</strong> &gt; <strong>Next</strong></li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-016.png" data-title="A screenshot of a device AI-generated content may be incorrect." data-desc-position="top"><img alt="A screenshot of a device AI-generated content may be incorrect." src="../assets/docx-image-016.png"></a></p>
+<ol start="3">
+<li>Next page of Add device workflow is to select the user. In the <strong>User</strong> text box, enter the name of the user <strong>Charles Holland</strong>. Note that, after you enter 3 characters of user, you will get drop down. Select the user <strong>Charles Holland</strong> and click on <strong>Next.</strong></li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-017.png" data-title="A screenshot of a computer Description automatically generated" data-desc-position="top"><img alt="A screenshot of a computer Description automatically generated" src="../assets/docx-image-017.png"></a></p>
+<ol start="4">
+<li>Next page of Add device workflow is to select the device type. In this page, notice the options and select <strong>Cisco Desk Phone (Cisco Desk Phone 9800 series)</strong> on the top right corner<strong>.</strong></li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-018.png" data-title="A screenshot of a device Description automatically generated" data-desc-position="top"><img alt="A screenshot of a device Description automatically generated" src="../assets/docx-image-018.png"></a></p>
+<ol start="5">
+<li>
+<p>On the next page, drop down <strong>Select device</strong> option under <strong>Select the device mode and activation method</strong> and select your <strong>Cisco 98XX</strong> model<strong>.</strong> For the option <strong>How would you like to setup this device?</strong> select <strong>By MAC Address</strong> for this lab. Enter the MAC address for your <strong>Cisco 98XX</strong> device. Click <strong>Save</strong>. You can also choose <strong>By Activation Code</strong> that gives you an Activation Code to enter on device.</p>
+<p>NOTE: If you choose the option <strong>By Activation Code</strong> do not close the pop-up window on which it displays Activation code, until you enter the code on phone or note it somewhere. If you close it before noting the code, you have to repeat all steps.</p>
+</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-019.png" data-title="A screenshot of a device AI-generated content may be incorrect." data-desc-position="top"><img alt="A screenshot of a device AI-generated content may be incorrect." src="../assets/docx-image-019.png"></a></p>
+<ol start="6">
+<li>
+<p>If you added the phone via MAC address, go to the Cisco 9800 phones for your pod and <strong>restart</strong> the phone. To do this on the phone go to <strong>Settings (Gear icon) &gt; Restart and reset &gt; Restart -&gt; Restart.</strong> It takes around 2 to 3 minutes for the phones to restart. After restart process completes, the phone will register to Webex.</p>
+</li>
+<li>
+<p>In Webex Control Hub, navigate to <strong>MANAGEMENT &gt; Devices</strong> and verify that the phone shows <strong>Online</strong>.</p>
+</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-021.png" data-title="A screenshot of a computer Description automatically generated" data-desc-position="top"><img alt="A screenshot of a computer Description automatically generated" src="../assets/docx-image-021.png"></a></p>
+<ol start="8">
+<li>Click on one of the phones and you will get details about phone, like <strong>MAC address</strong>, <strong>IP address</strong>, <strong>firmware</strong> and <strong>Software</strong> channel etc.</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/docx-image-022.png" data-title="A screenshot of a computer Description automatically generated" data-desc-position="top"><img alt="A screenshot of a computer Description automatically generated" src="../assets/docx-image-022.png"></a></p>
+<!--
+9. Once you see both phones registered, place a test call between phones. Go to one of the Cisco 98XX phone (assigned to Anita or Charles), click the **Contacts** physical button. Type other user name **Anita (or Charles)** and you should see **Anita Perez (or Charles Holland)** displayed from the **Webex Directory**. Select **user** you searched for from the directory and press the softkey **Call** to place a call. Answer the call and verify that call gets connected.
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../overview/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Overview
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../lab-2-configure-the-action-button-using-webex-calling/" class="md-footer__link md-footer__link--next" aria-label="Next: Lab 2 - Action button">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Lab 2 - Action button
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2026 Cisco
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.footer", "search.suggest", "content.code.copy", "toc.integrate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../template_assets/js/newLoad.js"></script>
+      
+        <script src="../template_assets/js/setInfo.js"></script>
+      
+        <script src="../template_assets/js/webexAccess.js"></script>
+      
+        <script src="../template_assets/js/xapiPlayground.js"></script>
+      
+        <script src="../template_assets/js/vendor/qrcode-generator-2.0.4.js"></script>
+      
+        <script src="../template_assets/js/devicefxActivation.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": false, "openEffect": "fade", "closeEffect": "fade", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
