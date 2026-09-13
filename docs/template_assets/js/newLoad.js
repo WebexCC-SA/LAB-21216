@@ -12,7 +12,7 @@ function normalizeSmartAudioDid(value) {
     return trimmedValue.startsWith("+") ? `+${digits}` : digits;
 }
 
-function clearDCloudAccess(storage = globalThis.localStorage) {
+function clearDCloudDetails(storage = globalThis.localStorage) {
     try {
         storage?.removeItem(DCLOUD_ACCESS_STORAGE_KEY);
     } catch {
@@ -25,6 +25,10 @@ function clearDCloudAccess(storage = globalThis.localStorage) {
     } catch {
         // Session storage may also be unavailable.
     }
+}
+
+function clearDCloudAccess(storage = globalThis.localStorage) {
+    clearDCloudDetails(storage);
     try {
         globalThis.labWebexAccess?.clearToken();
     } catch {
@@ -144,7 +148,7 @@ function readDCloudAccess(
             !Number.isFinite(access.expiresAt) ||
             access.expiresAt <= now
         ) {
-            clearDCloudAccess(storage);
+            clearDCloudDetails(storage);
             return null;
         }
         return {
@@ -154,7 +158,7 @@ function readDCloudAccess(
             expiresAt: access.expiresAt
         };
     } catch {
-        clearDCloudAccess(storage);
+        clearDCloudDetails(storage);
         return null;
     }
 }
@@ -324,6 +328,7 @@ if (typeof module !== "undefined" && module.exports) {
         DCLOUD_ACCESS_DURATION_MS,
         SMART_AUDIO_DID_PATTERN,
         clearDCloudAccess,
+        clearDCloudDetails,
         getControlHubCredentials,
         normalizeSmartAudioDid,
         readDCloudAccess,

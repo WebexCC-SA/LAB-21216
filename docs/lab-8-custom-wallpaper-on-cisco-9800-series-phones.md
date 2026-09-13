@@ -20,23 +20,23 @@ For more information about wall paper/logo and resolution requirement visit the 
 3. On the Device page go to **Configurations** > **All configurations**
 4. On the Device configuration page search for key word **CustomWallpaper**. From the filtered list choose **User > Screen > CustomWallpaper > CustomWallpaperDownloadURL[1]**
 
-![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-082.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-082.png)
 
 5. On the Custom Wallpaper Download URL[1] page configure the following and click **Next**.
 
-<copy>**serv**=https://webexcc-sa.github.io/LAB-21216/lab-assets/;**image**=WX1_26_Wallpaper.png;**thumbnail**=WX1_26_Thumbnail.png;theme=dark;</copy>
+    <copy>**serv**=https://webexcc-sa.github.io/LAB-21216/lab-assets/;**image**=WX1_26_Wallpaper.png;**thumbnail**=WX1_26_Thumbnail.png;theme=dark;</copy>
 
-    1. serv = The URL address of where the wallpaper and thumbnail images are stored
-    2. image = custom wallpaper name
-    3. thumbnail = the custom wallpaper thumbnail
+    1. **serv** = The URL address of where the wallpaper and thumbnail images are stored
+    2. **image** = custom wallpaper name
+    3. **thumbnail** = the custom wallpaper thumbnail
 
-![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-083.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-083.png)
 
 6. On the next page click **Apply**. Click **Close**.
 7. Now go to the phone for which you have configured custom wall paper and navigate on the phone to **Settings** > **User preferences** > **Screen** > **Appearance** > **Custom wallpaper**, select the custom wallpaper and click **Apply**.
 
-![alt text](assets/image.png)
+    ![alt text](assets/image.png)
 
-![alt text](assets/image-1.png)
+    ![alt text](assets/image-1.png)
 
-**NOTE**: The custom wallpaper location and image provided above are for demonstration purpose only. If you have your own custom wallpaper feel free to use them.
+    **NOTE**: The custom wallpaper location and image provided above are for demonstration purpose only. If you have your own custom wallpaper feel free to use them.

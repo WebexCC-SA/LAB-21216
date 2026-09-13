@@ -9,7 +9,8 @@
         initialized: false,
         listSelectionAnchor: null,
         imageOffsetStep: 16,
-        maxImageOffset: 512
+        maxImageOffset: 512,
+        setupVersion: 0
     };
 
     function editorUrl(href) {
@@ -202,14 +203,31 @@
         if (!editorItem) {
             editorItem = labLink.closest("li").cloneNode(true);
             editorItem.dataset.labImageEditorTab = "true";
-            const editorLink = editorItem.querySelector("a.md-tabs__link");
-            const target = editorUrl(labLink.href);
-            if (!target) {
-                return;
-            }
-            editorLink.href = target.href;
-            editorLink.textContent = "Lab (edit)";
             labLink.closest("li").after(editorItem);
+        }
+        const editorLink = editorItem.querySelector("a.md-tabs__link");
+        const target = editorUrl(labLink.href);
+        if (!editorLink || !target) {
+            return;
+        }
+        editorLink.href = target.href;
+        editorLink.textContent = "Lab (edit)";
+        if (editorLink.dataset.editorNavigationInitialized !== "true") {
+            editorLink.dataset.editorNavigationInitialized = "true";
+            editorLink.addEventListener("click", (event) => {
+                const editing = new URLSearchParams(window.location.search)
+                    .get(EDIT_QUERY) === "1";
+                if (editing) {
+                    return;
+                }
+                const destination = editorUrl(labLink.href);
+                if (!destination) {
+                    return;
+                }
+                event.preventDefault();
+                event.stopPropagation();
+                window.location.assign(destination.href);
+            });
         }
 
         const editing = new URLSearchParams(window.location.search)
@@ -322,12 +340,29 @@
         }
     }
 
-    function enableImageResizing(page) {
+    async function waitForImageLayout(image) {
+        if (!image.complete) {
+            await new Promise((resolve) => {
+                image.addEventListener("load", resolve, { once: true });
+                image.addEventListener("error", resolve, { once: true });
+            });
+        }
+        if (typeof image.decode === "function") {
+            try {
+                await image.decode();
+            } catch {
+                // A failed image is ignored below instead of receiving a 24px frame.
+            }
+        }
+        await new Promise((resolve) => requestAnimationFrame(resolve));
+    }
+
+    function enableImageResizing(page, setupVersion) {
         addEditorStyles();
         showStatus("Drag an image from its lower-right corner to resize it.");
         const occurrences = new Map();
 
-        document.querySelectorAll("article.md-content__inner img").forEach((image) => {
+        document.querySelectorAll("article.md-content__inner img").forEach(async (image) => {
             if (image.closest(".lab-image-editor-frame")) {
                 return;
             }
@@ -338,7 +373,19 @@
             const occurrence = occurrences.get(source) || 0;
             occurrences.set(source, occurrence + 1);
 
+            await waitForImageLayout(image);
+            if (
+                setupVersion !== state.setupVersion ||
+                !image.isConnected ||
+                image.naturalWidth <= 0 ||
+                image.closest(".lab-image-editor-frame")
+            ) {
+                return;
+            }
             const imageRect = image.getBoundingClientRect();
+            if (imageRect.width <= 0 || imageRect.height <= 0) {
+                return;
+            }
             const target = image.closest("a.glightbox") || image;
             const frame = document.createElement("span");
             frame.className = "lab-image-editor-frame";
@@ -731,6 +778,8 @@
     }
 
     function setupCurrentPage() {
+        state.setupVersion += 1;
+        const setupVersion = state.setupVersion;
         addEditorTab();
         removeListEditorUi();
         const editing = new URLSearchParams(window.location.search)
@@ -743,7 +792,7 @@
             return;
         }
         preserveEditorNavigation();
-        enableImageResizing(page);
+        enableImageResizing(page, setupVersion);
         enableListEditing(page);
     }
 

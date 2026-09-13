@@ -9,6 +9,11 @@ const {
     readDCloudAccess,
     saveDCloudAccess
 } = require("../docs/template_assets/js/newLoad.js");
+const {
+    clearToken: clearWebexToken,
+    readStoredToken,
+    storeToken
+} = require("../docs/template_assets/js/webexAccess.js");
 
 class MemoryStorage {
     constructor() {
@@ -30,6 +35,21 @@ class MemoryStorage {
 
 const start = Date.UTC(2026, 8, 4, 12);
 const storage = new MemoryStorage();
+const tokenStorage = new MemoryStorage();
+const freshToken = "abcdefghijklmnopqrstuvwxyz0123456789";
+let tokenClearCount = 0;
+let deviceClearCount = 0;
+globalThis.labWebexAccess = {
+    clearToken() {
+        tokenClearCount += 1;
+        clearWebexToken(tokenStorage);
+    }
+};
+globalThis.labXapiPlayground = {
+    clearSelectedDevice() {
+        deviceClearCount += 1;
+    }
+};
 
 assert.equal(DCLOUD_ACCESS_DURATION_MS, 12 * 60 * 60 * 1000);
 assert.equal(
@@ -52,12 +72,26 @@ assert.deepEqual(getControlHubCredentials(storage, start + 1), {
     username: "cholland@cb122.dc-01.com",
     password: "dCloud8643!"
 });
+assert.equal(
+    storeToken(
+        freshToken,
+        tokenStorage,
+        start + DCLOUD_ACCESS_DURATION_MS - 1
+    ),
+    true
+);
 
 assert.equal(
     readDCloudAccess(storage, start + DCLOUD_ACCESS_DURATION_MS),
     null
 );
 assert.equal(storage.values.size, 0);
+assert.equal(tokenClearCount, 0);
+assert.equal(deviceClearCount, 0);
+assert.equal(
+    readStoredToken(tokenStorage, start + DCLOUD_ACCESS_DURATION_MS),
+    freshToken
+);
 
 assert.equal(
     saveDCloudAccess("example.com", "1168643", "9199912389", storage, start),
@@ -106,6 +140,11 @@ assert.deepEqual(getControlHubCredentials(blockedStorage, start + 1), {
 });
 clearDCloudAccess(blockedStorage);
 assert.equal(globalThis.sessionStorage.values.size, 0);
+assert.equal(tokenClearCount, 1);
+assert.equal(deviceClearCount, 1);
+assert.equal(tokenStorage.values.size, 0);
 delete globalThis.sessionStorage;
+delete globalThis.labWebexAccess;
+delete globalThis.labXapiPlayground;
 
 console.log("dCloud storage tests passed.");

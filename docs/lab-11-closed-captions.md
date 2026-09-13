@@ -23,4 +23,4 @@ When enabled, the closed captions will display just above the softkeys or soft b
    
     ![alt text](assets/image-6.png)
 
-   Up to 4 rows can be displayed in the closed captions on the phone screen.
+    Up to 4 rows can be displayed in the closed captions on the phone screen.

@@ -59,6 +59,11 @@ copy:hover::after, .copy:hover::after {
     padding: clamp(1rem, 3vw, 1.5rem);
 }
 
+.md-typeset .lab-access-nested {
+    /* Match Material list text: ol 0.625em + li 1.25em */
+    margin-inline-start: 1.875em;
+}
+
 .lab-access-card-header h3 {
     margin: 0.15rem 0 0.35rem;
 }

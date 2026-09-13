@@ -15,22 +15,18 @@ This lab uses your Cisco dCloud session details to populate the credentials you 
 1. Open your dCloud session and select the **Info** tab.
 2. In the fly-out panel, expand **DNS**. Copy the domain beginning with `cb` from one of the DNS names. For example, copy `cb122.dc-01.com` from `mail1.cb122.dc-01.com`.
 
-    <figure markdown>
-      ![The DNS section of the dCloud Info panel with the session domain highlighted](./assets/ch-access/docx-image-001.png){ width="700" }
-    </figure>
+    ![The DNS section of the dCloud Info panel with the session domain highlighted](./assets/ch-access/docx-image-001.png){ width="700" }
 
 3. In the same panel, expand **Session Information** and find your **Session Id**.
 
-    <figure markdown>
-      ![The Session Information section of the dCloud Info panel with the session ID highlighted](./assets/ch-access/docx-image-002.png){ width="700" }
-    </figure>
+    ![The Session Information section of the dCloud Info panel with the session ID highlighted](./assets/ch-access/docx-image-002.png){ width="700" }
 
 4. In the same fly-out panel, expand **Phone Numbers**. Find the entry whose **Description** is **Smart Audio** and note its **External (DID)** number.
-    ![alt text](image.png)
+    ![The Phone Numbers section showing the Smart Audio external DID](assets/ch-access/smart-audio-phone-numbers.png){ width="700" }
 
 5. Enter the dCloud domain, session ID, and Smart Audio DID below, then select **Update Lab Guide**. All three values will be available throughout the other lab sections.
 
-<section class="lab-access-card" aria-labelledby="dcloud-access-heading">
+<section class="lab-access-card lab-access-nested" aria-labelledby="dcloud-access-heading">
   <div class="lab-access-card-header">
     <span class="lab-access-step">Session details</span>
     <h3 id="dcloud-access-heading">Personalize your lab guide</h3>
@@ -94,6 +90,8 @@ This lab uses your Cisco dCloud session details to populate the credentials you 
   </form>
 </section>
 
+<div class="lab-access-nested" markdown>
+
 Your dCloud domain, session ID, and Smart Audio DID are stored in this browser
 for up to 12 hours, including across browser restarts. Clear the saved values
 when using a shared browser.
@@ -105,10 +103,12 @@ Your Control Hub credentials:
 
 The username is `cholland@` followed by your dCloud domain. The password is `dCloud`, followed by the last four digits of your session ID, followed by `!`.
 
+</div>
+
 6. Open the [Webex for Developers Getting Started page](https://developer.webex.com/messaging/docs/getting-started){ target="_blank" rel="noopener noreferrer" }. Select **Log in** at the top right and use the Control Hub credentials shown above.
 7. On the Getting Started page, copy your personal bearer token and enter it below. The DeviceFX workflow in Module 1d.1 can reuse it for up to 12 hours.
 
-<section id="webex-access-card" class="lab-access-card" aria-labelledby="webex-access-heading">
+<section id="webex-access-card" class="lab-access-card lab-access-nested" aria-labelledby="webex-access-heading">
   <div class="lab-access-card-header">
     <span class="lab-access-step">Webex API access</span>
     <h3 id="webex-access-heading">Bearer token</h3>
@@ -131,7 +131,11 @@ The username is `cholland@` followed by your dCloud domain. The password is `dCl
   <p id="webex-token-status" class="lab-access-status" role="status" aria-live="polite"></p>
 </section>
 
+<div class="lab-access-nested" markdown>
+
 The dCloud details, Smart Audio DID, derived Control Hub credentials, and
 sandbox bearer token remain available in this browser for up to 12 hours.
 Select **Clear saved values** before leaving a shared computer to remove all
 saved Lab Access values.
+
+</div>

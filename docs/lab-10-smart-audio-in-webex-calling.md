@@ -28,11 +28,11 @@ In this lab, experience the **Optimize for voice** in **incoming audio**.
 2. Scroll down to bottom and look under **Incoming Audio** and select **Original**. Click **Settings (Gear icon)** again to exit settings menu.
 3. Dial Smart Audio DID number <copy>**<w class="SmartAudioDid">Enter the Smart Audio DID in Overview > Lab Access</w>**</copy>, associated with internal directory number 6019. You will be connected to a pre-recorded message with background noise. Notice the background noise sounds like an airport or crowded place.
 
-NOTE: This session-specific DID is populated from the value saved under **Overview > Lab Access**.
+    NOTE: This session-specific DID is populated from the value saved under **Overview > Lab Access**.
 
-![A computer screen shot of a computer Description automatically generated](assets/docx-image-059.png)
+    ![A computer screen shot of a computer Description automatically generated](assets/docx-image-059.png)
 
 4. While still on the call, navigate back to **Go to Settings** (Gear icon) > **User preferences** > **Audio** > **Smart Audio**
 5. Scroll down to bottom and look under **Incoming Audio** and select **Optimize for voice**.
 
-Observe that the **background noise** is removed for **incoming audio** and you can hear better compared to the **Original** option.
+    Observe that the **background noise** is removed for **incoming audio** and you can hear better compared to the **Original** option.

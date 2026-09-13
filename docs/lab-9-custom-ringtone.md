@@ -11,33 +11,37 @@ Make sure your ringtone files meet these requirements:
 
 For more information about custom ringtone, visit this resource link: [Configure ringtones for 9800 Series and 8875 phones (Control Hub)](https://help.webex.com/en-us/article/z6rlebb/Configure-ringtones-for-9800-Series-and-8875-phones-(Control-Hub)). For this lab, follow the instructions below:
 
-1. On the browser tab where you have Webex CH logged in. Navigate to **MANAGEMENT > Devices** on the left. It will list the Cisco 98XX phone registered.
-2. Select **Cisco 98XX** from the list.
-3. On the Device page go to **Configurations** > **All configurations**
-4. On the Device configuration page search for key word <copy>**CustomRingtone**</copy>. From the filtered list choose **Phone > Ringtone > CustomRingtoneURL[1]**
+1. First hear the current ringtone set on the desk phone. Hit the volume + button on the left side of the phone keypad to hear current ringtone. You will hear the phone playing current ringtone.
+
+    ![alt text](assets/image-4.png)
+
+2. To install custom ringtone, on the browser tab where you have Webex CH logged in. Navigate to **MANAGEMENT > Devices** on the left. It will list the Cisco 98XX phone registered.
+3. Select **Cisco 98XX** from the list.
+4. On the Device page go to **Configurations** > **All configurations**
+5. On the Device configuration page search for key word <copy>**CustomRingtone**</copy>. From the filtered list choose **Phone > Ringtone > CustomRingtoneURL[1]**
 
     ![alt text](assets/image-13.png)
 
-5. On the Custom Ringtone URL[1] page configure the following and click **All** in the configuration navigation menu.
+6. On the Custom Ringtone URL[1] page configure the following and click **All** in the configuration navigation menu.
 
     <copy>**[https://webexcc-sa.github.io/LAB-21216/lab-assets/cisco_synth4.raw](https://webexcc-sa.github.io/LAB-21216/lab-assets/cisco_synth4.raw)**</copy>
 
     ![alt text](assets/image-15.png)
 
-6. From All configurations screen, navigate to **Lines > Line[1] > CallFeatureSettings**
+7. From All configurations screen, navigate to **Lines > Line[1] > CallFeatureSettings**
 
     ![alt text](assets/image-16.png)
 
-7. Set Ringtone to **Custom 1** and click **Next**.
+8. Set Ringtone to **Custom 1** and click **Next**.
 
     ![alt text](assets/image-17.png)
 
-8. On the next page click **Apply**. Click **Close**.
+9.  On the next page click **Apply**. Click **Close**.
 
-9. Give phone few seconds to apply the changes.
+10. Give phone few seconds to apply the changes.
 
-10. Now use your mobile phone to dial the DID number shown for Charles Holland on the top left corner of the phone screen.
+11. Hit the volume + button on the left side of the phone keypad. Alternatively, you can also use your mobile phone to dial the DID number shown for Charles Holland on the top left corner of the phone screen.
 
     ![alt text](assets/image-18.png)
 
-11. Observe that phone plays Cisco Synth jingle as a ringtone.
+12. Observe that phone plays Cisco Synth jingle as a ringtone.
