@@ -92,6 +92,41 @@ copy:hover::after, .copy:hover::after {
     grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
 }
 
+.lab-access-inline-entry {
+    background: var(--md-code-bg-color);
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 9px;
+    margin: 0.8rem 0 1rem;
+    max-width: 36rem;
+    padding: 0.9rem;
+}
+
+.lab-access-summary {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    margin: 0;
+}
+
+.lab-access-summary > div {
+    background: var(--md-default-bg-color);
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 8px;
+    padding: 0.8rem;
+}
+
+.lab-access-summary dt {
+    color: var(--md-default-fg-color--light);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.lab-access-summary dd {
+    font-weight: 700;
+    margin: 0.2rem 0 0;
+    overflow-wrap: anywhere;
+}
+
 .lab-access-field label {
     font-weight: 700;
 }

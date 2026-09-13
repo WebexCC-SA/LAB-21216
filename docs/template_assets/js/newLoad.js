@@ -184,6 +184,81 @@ function updateTextByClass(className, value) {
     });
 }
 
+function getDCloudInputs(form = document.querySelector("#info")) {
+    if (!form) {
+        return null;
+    }
+    const getInput = (name) =>
+        form.elements?.namedItem(name) ||
+        document.querySelector(`input[name="${name}"][form="${form.id}"]`);
+    const inputs = {
+        domain: getInput("dCloudDomain"),
+        sessionId: getInput("dCloudSessionId"),
+        smartAudioDid: getInput("smartAudioDid")
+    };
+    return Object.values(inputs).every(Boolean) ? inputs : null;
+}
+
+function updateDCloudSummary(inputs) {
+    const summaryValues = {
+        "dcloud-summary-session-id": inputs?.sessionId.value.trim(),
+        "dcloud-summary-domain": inputs?.domain.value.trim(),
+        "dcloud-summary-smart-audio-did": inputs?.smartAudioDid.value.trim()
+    };
+    Object.entries(summaryValues).forEach(([id, value]) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.textContent = value || "Not entered";
+        }
+    });
+}
+
+function updateDCloudAccessFromInputs(inputs) {
+    const domain = inputs.domain.value.trim().toLowerCase();
+    const sessionId = inputs.sessionId.value.trim();
+    const smartAudioDid = normalizeSmartAudioDid(inputs.smartAudioDid.value);
+
+    try {
+        globalThis.sessionStorage?.setItem("dCloudDomain", domain);
+        globalThis.sessionStorage?.setItem("dCloudSessionId", sessionId);
+        globalThis.sessionStorage?.setItem("smartAudioDid", smartAudioDid);
+    } catch {
+        // Values can still be used on the current page.
+    }
+
+    updateDCloudSummary(inputs);
+    if (
+        !DCLOUD_DOMAIN_PATTERN.test(domain) ||
+        !DCLOUD_SESSION_ID_PATTERN.test(sessionId) ||
+        !SMART_AUDIO_DID_PATTERN.test(smartAudioDid)
+    ) {
+        showDCloudFormError(
+            "Continue entering the session ID, domain, and Smart Audio DID."
+        );
+        return;
+    }
+
+    inputs.domain.value = domain;
+    inputs.smartAudioDid.value = smartAudioDid;
+    if (saveDCloudAccess(domain, sessionId, smartAudioDid)) {
+        showDCloudFormError(
+            "All three values are saved in this browser for 12 hours."
+        );
+    } else {
+        showDCloudFormError(
+            "Values applied, but this browser blocked 12-hour storage."
+        );
+    }
+    updateDCloudSummary(inputs);
+
+    const credentials = getControlHubCredentials();
+    if (credentials) {
+        updateTextByClass("ControlHubUsername", credentials.username);
+        updateTextByClass("ControlHubPassword", credentials.password);
+    }
+    updateTextByClass("SmartAudioDid", smartAudioDid);
+}
+
 function loadem() {
     Object.keys(sessionStorage).forEach((key) => {
         if (STORAGE_CLASS_PATTERN.test(key)) {
@@ -204,23 +279,46 @@ function loadem() {
 
     const form = document.querySelector("#info");
     if (form) {
-        form.querySelectorAll("input[name]").forEach((input) => {
-            if (input.name === "dCloudDomain" && access) {
-                input.value = access.domain;
-            } else if (input.name === "dCloudSessionId" && access) {
-                input.value = access.sessionId;
-            } else if (input.name === "smartAudioDid" && access) {
-                input.value = access.smartAudioDid;
-            } else if (!access) {
+        const inputs = getDCloudInputs(form);
+        if (inputs) {
+            const accessValues = access
+                ? {
+                      dCloudDomain: access.domain,
+                      dCloudSessionId: access.sessionId,
+                      smartAudioDid: access.smartAudioDid
+                  }
+                : {};
+            Object.values(inputs).forEach((input) => {
+                const draftValue = sessionStorage.getItem(input.name);
+                input.value =
+                    draftValue !== null
+                        ? draftValue
+                        : accessValues[input.name] || "";
+                if (input.dataset.dcloudCaptureInitialized !== "true") {
+                    input.dataset.dcloudCaptureInitialized = "true";
+                    input.addEventListener("input", () => {
+                        updateDCloudAccessFromInputs(inputs);
+                    });
+                }
+            });
+            updateDCloudSummary(inputs);
+        } else {
+            form.querySelectorAll("input[name]").forEach((input) => {
                 input.value = sessionStorage.getItem(input.name) || "";
-            }
-        });
+            });
+        }
         const clearButton = form.querySelector("#dcloud-clear-saved");
         if (clearButton && clearButton.dataset.initialized !== "true") {
             clearButton.dataset.initialized = "true";
             clearButton.addEventListener("click", () => {
                 clearDCloudAccess();
                 form.reset();
+                if (inputs) {
+                    Object.values(inputs).forEach((input) => {
+                        input.value = "";
+                    });
+                    updateDCloudSummary(inputs);
+                }
                 updateTextByClass(
                     "ControlHubUsername",
                     "Enter your dCloud details above"
@@ -257,11 +355,10 @@ function setValues(event) {
         return;
     }
 
-    const domainInput = form.querySelector('input[name="dCloudDomain"]');
-    const sessionIdInput = form.querySelector('input[name="dCloudSessionId"]');
-    const smartAudioDidInput = form.querySelector(
-        'input[name="smartAudioDid"]'
-    );
+    const dCloudInputs = getDCloudInputs(form);
+    const domainInput = dCloudInputs?.domain;
+    const sessionIdInput = dCloudInputs?.sessionId;
+    const smartAudioDidInput = dCloudInputs?.smartAudioDid;
 
     if (domainInput && sessionIdInput && smartAudioDidInput) {
         const domain = domainInput.value.trim().toLowerCase();

@@ -2,7 +2,13 @@
 
 ## Learning Objectives
 
-This lab will walk you through the setup, customization and management of the Cisco Desk Phone 9800 series when deployed with Webex Calling.
+The Desk Phone 9800 series is designed for the modern office and optimized for IT and facility’s needs.
+
+The Desk Phone 9800 series is uniquely positioned as the most cost-effective solution for workstations at scale. With expanded functionality, the 9800 Series combines secure enterprise calling, meetings, desk reservations, and emergency calls all in one device. 
+
+The Desk Phone 9800 series runs PhoneOS and now you can use one device for Cisco Unified Communications Manager (CUCM), Webex Calling, Broadworks, or other 3rd party cloud calling platforms without having to migrate to different type of firmware. It only requires a factory reset to switch the calling platform.
+
+This lab will walk you through the setup, customization and management of the Desk Phone 9800 series when deployed with Webex Calling.
 
 ## Disclaimer
 
@@ -13,48 +19,19 @@ Although the lab design and configuration examples could be used as a reference,
 This lab uses your Cisco dCloud session details to populate the credentials you will use to access Collaboration Control Hub. These credentials will be populated automatically in the lab instructions so it is important that you complete this step.
 
 1. Open your dCloud session and select the **Info** tab.
-2. In the fly-out panel, expand **DNS**. Copy the domain beginning with `cb` from one of the DNS names. For example, copy `cb122.dc-01.com` from `mail1.cb122.dc-01.com`.
 
-    ![The DNS section of the dCloud Info panel with the session domain highlighted](./assets/ch-access/docx-image-001.png){ width="700" }
+    ![alt text](assets/image-7.png)
 
-3. In the same panel, expand **Session Information** and find your **Session Id**.
+2. In the fly-out panel, expand **Session Information** and find your **Session Id**.
 
-    ![The Session Information section of the dCloud Info panel with the session ID highlighted](./assets/ch-access/docx-image-002.png){ width="700" }
-
-4. In the same fly-out panel, expand **Phone Numbers**. Find the entry whose **Description** is **Smart Audio** and note its **External (DID)** number.
-    ![The Phone Numbers section showing the Smart Audio external DID](assets/ch-access/smart-audio-phone-numbers.png){ width="700" }
-
-5. Enter the dCloud domain, session ID, and Smart Audio DID below, then select **Update Lab Guide**. All three values will be available throughout the other lab sections.
-
-<section class="lab-access-card lab-access-nested" aria-labelledby="dcloud-access-heading">
-  <div class="lab-access-card-header">
-    <span class="lab-access-step">Session details</span>
-    <h3 id="dcloud-access-heading">Personalize your lab guide</h3>
-    <p>Enter the three values from your dCloud session. They are used only to populate session-specific details in this guide.</p>
-  </div>
-
-  <form id="info" class="lab-access-form" onsubmit="setValues(event)">
-    <div class="lab-access-form-grid">
+    <div class="lab-access-inline-entry">
       <div class="lab-access-field">
-        <label for="dCloudDomain">dCloud domain</label>
-        <input
-          type="text"
-          id="dCloudDomain"
-          name="dCloudDomain"
-          placeholder="cb122.dc-01.com"
-          autocomplete="off"
-          maxlength="253"
-          required
-        >
-        <span class="lab-access-field-hint">Example: cb122.dc-01.com</span>
-      </div>
-
-      <div class="lab-access-field">
-        <label for="dCloudSessionId">dCloud session ID</label>
+        <label for="dCloudSessionId">Enter your dCloud session ID</label>
         <input
           type="text"
           id="dCloudSessionId"
           name="dCloudSessionId"
+          form="info"
           inputmode="numeric"
           pattern="[0-9]{4,20}"
           placeholder="1168643"
@@ -62,15 +39,44 @@ This lab uses your Cisco dCloud session details to populate the credentials you 
           autocomplete="off"
           required
         >
-        <span class="lab-access-field-hint">Use the numeric Session Id from dCloud.</span>
+        <span class="lab-access-field-hint">Use the numeric Session Id shown in dCloud.</span>
       </div>
+    </div>
 
+    ![The Session Information section of the dCloud Info panel with the session ID highlighted](./assets/ch-access/docx-image-002.png){ width="700" }
+
+
+3. In the same fly-out panel, expand **DNS**. Copy the domain beginning with `cb` from one of the DNS names. For example, copy `cb122.dc-01.com` from `mail1.cb122.dc-01.com`.
+
+    <div class="lab-access-inline-entry">
       <div class="lab-access-field">
-        <label for="smartAudioDid">Smart Audio external DID</label>
+        <label for="dCloudDomain">Enter your dCloud domain</label>
+        <input
+          type="text"
+          id="dCloudDomain"
+          name="dCloudDomain"
+          form="info"
+          placeholder="cb122.dc-01.com"
+          autocomplete="off"
+          maxlength="253"
+          required
+        >
+        <span class="lab-access-field-hint">Example: cb122.dc-01.com</span>
+      </div>
+    </div>
+
+    ![The DNS section of the dCloud Info panel with the session domain highlighted](./assets/ch-access/docx-image-001.png){ width="700" }
+
+4. In the same fly-out panel, expand **Phone Numbers**. Find the entry whose **Description** is **Smart Audio** and note its **External (DID)** number.
+
+    <div class="lab-access-inline-entry">
+      <div class="lab-access-field">
+        <label for="smartAudioDid">Enter the Smart Audio external DID</label>
         <input
           type="tel"
           id="smartAudioDid"
           name="smartAudioDid"
+          form="info"
           inputmode="tel"
           pattern="[+0-9() .-]{7,25}"
           placeholder="919-991-2389"
@@ -82,8 +88,34 @@ This lab uses your Cisco dCloud session details to populate the credentials you 
       </div>
     </div>
 
+    ![The Phone Numbers section showing the Smart Audio external DID](assets/ch-access/smart-audio-phone-numbers.png){ width="700" }
+
+5. Review the session details you entered above. To correct a value, return to its step and update the entry. The completed values will be available throughout the other lab sections.
+
+<section class="lab-access-card lab-access-nested" aria-labelledby="dcloud-access-heading">
+  <div class="lab-access-card-header">
+    <span class="lab-access-step">Session details</span>
+    <h3 id="dcloud-access-heading">Review your lab details</h3>
+    <p>Your entries are saved automatically after all three values are valid.</p>
+  </div>
+
+  <form id="info" class="lab-access-form" onsubmit="setValues(event)">
+    <dl class="lab-access-summary">
+      <div>
+        <dt>dCloud session ID</dt>
+        <dd id="dcloud-summary-session-id">Not entered</dd>
+      </div>
+      <div>
+        <dt>dCloud domain</dt>
+        <dd id="dcloud-summary-domain">Not entered</dd>
+      </div>
+      <div>
+        <dt>Smart Audio external DID</dt>
+        <dd id="dcloud-summary-smart-audio-did">Not entered</dd>
+      </div>
+    </dl>
+
     <div class="lab-access-actions">
-      <button type="submit" class="lab-access-button lab-access-button-primary">Update Lab Guide</button>
       <button type="button" id="dcloud-clear-saved" class="lab-access-button lab-access-button-secondary">Clear saved values</button>
     </div>
     <p id="dcloud-form-error" class="lab-access-status" role="status" aria-live="polite"></p>
@@ -106,7 +138,14 @@ The username is `cholland@` followed by your dCloud domain. The password is `dCl
 </div>
 
 6. Open the [Webex for Developers Getting Started page](https://developer.webex.com/messaging/docs/getting-started){ target="_blank" rel="noopener noreferrer" }. Select **Log in** at the top right and use the Control Hub credentials shown above.
-7. On the Getting Started page, copy your personal bearer token and enter it below. The DeviceFX workflow in Module 1d.1 can reuse it for up to 12 hours.
+
+    ![alt text](assets/image-14.png)
+
+7. After logging in, click on the profile picture of Charles Holland on the top right corner of the screen and copy the bearer token. Click OK on the Copy Token popup. 
+
+    ![alt text](assets/image-22.png)
+
+8. Enter your copied bearer token below. You can use it during various lab modules for up to 12 hours.
 
 <section id="webex-access-card" class="lab-access-card lab-access-nested" aria-labelledby="webex-access-heading">
   <div class="lab-access-card-header">
