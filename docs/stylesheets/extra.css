@@ -337,6 +337,17 @@ copy:hover::after, .copy:hover::after {
     margin: 0;
 }
 
+.devicefx-activation-details {
+    border-top: 1px solid var(--md-default-fg-color--lightest);
+    display: grid;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.devicefx-activation-details[hidden] {
+    display: none;
+}
+
 .devicefx-result-row {
     align-items: center;
     display: flex;

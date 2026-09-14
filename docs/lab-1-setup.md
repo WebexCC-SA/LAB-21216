@@ -29,7 +29,7 @@ Lets setup Webex location PSTN connection type and order PSTN DID numbers for us
 
 4. You will be taken to **Edit PSTN connection for dCloud** (Location) and under the connection type choose **Cisco Calling Plans** and click **Next**.
 
-    **NOTE:** *If you do not see the option Cisco Calling Plans, close the page and repeat steps 2 through*
+    **NOTE:** *If you do not see the option Cisco Calling Plans, close the page and repeat starting step 2.*
 
     ![A screenshot of a computer Description automatically generated](assets/docx-image-006.png)
 
@@ -92,9 +92,7 @@ numbers, extensions, and outbound calling access to both users.
 
     **![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-015.png)**
 
-6. Return to the user's **Calling** tab. Under **Cisco Calling Plan**, enable the option that allows the user to utilize the outbound calling plan, then save the change.
-7. Take note of the phone number assigned to **Charles Holland** in the note pad. You will need this number later to make calls.
-8. Go back to **MANAGEMENT** > **Users** again and on users page choose **Anita Perez** and repeat steps 2 through 7, assign the Webex Calling license and DID number, and enable the Cisco Calling Plan.
+6. Go back to **MANAGEMENT** > **Users** again and on users page choose **Anita Perez** and repeat steps 2 through 7, assign the Webex Calling license and DID number, and enable the Cisco Calling Plan.
 
 ### **Module 1d: Adding 98XX devices to users**
 
@@ -106,13 +104,15 @@ UnifiedFX developed an application, called **DeviceFX NFC App,** that can be use
 
 Use the workflow below to generate a Webex activation code and transfer it to a Cisco Desk Phone 9800 Series device with the **DeviceFX NFC App**.
 
-1. Install the DeviceFX NFC App from the Google Play Store or Apple App Store. For more information, visit [DeviceFX NFC](https://nfc.devicefx.com/){ target="_blank" rel="noopener noreferrer" }.
-2. Make sure you saved your bearer token under **Lab > Overview > Lab Access**.
-3. Click **Load calling users**, then select a calling user. **Charles Holland** is selected automatically when available.
-4. Select **Desk Phone 9871** or **Desk Phone 9861** depending on which phone model you have on your desk, then click **Generate activation code**.
+1. Verify that the desk phone is on activation code screen and it claims NFC is supported.
 
+    ![alt text](assets/image-32.png)
 
-<div id="devicefx-activation-app" class="devicefx-activation-card lab-access-nested">
+2. Install the DeviceFX NFC App from the Google Play Store or Apple App Store. For more information, visit [DeviceFX NFC](https://nfc.devicefx.com/){ target="_blank" rel="noopener noreferrer" }.
+
+3. If you saved your bearer token under **Lab > Overview > Lab Access**, it appears below. If not, navigate to <a href="../overview/#lab-access">Lab access setup</a>, follow the instructions there to save the bearer token, and then return here.
+
+<div class="devicefx-activation-card lab-access-nested">
   <p class="devicefx-help">Use the bearer token from <strong>Lab &gt; Overview &gt; Lab Access</strong>, or enter it here.</p>
 
   <div class="webex-inline-token lab-access-field" data-webex-token-entry>
@@ -124,6 +124,11 @@ Use the workflow below to generate a Webex activation code and transfer it to a 
     </div>
     <p class="lab-access-status" role="status" aria-live="polite" data-webex-token-status></p>
   </div>
+</div>
+
+4. With the bearer token saved, click **Load calling users**, select a calling user, and select **Desk Phone 9861**. **Charles Holland** is selected automatically when available. Click **Generate activation code**.
+
+<div id="devicefx-activation-app" class="devicefx-activation-card lab-access-nested">
 
   <button id="devicefx-load-users" type="button" class="devicefx-button devicefx-button-primary">Load calling users</button>
 
@@ -137,17 +142,30 @@ Use the workflow below to generate a Webex activation code and transfer it to a 
     <div class="devicefx-form-group">
       <label for="devicefx-model">Phone model</label>
       <select id="devicefx-model">
-        <option value="Cisco 9871" selected>Desk Phone 9871</option>
-        <option value="Cisco 9861">Desk Phone 9861</option>
+        <option value="Cisco 9871">Desk Phone 9871</option>
+        <option value="Cisco 9861" selected>Desk Phone 9861</option>
       </select>
     </div>
   </div>
 
   <button id="devicefx-generate-code" type="button" class="devicefx-button devicefx-button-primary" disabled>Generate activation code</button>
   <p id="devicefx-status" class="devicefx-status" role="status" aria-live="polite"></p>
+</div>
 
-  <section id="devicefx-result" class="devicefx-result" aria-labelledby="devicefx-result-heading" hidden>
-    <h4 id="devicefx-result-heading">DeviceFX activation</h4>
+5. Wait for confirmation that the DeviceFX QR code was generated.
+
+<section id="devicefx-result" class="devicefx-result devicefx-activation-card lab-access-nested" aria-labelledby="devicefx-result-heading" hidden>
+  <h4 id="devicefx-result-heading">DeviceFX QR code</h4>
+  <div id="devicefx-qr-code" class="devicefx-qr-code" role="img" aria-label="QR code for the DeviceFX onboarding URL"></div>
+  <p id="devicefx-expiry" class="devicefx-help"></p>
+  <button
+    id="devicefx-show-code"
+    type="button"
+    class="devicefx-button devicefx-button-secondary"
+    aria-expanded="false"
+    aria-controls="devicefx-activation-details"
+  >Show activation code</button>
+  <div id="devicefx-activation-details" class="devicefx-activation-details" hidden>
     <div class="devicefx-result-row">
       <div>
         <span class="devicefx-result-label">Activation code</span>
@@ -162,14 +180,31 @@ Use the workflow below to generate a Webex activation code and transfer it to a 
       </div>
       <button id="devicefx-copy-url" type="button" class="devicefx-button devicefx-button-secondary">Copy URL</button>
     </div>
-    <div id="devicefx-qr-code" class="devicefx-qr-code" role="img" aria-label="QR code for the DeviceFX onboarding URL"></div>
-    <p id="devicefx-expiry" class="devicefx-help"></p>
-  </section>
-</div>
+  </div>
+</section>
 
-5. Scan the displayed QR code with your mobile phone. The DeviceFX onboarding link opens the DeviceFX NFC App and supplies the activation code.
-6. Follow the instructions in the app. When prompted, tap and hold the mobile phone over the desk phone's NFC area until the transfer completes.
-7. Wait 2–3 minutes for the phone to register. In Webex Control Hub, navigate to **MANAGEMENT > Devices** and verify that the phone shows **Online**.
+6. Scan the displayed QR code with your mobile phone. The DeviceFX onboarding link opens the DeviceFX NFC App and supplies the activation code. Click on "Save" button.
+
+    Note: If you do not see the activation code displayed like in the screenshot below, exit the app and scan the QR code again.
+
+    ![alt text](assets/image-36.png){ width="326" height="1515" }
+
+7. Follow the instructions in the app. When prompted, tap and hold the mobile phone over the desk phone's NFC area until the activation code writing completes fully. Notice the app updates the status as it moves through various steps.
+
+    ![alt text](assets/image-43.png){ style="border: 1px solid var(--md-default-fg-color--lighter);" }    ![alt text](assets/image-44.png){ style="border: 1px solid var(--md-default-fg-color--lighter);" }    ![alt text](assets/image-45.png){ width="287" height="253" style="border: 1px solid var(--md-default-fg-color--lighter);" }
+
+8.  Desk phone will show the status as "Activating".
+
+    ![alt text](assets/image-33.png)
+
+9.  Wait 2–3 minutes for the phone to register. In Webex Control Hub, navigate to **MANAGEMENT > Devices** and verify that the phone shows **Online**.
+
+    ![alt text](assets/image-30.png)
+
+10. Click on the phone and you will get details about phone, like **MAC address**, **IP address**, **firmware** and **Software** channel etc.
+
+    ![alt text](assets/image-31.png)
+
 
 **NOTE:** The phone may upgrade its firmware and restart if a newer version is available from the Webex cloud.
 
@@ -178,33 +213,37 @@ Use the workflow below to generate a Webex activation code and transfer it to a 
 **NOTE:** Only continue these steps if you skipped adding 98XX phone via NFC app in Module 1d.1.
 
 1. Continue on the browser tab where you have Collaboration Control Hub logged in. Go back to **MANAGEMENT** > **Devices**. On the **Devices** page drop down **Add device** option and choose **Add device**.
-2. In the **Add device** page, select **Personal Usage** > **Next**
+2. In the **Add device** page, select **Add a device to a user** > **Next**
 
-    ![A screenshot of a device AI-generated content may be incorrect.](assets/docx-image-016.png)
+    ![alt text](assets/image-23.png)
 
 3. Next page of Add device workflow is to select the user. In the **User** text box, enter the name of the user **Charles Holland**. Note that, after you enter 3 characters of user, you will get drop down. Select the user **Charles Holland** and click on **Next.**
 
-    ![A screenshot of a computer Description automatically generated](assets/docx-image-017.png)
+    ![alt text](assets/image-24.png)
 
-4. Next page of Add device workflow is to select the device type. In this page, notice the options and select **Cisco Desk Phone (Cisco Desk Phone 9800 series)** on the top right corner**.**
+4. Next page of Add device workflow is to select the device type. In this page, notice the options and select **Cisco Desk Phone (Cisco Desk Phone 9800 series)**.
 
-    ![A screenshot of a device Description automatically generated](assets/docx-image-018.png)
+    ![alt text](assets/image-26.png)
 
-5. On the next page, drop down **Select device** option under **Select the device mode and activation method** and select your **Cisco 98XX** model**.** For the option **How would you like to setup this device?** select **By MAC Address** for this lab. Enter the MAC address for your **Cisco 98XX** device. Click **Save**. You can also choose **By Activation Code** that gives you an Activation Code to enter on device.
+5. On the next page, drop down **Select device** option under **Select the device mode and activation method** and select your **Cisco 98XX** model. For the option **How would you like to setup this device?** select **By Activation Code** for this lab. Click **Next**.
 
-    NOTE: If you choose the option **By Activation Code** do not close the pop-up window on which it displays Activation code, until you enter the code on phone or note it somewhere. If you close it before noting the code, you have to repeat all steps.
+    ![alt text](assets/image-27.png)
 
-    ![A screenshot of a device AI-generated content may be incorrect.](assets/docx-image-019.png)
+6. You will get an activation code to enter on the phone. Do NOT close this dialog yet.
 
-6. If you added the phone via MAC address, go to the Cisco 9800 phones for your pod and **restart** the phone. To do this on the phone go to **Settings (Gear icon) > Restart and reset > Restart -> Restart.** It takes around 2 to 3 minutes for the phones to restart. After restart process completes, the phone will register to Webex.
+    ![alt text](assets/image-29.png)
 
-7. In Webex Control Hub, navigate to **MANAGEMENT > Devices** and verify that the phone shows **Online**.
+7. Enter the activation code on the phone and click Activate. Once the phone gives "Successfully activated" confirmation, you can close the activation code screen by clicking "Close" button.
 
-    ![A screenshot of a computer Description automatically generated](assets/docx-image-021.png)
+8. It takes around 2 to 3 minutes for the phones to restart. After restart process completes, the phone will register to Webex.
 
-8. Click on one of the phones and you will get details about phone, like **MAC address**, **IP address**, **firmware** and **Software** channel etc.
+9.  In the Collaboration Control Hub, navigate to **MANAGEMENT > Devices** and verify that the phone shows **Online**.
 
-    ![A screenshot of a computer Description automatically generated](assets/docx-image-022.png)
+    ![alt text](assets/image-30.png)
+
+10. Click on the phone and you will get details about phone, like **MAC address**, **IP address**, **firmware** and **Software** channel etc.
+
+    ![alt text](assets/image-31.png)
 
 <!--
 9. Once you see both phones registered, place a test call between phones. Go to one of the Cisco 98XX phone (assigned to Anita or Charles), click the **Contacts** physical button. Type other user name **Anita (or Charles)** and you should see **Anita Perez (or Charles Holland)** displayed from the **Webex Directory**. Select **user** you searched for from the directory and press the softkey **Call** to place a call. Answer the call and verify that call gets connected.

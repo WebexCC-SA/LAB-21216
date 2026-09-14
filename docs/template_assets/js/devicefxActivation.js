@@ -16,8 +16,9 @@
     let localEditorToken = "";
 
     function getElements(app) {
+        const scope = app.ownerDocument;
         const byId = (id) => {
-            const element = app.querySelector(`#${id}`);
+            const element = scope.getElementById(id);
             if (!element) {
                 throw new Error(`DeviceFX form element is missing: ${id}`);
             }
@@ -31,6 +32,8 @@
             status: byId("devicefx-status"),
             result: byId("devicefx-result"),
             activationCode: byId("devicefx-activation-code"),
+            activationDetails: byId("devicefx-activation-details"),
+            showCode: byId("devicefx-show-code"),
             onboardingUrl: byId("devicefx-onboarding-url"),
             qrCode: byId("devicefx-qr-code"),
             expiry: byId("devicefx-expiry"),
@@ -55,6 +58,9 @@
         elements.onboardingUrl.removeAttribute("href");
         elements.qrCode.replaceChildren();
         elements.expiry.textContent = "";
+        elements.activationDetails.hidden = true;
+        elements.showCode.textContent = "Show activation code";
+        elements.showCode.setAttribute("aria-expanded", "false");
     }
 
     function resetPeople(elements) {
@@ -371,6 +377,8 @@
         }
         app.dataset.initialized = "true";
         let loadedToken = "";
+        let generatedCode = "";
+        let generatedOnboardingUrl = "";
 
         elements.loadUsers.addEventListener("click", async () => {
             const token = bearerToken();
@@ -384,6 +392,8 @@
             }
             resetPeople(elements);
             resetResult(elements);
+            generatedCode = "";
+            generatedOnboardingUrl = "";
             elements.loadUsers.disabled = true;
             setStatus(elements, "Loading calling users…");
             try {
@@ -431,6 +441,8 @@
             }
 
             resetResult(elements);
+            generatedCode = "";
+            generatedOnboardingUrl = "";
             elements.generate.disabled = true;
             setStatus(elements, "Generating the activation code…");
             try {
@@ -443,9 +455,8 @@
                 const code = formatActivationCode(data.code);
                 const url = buildOnboardingUrl(code);
 
-                elements.activationCode.textContent = code;
-                elements.onboardingUrl.href = url;
-                elements.onboardingUrl.textContent = url;
+                generatedCode = code;
+                generatedOnboardingUrl = url;
                 renderQrCode(elements.qrCode, url);
                 if (
                     typeof data.expiryTime === "string" &&
@@ -460,25 +471,48 @@
                 elements.result.hidden = false;
                 setStatus(
                     elements,
-                    "Activation code and DeviceFX QR code generated."
+                    "DeviceFX QR code generated."
                 );
             } catch (error) {
+                generatedCode = "";
+                generatedOnboardingUrl = "";
                 setStatus(elements, error.message, true);
             } finally {
                 elements.generate.disabled = false;
             }
         });
 
+        elements.showCode.addEventListener("click", () => {
+            const shouldShow = elements.activationDetails.hidden;
+            if (shouldShow && generatedCode && generatedOnboardingUrl) {
+                elements.activationCode.textContent = generatedCode;
+                elements.onboardingUrl.href = generatedOnboardingUrl;
+                elements.onboardingUrl.textContent = generatedOnboardingUrl;
+            } else {
+                elements.activationCode.textContent = "";
+                elements.onboardingUrl.textContent = "";
+                elements.onboardingUrl.removeAttribute("href");
+            }
+            elements.activationDetails.hidden = !shouldShow;
+            elements.showCode.textContent = shouldShow
+                ? "Hide activation code"
+                : "Show activation code";
+            elements.showCode.setAttribute(
+                "aria-expanded",
+                String(shouldShow)
+            );
+        });
+
         elements.copyCode.addEventListener("click", () => {
             copyText(
-                elements.activationCode.textContent,
+                generatedCode,
                 elements,
                 "Activation code"
             );
         });
         elements.copyUrl.addEventListener("click", () => {
             copyText(
-                elements.onboardingUrl.href,
+                generatedOnboardingUrl,
                 elements,
                 "DeviceFX URL"
             );
