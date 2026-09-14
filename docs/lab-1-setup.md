@@ -1,16 +1,16 @@
 # Lab 1: Setup
 
-9800 Series devices run PhoneOS. PhoneOS is a single operating system for both CUCM and Cloud deployed Phones. All you have to do is to Factory reset the device to migrate from one to another. This eliminates the need for migrating the firmware on the device and eases the process of switching the device from CUCM to Webex Calling or to any other SIP based calling platforms. This also helps in retaining the user experience across the platforms.
+The Desk Phone 9800 series run PhoneOS. PhoneOS is a single operating system for both CUCM and Cloud deployed Phones. All you have to do is to Factory reset the device to migrate from one to another. This eliminates the need for migrating the firmware on the device and eases the process of switching the device from CUCM to Webex Calling or to any other SIP based calling platforms. This also helps in retaining the user experience across the platforms.
 
 In this module we will walk you through initial setup including a desk phone onboarding.
 
-### **Module 1a: Logging into Webex Control Hub**
+### **Module 1a: Logging into Collaboration Control Hub**
 
 1. Click <a href="https://admin.webex.com" target="_blank">Collaboration Control Hub</a> link to open it in a new browser tab.
 2. Login using following credentials:
-    - Username / Email address: <copy><w class="ControlHubUsername">Go to Overview section and enter your dCloud session details to auto populate this field</w></copy>
-    - Password: <copy><w class="ControlHubPassword">Go to Overview section and enter your dCloud session details to auto populate this field</w></copy>
-3. For security reasons, **Webex Control Hub** signs out every 20 minutes (Idle timeout) by default. For this lab, let’s make the idle time out longer so the Control Hub does not sign you out often during this lab. Go to **MANAGEMENT > Organization Settings > Control Hub’s idle timeout.** Drop down the option for **Control Hub idle timeout** and select **12 hours** or **no timeout**. Click **Save**.
+    - Username / Email address: <copy><w class="ControlHubUsername"><a href="../overview/#lab-access">Go to Overview</a> section and enter your dCloud session details to auto populate this field</w></copy>
+    - Password: <copy><w class="ControlHubPassword"><a href="../overview/#lab-access">Go to Overview</a> section and enter your dCloud session details to auto populate this field</w></copy>
+3. For security reasons, **Collaboration Control Hub** signs out every 20 minutes (Idle timeout) by default. For this lab, let’s make the idle time out longer so the Control Hub does not sign you out often during this lab. Go to **MANAGEMENT > Organization Settings > Control Hub’s idle timeout.** Drop down the option for **Control Hub idle timeout** and select **12 hours** or **no timeout**. Click **Save**.
 
     ![A screenshot of a computer Description automatically generated](assets/docx-image-003.png)
 
@@ -18,8 +18,8 @@ In this module we will walk you through initial setup including a desk phone onb
 
 Lets setup Webex location PSTN connection type and order PSTN DID numbers for users/phones.
 
-1. Continuing on Workstation 1, on the browser tab where you have Webex CH logged in.
-2. Go to **SERVICES** > **PSTN & Routing**. Click + **Add Numbers**.
+1. Continuing in the browser tab where you are logged in to Collaboration Control Hub, go to **SERVICES** > **PSTN & Routing**.
+2. Click + **Add Numbers**.
 
     ![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-004.png)
 
@@ -40,7 +40,7 @@ Lets setup Webex location PSTN connection type and order PSTN DID numbers for us
     | ***Parameter*** | ***Value*** |
     | First Name | <copy>Charles</copy> |
     | Last Name | <copy>Holland</copy> |
-    | Email Address and Confirm Email Address | <copy><w class="ControlHubUsername">Go to Overview section and enter your dCloud session details to auto populate this field</w></copy> |
+    | Email Address and Confirm Email Address | <copy><w class="ControlHubUsername"><a href="../overview/#lab-access">Go to Overview</a> section and enter your dCloud session details to auto populate this field</w></copy> |
 
     **NOTE:** *Following is just an example. You need to use the email from the table above for the domain assigned to your session*.
 
@@ -78,7 +78,7 @@ Lets setup Webex location PSTN connection type and order PSTN DID numbers for us
 Use the following Control Hub steps to assign Webex Calling licenses, PSTN
 numbers, extensions, and outbound calling access to both users.
 
-1. Continuing on Workstation 1, on the browser tab where you have Webex CH logged in. Go to **MANAGEMENT** > **Users** and choose **Charles Holland** from the list**.**
+1. Continuing in the browser tab where you are logged in to Collaboration Control Hub, go to **MANAGEMENT** > **Users** and choose **Charles Holland** from the list**.**
 2. Scroll down on the summary page, click **Edit Licenses**
 
     **![A screenshot of a computer Description automatically generated](assets/docx-image-013.png)**

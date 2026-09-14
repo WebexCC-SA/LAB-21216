@@ -15,7 +15,7 @@ To get the best experience, keep the following tips in mind when choosing or des
 
 For more information about wall paper/logo and resolution requirement visit the following URL: <https://help.webex.com/en-us/article/nq1xuwo/Custom-wallpaper-and-logo-for-9800/8875-(Control-Hub)#reference-template_d08f9f2c-36a0-4ef6-b069-e3bccdadae7f>
 
-1. On the browser tab where you have Webex CH logged in. Navigate to **MANAGEMENT > Devices** on the left. It will list the Cisco 98XX phone registered.
+1. In the browser tab where you are logged in to Collaboration Control Hub, navigate to **MANAGEMENT > Devices** on the left. It will list the Cisco 98XX phone registered.
 2. Select **Cisco 98XX** from the list.
 3. On the Device page go to **Configurations** > **All configurations**
 4. On the Device configuration page search for key word **CustomWallpaper**. From the filtered list choose **User > Screen > CustomWallpaper > CustomWallpaperDownloadURL[1]**

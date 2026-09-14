@@ -26,7 +26,7 @@ In this lab, experience the **Optimize for voice** in **incoming audio**.
 1. On the Cisco 9861 phone navigate to **Go to Settings** (Gear icon) > **User preferences** > **Audio** > **Smart Audio**
     1. Here, observe the two sections – 1) **Microphone audio** and 2) **Incoming audio**.
 2. Scroll down to bottom and look under **Incoming Audio** and select **Original**. Click **Settings (Gear icon)** again to exit settings menu.
-3. Dial Smart Audio DID number <copy>**<w class="SmartAudioDid">Enter the Smart Audio DID in Overview > Lab Access</w>**</copy>, associated with internal directory number 6019. You will be connected to a pre-recorded message with background noise. Notice the background noise sounds like an airport or crowded place.
+3. Dial Smart Audio DID number <copy>**<w class="SmartAudioDid">Enter the Smart Audio DID in <a href="../overview/#lab-access">Overview &gt; Lab Access</a></w>**</copy>, associated with internal directory number 6019. You will be connected to a pre-recorded message with background noise. Notice the background noise sounds like an airport or crowded place.
 
     NOTE: This session-specific DID is populated from the value saved under **Overview > Lab Access**.
 

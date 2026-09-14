@@ -4,13 +4,13 @@ The Desk Phone 9800 Series is the first desk phone in the industry to have a red
 
 ### **Module 2a: Configuring the Action Button as an Emergency call**
 
-1. On the browser tab where you have Webex CH logged in. Navigate to **MANAGEMENT > Devices.** It will list the phone you registered above. Select the **Cisco 98XX** phone from the list. On the device Overview page, go to **Configuration** > **All configurations.**
+1. In the browser tab where you are logged in to Collaboration Control Hub, navigate to **MANAGEMENT > Devices.** It will list the phone you registered above. Select the **Cisco 98XX** phone from the list. On the device Overview page, go to **Configuration** > **All configurations.**
 
     ![A screenshot of a computer Description automatically generated](assets/docx-image-034.png)
 
 2. It will bring up **Device Configuration** page. Scroll down on the page, go to **Phone** > **Action Button.** On the Action Button configuration page, populate the following values and click **Next**.
     1. **Action Button Function** > **Cisco 98XX** > drop down the option and set **Emergency Call**
-    2. **Action Button Service Destination** > **Cisco 98XX >**  Enter the Smart Audio DID number <copy>**<w class="SmartAudioDid">Enter the Smart Audio DID in Overview > Lab Access</w>**</copy>.
+    2. **Action Button Service Destination** > **Cisco 98XX >**  Enter the Smart Audio DID number <copy>**<w class="SmartAudioDid">Enter the Smart Audio DID in <a href="../overview/#lab-access">Overview &gt; Lab Access</a></w>**</copy>.
     3. **Action Button Service Name > Cisco 98XX >** Enter any description (Like <copy>**Building Security**</copy>)
 
     ![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-035.png)
@@ -29,7 +29,7 @@ The Desk Phone 9800 Series is the first desk phone in the industry to have a red
 
 ### **Module 2b: Configuring the Action Button as a Silent Emergency call**
 
-1. Continuing on Workstation 1, on the browser tab where you have Webex CH logged in. Navigate to **MANAGEMENT > Devices.** It will list both the phones you registered above. Select a different **Cisco 98XX** phone than you configured above (8a)**.** On the device Overview page go to **Configuration** > **All configurations.**
+1. Continuing in the browser tab where you are logged in to Collaboration Control Hub, navigate to **MANAGEMENT > Devices.** It will list both the phones you registered above. Select a different **Cisco 98XX** phone than you configured above (8a)**.** On the device Overview page go to **Configuration** > **All configurations.**
 2. It will bring up **Device Configuration** page. Scroll down on the page, go to **Phone** > **Action Button.** On the Action Button configuration page, populate the following values and click **Next**.
     1. **Action Button Function** > **Cisco 98XX** > drop down and choose **Emergency Call**
     2. **Action Button Service Destination** > **Cisco 98XX >**  DID number assigned to **Anita Perez**.
@@ -62,7 +62,7 @@ The purpose of this feature is to, help the caller in intruder alerts. Though th
 
 When you place a **Silent Emergency Call**, there could be some instances where the remote party not available or reachable and the caller may need to retrieve the call or the phone will be not usable until the current Silent Emergency call is some how disconnected. We can configure a new parameter (Silent Emergency Call Retrieval) to retrieve the call in those instances.
 
-1. Continuing on Workstation 1, on the browser tab where you have Webex CH logged in. Navigate to **MANAGEMENT > Devices.** It will list both the phones you registered above. Select the same device you configured Silent Emergency Call in above module.On the device Overview page go to **Configuration** > **All configurations.**
+1. Continuing in the browser tab where you are logged in to Collaboration Control Hub, navigate to **MANAGEMENT > Devices.** It will list both the phones you registered above. Select the same device you configured Silent Emergency Call in above module.On the device Overview page go to **Configuration** > **All configurations.**
 2. It will bring up **Device Configuration** page. Scroll down on the page, go to **Phone** > **Action Button.** On the Action Button configuration page, populate the following values and click **Next**.
 3. **Allow Silent Emergency Call Retrieval >** drop down and choose **Yes**
 
@@ -129,7 +129,7 @@ Thus, you have options such as **Dial Out Delay** and **Service Trigger** config
 
 You can customize action button for a specific needs to fit into your requirement. Like sending to an URL to display some office evacuation route / directory / custom message etc.,
 
-1. On the browser tab where you have Webex CH logged in, navigate to **MANAGEMENT > Devices.** It will list the phone you registered above. Select your **Cisco 98XX** phone. On the device Overview page go to **Configuration** > **All configurations.**
+1. In the browser tab where you are logged in to Collaboration Control Hub, navigate to **MANAGEMENT > Devices.** It will list the phone you registered above. Select your **Cisco 98XX** phone. On the device Overview page go to **Configuration** > **All configurations.**
 2. It will bring up **Device Configuration** page. Scroll down on the page, go to **Phone** > **Action Button.** On the Action Button configuration page, populate the following values and click **Next**.
     1. **Action Button Function** > **Cisco 98XX** > drop down and choose **Custom**
     2. **Action Button Service Destination** > **Cisco 98XX >**  use the URL: **<copy><https://webexcc-sa.github.io/LAB-21216/lab-assets/cisco-phone-services/tornado.xml></copy>** (Tornado alert).
@@ -147,11 +147,11 @@ You can customize action button for a specific needs to fit into your requiremen
 
 You can trigger multiple events with single trigger as well. Like when you press action button you want to both: Call a phone number (like emergency services) as well services display the evacuation map on the phone.
 
-7. On the browser tab where you have Webex CH logged in, navigate to **MANAGEMENT > Devices.** It will list the phone you registered above. Select the **Cisco 98XX** phone you configured Custom service above**.** On the device Overview page go to **Configuration** > **All configurations.**
+7. In the browser tab where you are logged in to Collaboration Control Hub, navigate to **MANAGEMENT > Devices.** It will list the phone you registered above. Select the **Cisco 98XX** phone you configured Custom service above**.** On the device Overview page go to **Configuration** > **All configurations.**
 8. It will bring up **Device Configuration** page. Scroll down on the page, go to **Phone** > **Action Button.** On the Action Button configuration page, update the following value and click **Next**. In this example we are using Evacuation map.
     1. **Action Button Service Destination** > **Cisco 98XX >**
 
-    **<copy>tel:+1<w class="SmartAudioDid">Enter the Smart Audio DID in Overview > Lab Access</w> + https://webexcc-sa.github.io/LAB-21216/lab-assets/cisco-phone-services/tornado.xml</copy>**
+    **<copy>tel:+1<w class="SmartAudioDid">Enter the Smart Audio DID in <a href="../overview/#lab-access">Overview &gt; Lab Access</a></w> + https://webexcc-sa.github.io/LAB-21216/lab-assets/cisco-phone-services/tornado.xml</copy>**
 
     (We are using Smart Audio external DID number in this example.)
 
@@ -168,7 +168,7 @@ You can trigger multiple events with single trigger as well. Like when you press
 
 You can configure the Action button to connect to multiple services and assign each service with its own trigger. Like single press on action button places a call to a phone number & long press on action button displays evacuation map & three presses on action button would display corporate directory.
 
-1. Continuing on Workstation 1, on the browser tab where you have Webex CH logged in. Navigate to **MANAGEMENT > Devices.** It will list both the phones you registered above. Select one of the **Cisco 98XX** devices & clear out (set all parameters to **Factory**) all Action Button parameters first.
+1. Continuing in the browser tab where you are logged in to Collaboration Control Hub, navigate to **MANAGEMENT > Devices.** It will list both the phones you registered above. Select one of the **Cisco 98XX** devices & clear out (set all parameters to **Factory**) all Action Button parameters first.
 2. Then select the device again & on the device Overview page go to **Configuration** > **All configurations.**
 3. Drop down the option for **Service Trigger** and choose **MultiTrigger**.
 
@@ -180,7 +180,7 @@ You can configure the Action button to connect to multiple services and assign e
 
 5. On the **SinglePress** configuration page, update the following values.
     1.  **Action Button Function** > **Cisco 98XX** > drop down the option and set **Emergency Call**
-    2.  **Action Button Service Destination** > **Cisco 98XX >**  Enter the Smart Audio DID number <copy>**<w class="SmartAudioDid">Enter the Smart Audio DID in Overview > Lab Access</w>**</copy>.
+    2.  **Action Button Service Destination** > **Cisco 98XX >**  Enter the Smart Audio DID number <copy>**<w class="SmartAudioDid">Enter the Smart Audio DID in <a href="../overview/#lab-access">Overview &gt; Lab Access</a></w>**</copy>.
     3. **Action Button Service Name > Cisco 98XX >** Enter any description (Like <copy>**Building Security**</copy>)
 
         ![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-051.png)

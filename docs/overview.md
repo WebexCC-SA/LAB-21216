@@ -6,8 +6,6 @@ The Desk Phone 9800 series is designed for the modern office and optimized for I
 
 The Desk Phone 9800 series is uniquely positioned as the most cost-effective solution for workstations at scale. With expanded functionality, the 9800 Series combines secure enterprise calling, meetings, desk reservations, and emergency calls all in one device. 
 
-The Desk Phone 9800 series runs PhoneOS and now you can use one device for Cisco Unified Communications Manager (CUCM), Webex Calling, Broadworks, or other 3rd party cloud calling platforms without having to migrate to different type of firmware. It only requires a factory reset to switch the calling platform.
-
 This lab will walk you through the setup, customization and management of the Desk Phone 9800 series when deployed with Webex Calling.
 
 ## Disclaimer

@@ -6,7 +6,7 @@ As a participant in a phone call or a Webex meeting, you can choose to show or h
 
 When enabled, the closed captions will display just above the softkeys or soft buttons.
 
-1. On the Cisco 9861 phone, dial Smart Audio DID number <copy>**<w class="SmartAudioDid">Enter the Smart Audio DID in Overview > Lab Access</w>**</copy>, associated with internal directory number 6019. You will be connected to a pre-recorded message.
+1. On the Cisco 9861 phone, dial Smart Audio DID number <copy>**<w class="SmartAudioDid">Enter the Smart Audio DID in <a href="../overview/#lab-access">Overview &gt; Lab Access</a></w>**</copy>, associated with internal directory number 6019. You will be connected to a pre-recorded message.
 2. Click on the "Captions" softkey.
     
     ![alt text](assets/image-2.png)

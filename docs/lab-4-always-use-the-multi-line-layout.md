@@ -10,7 +10,7 @@ Before we configure this feature let's observe current lines layout on your Cisc
 
     ![A screenshot of a phone AI-generated content may be incorrect.](assets/docx-image-060.png){ width="698" height="458" }
 
-1. On the browser tab where you have Webex CH logged in. Navigate to **MANAGEMENT > Devices.** It will list the phone you registered. Select your **Cisco 9841 or 9851 or 9861** phone**.** On the device Overview page, go to **Configuration** > **All configurations.**
+1. In the browser tab where you are logged in to Collaboration Control Hub, navigate to **MANAGEMENT > Devices.** It will list the phone you registered. Select your **Cisco 9841 or 9851 or 9861** phone**.** On the device Overview page, go to **Configuration** > **All configurations.**
 2. It will bring up **Device Configurations** page. Search for key word **AlwaysUseMultilineMode.** Select **Phone** > **LineKeySettings** > **AlwaysUseMultilineMode** from the available options.
 3. Drop down the option for **Cisco 98XX** phone and choose **Enabled** for **Configuration value** and click **Next**.
 

@@ -6,7 +6,7 @@ The menu customization feature allows administrators to enhance usability by dis
 
 Now we will customize the Settings Menu to hide **Network Settings** and **Factory Reset** option.
 
-2. On the browser tab where you have Webex CH logged in. Navigate to **MANAGEMENT > Devices.** It will list the phone you registered above. Select your **Cisco 98XX** phone**.** On the device Overview page go to **Configuration** > **All configurations.**
+2. In the browser tab where you are logged in to Collaboration Control Hub, navigate to **MANAGEMENT > Devices.** It will list the phone you registered above. Select your **Cisco 98XX** phone**.** On the device Overview page go to **Configuration** > **All configurations.**
 3. It will bring up **Device Configuration** page. Scroll down and go to **Phone** > **MenuCustomization**.
 
     ![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-074.png)

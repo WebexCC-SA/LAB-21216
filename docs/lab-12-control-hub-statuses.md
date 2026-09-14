@@ -6,7 +6,7 @@ You can search, list, and show status values from a specific device directly on 
 
     ![alt text](assets/image-12.png)
 
-2. On the browser tab where you have Webex CH logged in. Navigate to **MANAGEMENT > Devices** on the left. It will list the Cisco 98XX phone registered.
+2. In the browser tab where you are logged in to Collaboration Control Hub, navigate to **MANAGEMENT > Devices** on the left. It will list the Cisco 98XX phone registered.
 
 3. Select **Cisco 98XX** from the list.
 
