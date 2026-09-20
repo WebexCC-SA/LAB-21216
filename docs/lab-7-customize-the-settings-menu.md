@@ -11,7 +11,7 @@ Now we will customize the Settings Menu to hide **Network Settings** and **Facto
 
     ![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-074.png)
 
-4. Under **MenuCustomization**, drop down option for any of the available options and choose to Hide it from **Phone Menu** options. In this example choose to hide options **FactoryReset** & **NetworkSettings**. Click **Next**.
+4. Under **MenuCustomization**, expand the drop down options for **FactoryReset** & **NetworkSettings** and choose **Hide** option. Click **Next**.
 
     ![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-075.png)
 

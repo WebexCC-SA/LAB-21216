@@ -16,8 +16,11 @@ For more information about custom ringtone, visit this resource link: [Configure
     ![alt text](assets/image-4.png)
 
 2. To install a custom ringtone, return to the browser tab where you are logged in to Collaboration Control Hub, then navigate to **MANAGEMENT > Devices** on the left. It will list the Cisco 98XX phone registered.
+
 3. Select **Cisco 98XX** from the list.
+
 4. On the Device page go to **Configurations** > **All configurations**
+
 5. On the Device configuration page search for key word <copy>**CustomRingtone**</copy>. From the filtered list choose **Phone > Ringtone > CustomRingtoneURL[1]**
 
     ![alt text](assets/image-13.png)

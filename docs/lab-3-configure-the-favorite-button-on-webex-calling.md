@@ -7,7 +7,7 @@ The Desk Phone 9800 Series has a new Favorite Button. The Favorite Button can be
 
     ![A screenshot of a computer Description automatically generated](assets/docx-image-055.png)
 
-3. Drop down **Custom Menu Name > Cisco 98XX** and change it to **Quick Dials.** Drop down the option for **Enable > Cisco 98XX** and choose **Yes**.
+3. Go to **Custom Menu Name > Cisco 98XX** and change it to <copy>**Quick Dials.**</copy> Expand the drop down options for **Enable > Cisco 98XX** and choose **Yes**.
 
 ![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-056.png)
 

@@ -6,12 +6,12 @@ By default, the phone displays the multi-line interface only when multiple lines
 
 Before we configure this feature let's observe current lines layout on your Cisco 9841/51/61 phone. It will have user name and phone number displayed on top left corner of the phone.
 
-1. Before enabling Always use the multi-line layout observe phone screen and notice that only extension number or phone number is listed on top left corner.
+1. Before enabling Always use the multi-line layout observe phone screen and notice that extension number or phone number is listed only on the top left corner.
 
     ![A screenshot of a phone AI-generated content may be incorrect.](assets/docx-image-060.png){ width="698" height="458" }
 
 1. In the browser tab where you are logged in to Collaboration Control Hub, navigate to **MANAGEMENT > Devices.** It will list the phone you registered. Select your **Cisco 9841 or 9851 or 9861** phone**.** On the device Overview page, go to **Configuration** > **All configurations.**
-2. It will bring up **Device Configurations** page. Search for key word **AlwaysUseMultilineMode.** Select **Phone** > **LineKeySettings** > **AlwaysUseMultilineMode** from the available options.
+2. It will bring up **Device Configurations** page. Search for key word <copy>**AlwaysUseMultilineMode**</copy>. Select **Phone** > **LineKeySettings** > **AlwaysUseMultilineMode** from the available options.
 3. Drop down the option for **Cisco 98XX** phone and choose **Enabled** for **Configuration value** and click **Next**.
 
     ![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-061.png)
@@ -21,4 +21,4 @@ Before we configure this feature let's observe current lines layout on your Cisc
 
     ![A screenshot of a phone AI-generated content may be incorrect.](assets/docx-image-062.png){ width="699" height="422" }
 
-7. If you configure additional line it will list them right below line 1.
+7. Observe that now you can go off hook by pressing the line key 1.

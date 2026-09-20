@@ -1,6 +1,6 @@
 # Lab 10: Smart Audio in Webex Calling
 
-Smart Audio features provides multiple ways to remove the noise from the phone microphone and from the remote caller’s side, providing the best experience for both the parties in the call.
+Smart Audio features provide multiple ways to remove the noise from the phone microphone and from the remote caller’s side, providing the best experience for both the parties in the call.
 
 For Cisco 98XX phones, in Smart Audio settings, you will have the options as follows:
 
@@ -25,14 +25,18 @@ In this lab, experience the **Optimize for voice** in **incoming audio**.
 
 1. On the Cisco 9861 phone navigate to **Go to Settings** (Gear icon) > **User preferences** > **Audio** > **Smart Audio**
     1. Here, observe the two sections – 1) **Microphone audio** and 2) **Incoming audio**.
-2. Scroll down to bottom and look under **Incoming Audio** and select **Original**. Click **Settings (Gear icon)** again to exit settings menu.
-3. Dial Smart Audio DID number <copy>**<w class="SmartAudioDid">Enter the Smart Audio DID in <a href="../overview/#lab-access">Overview &gt; Lab Access</a></w>**</copy>, associated with internal directory number 6019. You will be connected to a pre-recorded message with background noise. Notice the background noise sounds like an airport or crowded place.
+2. Scroll down and select **Incoming Audio** and then select **Original**. Click **Apply**.
+3. Click **Settings (Gear icon)** again to exit settings menu.
+4. Dial Smart Audio DID number <copy>**<w class="SmartAudioDid">Enter the Smart Audio DID in <a href="../overview/#lab-access">Overview &gt; Lab Access</a></w>**</copy>. You can use the speed dial that you created in earlier step.
+5. You will be connected to a pre-recorded message with background noise. Notice the background noise sounds like an airport or crowded place.
 
     NOTE: This session-specific DID is populated from the value saved under **Overview > Lab Access**.
 
     ![A computer screen shot of a computer Description automatically generated](assets/docx-image-059.png)
 
-4. While still on the call, navigate back to **Go to Settings** (Gear icon) > **User preferences** > **Audio** > **Smart Audio**
-5. Scroll down to bottom and look under **Incoming Audio** and select **Optimize for voice**.
+6. While still on the call, navigate back to **Settings** (Gear icon) > **User preferences** > **Audio** > **Smart Audio**
+7. Scroll down and select **Incoming Audio** and then select **Optimize for voice**. Click **Apply**.
 
     Observe that the **background noise** is removed for **incoming audio** and you can hear better compared to the **Original** option.
+
+8. Hang up the call.

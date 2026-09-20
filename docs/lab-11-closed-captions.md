@@ -1,12 +1,12 @@
 # Lab 11: Closed Captions
 
-You can turn on and view closed captions real-time transcription on Cisco 98XX phone (9861 and 9871) during phone calls and Webex meetings.
+You can turn on and view real-time transcription on Cisco 98XX phone (9861 and 9871) during phone calls and Webex meetings.
 
 As a participant in a phone call or a Webex meeting, you can choose to show or hide the real-time translation and transcription on the phone screen by simply pressing the softkey Captions or tapping the soft button Closed captions ![Closed captions soft button](assets/docx-image-067.png) (depending on your phone model).
 
 When enabled, the closed captions will display just above the softkeys or soft buttons.
 
-1. On the Cisco 9861 phone, dial Smart Audio DID number <copy>**<w class="SmartAudioDid">Enter the Smart Audio DID in <a href="../overview/#lab-access">Overview &gt; Lab Access</a></w>**</copy>, associated with internal directory number 6019. You will be connected to a pre-recorded message.
+1. On the Cisco 9861 phone, dial Smart Audio DID number <copy>**<w class="SmartAudioDid">Enter the Smart Audio DID in <a href="../overview/#lab-access">Overview &gt; Lab Access</a></w>**</copy>. You can also use a speed dial that you created in previous steps. You will be connected to a pre-recorded message.
 2. Click on the "Captions" softkey.
     
     ![alt text](assets/image-2.png)
@@ -24,3 +24,5 @@ When enabled, the closed captions will display just above the softkeys or soft b
     ![alt text](assets/image-6.png)
 
     Up to 4 rows can be displayed in the closed captions on the phone screen.
+
+6. End the call.

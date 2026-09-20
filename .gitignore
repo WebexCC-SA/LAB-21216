@@ -404,6 +404,7 @@ site/
 # Local image editor backups
 /_image_size_editor_backups/
 /_cisco_phone_assets_backups/
+/docs/assets/*.backup.png
 
 # Local source documents and generated archives
 /Archive/

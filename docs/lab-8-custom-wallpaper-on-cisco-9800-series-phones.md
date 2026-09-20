@@ -18,7 +18,7 @@ For more information about wall paper/logo and resolution requirement visit the 
 1. In the browser tab where you are logged in to Collaboration Control Hub, navigate to **MANAGEMENT > Devices** on the left. It will list the Cisco 98XX phone registered.
 2. Select **Cisco 98XX** from the list.
 3. On the Device page go to **Configurations** > **All configurations**
-4. On the Device configuration page search for key word **CustomWallpaper**. From the filtered list choose **User > Screen > CustomWallpaper > CustomWallpaperDownloadURL[1]**
+4. On the Device configuration page search for key word <copy>**CustomWallpaper**</copy>. From the filtered list choose **User > Screen > CustomWallpaper > CustomWallpaperDownloadURL[1]**
 
     ![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-082.png)
 
@@ -35,7 +35,10 @@ For more information about wall paper/logo and resolution requirement visit the 
 6. On the next page click **Apply**. Click **Close**.
 7. Now go to the phone for which you have configured custom wall paper and navigate on the phone to **Settings** > **User preferences** > **Screen** > **Appearance** > **Custom wallpaper**, select the custom wallpaper and click **Apply**.
 
+
     ![alt text](assets/image.png)
+
+8. Exit from the settings menu to go to the home screen. Observe the newly setup wallpaper.
 
     ![alt text](assets/image-1.png)
 

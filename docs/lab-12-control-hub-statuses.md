@@ -19,3 +19,7 @@ You can search, list, and show status values from a specific device directly on 
     ![alt text](assets/image-20.png)
 
 6. Notice various call statistics related to the active call.
+
+7. Explore other statuses. Once done, close the **Statuses** screen.
+
+8. Hang up the call on the phone.

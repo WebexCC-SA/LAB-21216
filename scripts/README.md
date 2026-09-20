@@ -83,6 +83,18 @@ pip install -r requirements_dev.txt
 The converter's direct dependencies are pinned in `scripts/requirements.txt`
 for reproducibility.
 
+## Speed-dial screenshot
+
+Update `docs/assets/image-54.png` so its Smart Audio number matches the number
+used in the earlier Lab 5 screenshots:
+
+```bash
+venv/bin/python scripts/update_speed_dial_screenshot.py
+```
+
+The script is idempotent and creates
+`docs/assets/image-54.backup.png` before the first update.
+
 ## Lab filename numbering
 
 Synchronize the Lab 5–12 Markdown filename prefixes with the numbers shown in

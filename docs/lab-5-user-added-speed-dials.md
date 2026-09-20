@@ -8,11 +8,11 @@ End user can add speed dials using Webex User hub and those show up on their des
     - Username / Email address: <copy><w class="ControlHubUsername"><a href="../overview/#lab-access">Go to Overview</a> section and enter your dCloud session details to auto populate this field</w></copy>
     - Password: <copy><w class="ControlHubPassword"><a href="../overview/#lab-access">Go to Overview</a> section and enter your dCloud session details to auto populate this field</w></copy>
 
-3. Navigate to **Settings** -> **Call settings** -> **Calling** -> **Add speed dial**.
+3. Navigate to **Settings** -> **Calling** -> **Call settings** -> **Add speed dial**.
 
     ![alt text](assets/image-8.png)
 
-4. Select custom contacts option. Enter <copy>**Smart Audio**</copy> for the line key label and <copy>**<w class="SmartAudioDid">Enter the Smart Audio DID in <a href="../overview/#lab-access">Overview &gt; Lab Access</a></w>**</copy> (Smart Audio DID number) for the phone number.
+4. Select custom contacts option. Enter <copy>**Smart Audio**</copy> for the line key label and <copy>**<w class="SmartAudioDid">Enter the Smart Audio DID in <a href="../overview/#lab-access">Overview &gt; Lab Access</a></w>**</copy> (Smart Audio DID number) for the phone number. Click **Save**.
 
     ![alt text](assets/image-9.png)
 
@@ -31,3 +31,9 @@ End user can add speed dials using Webex User hub and those show up on their des
 9.  Phone may do a soft restart. Wait for a minute for it to reflect the changes and you will see the newly added speed dial assigned to a line key.
 
     ![alt text](assets/image-12.png)
+
+10. Feel free to dial the newly added speed dial by pressing the line key.
+
+11. Press the down navigation key. Notice the same speed dial is also available in the list.
+
+    ![The Smart Audio speed dial in the phone list](assets/image-54.png)
