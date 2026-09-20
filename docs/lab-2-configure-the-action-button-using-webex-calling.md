@@ -88,7 +88,7 @@ If you want to try out Dial Out Delay:
 
 - Go back to browser tab where you have Webex Control Hub opened.
 - Go to **MANAGEMENT** > **Devices**. Select the **Cisco 98XX** phone from the list.
-- Go to **All Configurations** > **Action Button** > **Dial Out Delay**. Use the slider bar (0 through 30) to change the value to desired value.
+- Go to **All Configurations** > **Phone** > **Action Button** > **Dial Out Delay**. Use the slider bar (0 through 30) to change the value to desired value.
 
     ![A screenshot of a computer Description automatically generated](assets/docx-image-043.png)
 
@@ -114,7 +114,7 @@ If you want to try out a different service trigger:
 
 - Go back to browser tab where you have Webex Control Hub opened.
 - Go to **MANAGEMENT** > **Devices**. Select the **Cisco 98XX** phone from the list.
-- Go to **All Configurations** > **Action Button** > **Service Trigger**.
+- Go to **All Configurations** > **Phone** > **Action Button** > **Service Trigger**.
 - Drop down option for Cisco 98XX phone and choose desired option (either **Long Press** or **Press 3 times**) .
 
     ![A screenshot of a computer Description automatically generated](assets/docx-image-044.png)
@@ -133,9 +133,12 @@ You can customize action button for a specific needs to fit into your requiremen
 2. It will bring up **Device Configuration** page. Scroll down on the page, go to **Phone** > **Action Button.** On the Action Button configuration page, populate the following values and click **Next**.
     1. **Action Button Function** > **Cisco 98XX** > drop down and choose **Custom**
     2. **Action Button Service Destination** > **Cisco 98XX >**  use the URL: **<copy><https://webexcc-sa.github.io/LAB-21216/lab-assets/cisco-phone-services/tornado.xml></copy>** (Tornado alert).
-    3. **Action Button Service Name** > anything descriptive (like Evacuation map)
+    3. **Action Button Service Name** > Enter **<copy>Evacuation map</copy>**
+    4. Set the **Dial Out Delay** and **Service Trigger** configurations back to their default value by clicking on the Factory Default switch.
 
-    ![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-045.png)
+        ![alt text](assets/image-48.png)
+
+        ![alt text](assets/image-46.png)
 
 3. On the next page, it will list the changes that we are going make to the device. Click **Apply.** Click **Close**, on the next page.
 4. Once the configuration is applied observe that on Cisco 98XX phone, **Action button guide** pops up in blue. Press **Got it**. This pop up will appear only once after any configuration changes to the Action button.
@@ -145,7 +148,7 @@ You can customize action button for a specific needs to fit into your requiremen
 
 6. Once verified, click **Back** softkey on the phone to go back to phone Home screen.
 
-You can trigger multiple events with single trigger as well. Like when you press action button you want to both: Call a phone number (like emergency services) as well services display the evacuation map on the phone.
+You can trigger multiple events with single trigger as well. Like when you press action button you want to both: Call a phone number (like emergency services) and also display the evacuation map on the phone.
 
 7. In the browser tab where you are logged in to Collaboration Control Hub, navigate to **MANAGEMENT > Devices.** It will list the phone you registered above. Select the **Cisco 98XX** phone you configured Custom service above**.** On the device Overview page go to **Configuration** > **All configurations.**
 8. It will bring up **Device Configuration** page. Scroll down on the page, go to **Phone** > **Action Button.** On the Action Button configuration page, update the following value and click **Next**. In this example we are using Evacuation map.
@@ -155,9 +158,9 @@ You can trigger multiple events with single trigger as well. Like when you press
 
     (We are using Smart Audio external DID number in this example.)
 
-    ![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-047.png)
+    ![alt text](assets/image-49.png)
 
-    NOTE: Make sure you follow he format of **tel:+XXXXXXXXXX + URL** when you create your own destination (including the country code).
+    NOTE: Make sure you follow the format of **tel:+XXXXXXXXXX + URL** when you create your own destination (including the country code).
 
 9.  On the next page, it will list the changes that we are going make to the device. Click **Apply.** Click **Close**, on the next page.
 10. Click the **Action Button** (the red button on top of the device) on Cisco 98XX, and observe that there is pop up in red “**Sending** <**Service Name> and calling <The number you have configured> in 5 seconds**”. That 5 seconds will count down to 1 and the call will be placed. Answer the call on your other Cisco 98XX phone. Make sure the call gets connected. Also observe that on caller phone it displays Evacuation map. Hang up the call after few seconds & click Back soft key on phone to go to phone Home screen.
@@ -168,46 +171,55 @@ You can trigger multiple events with single trigger as well. Like when you press
 
 You can configure the Action button to connect to multiple services and assign each service with its own trigger. Like single press on action button places a call to a phone number & long press on action button displays evacuation map & three presses on action button would display corporate directory.
 
-1. Continuing in the browser tab where you are logged in to Collaboration Control Hub, navigate to **MANAGEMENT > Devices.** It will list both the phones you registered above. Select one of the **Cisco 98XX** devices & clear out (set all parameters to **Factory**) all Action Button parameters first.
-2. Then select the device again & on the device Overview page go to **Configuration** > **All configurations.**
-3. Drop down the option for **Service Trigger** and choose **MultiTrigger**.
+1. Continuing in the browser tab where you are logged in to Collaboration Control Hub, navigate to **MANAGEMENT > Devices.** It will list the phone you registered above. Select the **Cisco 98XX** device and on the device Overview page go to **Configuration** > **All configurations.**
+2. Scroll down on the page, go to **Phone** > **Action Button.** Clear out (set all parameters to **Factory**) all Action Button parameters and click **Next**.
+
+    ![alt text](assets/image-50.png)
+
+3. On the next page, it will list the changes that we are going make to the device. Click **Apply.** Click **Close**, on the next page.
+4. On the device Overview page go back to **Configuration** > **All configurations.**
+5. It will bring up **Device Configuration** page. Scroll down on the page, go back into **Phone** > **Action Button.**
+6. Scroll down to see the option for **Service Trigger** and choose **MultiTrigger** from the dropdown.
 
     ![](assets/docx-image-049.png)
 
-4. It will bring up **Device Configuration** page. Scroll down on the page, go to **Phone** > **Action Button > ServiceTriggerMultiTrigger > SinglePress.**
+7. Scroll down on the page, go to **Phone** > **Action Button > ServiceTriggerMultiTrigger > SinglePress.**
 
     ![A white background with black lines AI-generated content may be incorrect.](assets/docx-image-050.png)
 
-5. On the **SinglePress** configuration page, update the following values.
+8. On the **SinglePress** configuration page, update the following values.
     1.  **Action Button Function** > **Cisco 98XX** > drop down the option and set **Emergency Call**
     2.  **Action Button Service Destination** > **Cisco 98XX >**  Enter the Smart Audio DID number <copy>**<w class="SmartAudioDid">Enter the Smart Audio DID in <a href="../overview/#lab-access">Overview &gt; Lab Access</a></w>**</copy>.
-    3. **Action Button Service Name > Cisco 98XX >** Enter any description (Like <copy>**Building Security**</copy>)
+    3. **Action Button Service Name > Cisco 98XX >** Enter <copy>**Building Security**</copy> or any other name of your choice.
 
-        ![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-051.png)
+        ![alt text](assets/image-51.png)
 
-6. Scroll up on the page and select **ActionButton** (hyperlink) to configure the rest of the triggers.
-7. It will bring up **Device Configuration** page. Scroll down on the page, go to **Phone** > **Action Button > ServiceTriggerMultiTrigger > PressThreeTimes.**
+9. Scroll up on the page and select **ActionButton** (hyperlink) to configure the rest of the triggers.
+10. It will bring up **Device Configuration** page. Scroll down on the page, go to **Phone** > **Action Button > ServiceTriggerMultiTrigger > PressThreeTimes.**
 
-    ![A screenshot of a phone AI-generated content may be incorrect.](assets/docx-image-052.png)
+    ![alt text](assets/image-52.png)
 
-8. On the **PressThreeTimes** configuration page, update the following values and click **Next**.
+11. On the **PressThreeTimes** configuration page, update the following values.
     1.  **Action Button Function** > **Cisco 98XX** > drop down the option and set **Custom**
     2.  **Action Button Service Destination** > **Cisco 98XX >**  Enter below URL <copy><https://webexcc-sa.github.io/LAB-21216/lab-assets/cisco-phone-services/menu.xml></copy>
-    3.  **Action Button Service Name > Cisco 98XX >** Enter any description (Like Corporate Directory)
+    3.  **Action Button Service Name > Cisco 98XX >** Enter <copy>**Corporate Directory**</copy>
 
         ![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-053.png)
 
-9. Scroll up on the page and select **ActionButton** (hyperlink) to configure the rest of the triggers.
-10. It will bring up **Device Configuration** page. Scroll down on the page, go to **Phone** > **Action Button > ServiceTriggerMultiTrigger > LongPress.**
-11. On the **PressThreeTimes** configuration page, update the following values and click **Next**.
+12. Scroll up on the page and select **ActionButton** (hyperlink) to configure the rest of the triggers.
+13. It will bring up **Device Configuration** page. Scroll down on the page, go to **Phone** > **Action Button > ServiceTriggerMultiTrigger > LongPress.**
+
+    ![alt text](assets/image-53.png)
+
+14. On the **LongPress** configuration page, update the following values and click **Next**.
     1.  **Action Button Function** > **Cisco 98XX** > drop down the option and set **Custom**
-    2.  **Action Button Service Destination** > **Cisco 98XX >**  Enter below URL <copy><https://webexcc-sa.github.io/LAB-21216/lab-assets/cisco-phone-services/tornado.xml></copy>
-    3.  **Action Button Service Name > Cisco 98XX >** Enter any description (Like Evacuation Map)
+    2.  **Action Button Service Destination** > **Cisco 98XX >**  Enter below URL <copy>**<https://webexcc-sa.github.io/LAB-21216/lab-assets/cisco-phone-services/tornado.xml>**</copy>
+    3.  **Action Button Service Name > Cisco 98XX >** Enter <copy>**Evacuation Map**</copy>
 
         ![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-054.png)
 
-12. On the next page, it will list the changes that we are going make to the device. Click **Apply.** Click **Close**, on the next page. It will take you to Device phone on Control Hub.
-13. Now go to the phone and press
+15. On the next page, it will list the changes that we are going make to the device. Click **Apply.** Click **Close**, on the next page. It will take you to Device phone on Collaboration Control Hub.
+16. Now go to the phone and press
     1.  **Single Press** > It should place call to the number you configured. Make sure call gets connected, then hangup the call after few seconds.
     2.  **Press Three Times** > It should display the Corporate Directory you configured.
     3.  **Long Press** > It should display the Evacuation Map.
