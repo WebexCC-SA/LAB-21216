@@ -16,6 +16,8 @@ In this module we will walk you through initial setup including a desk phone onb
 
 ### **Module 1b: Setup Webex Calling Location and PSTN Numbers**
 
+**Note:** If you are following this lab guide as part of a live proctored lab at Webex One 2026, you should skip this step and directly <a href="../lab-1-setup/#module-1d-adding-98xx-devices-to-users">go to Module 1.d - Adding 98XX devices to users</a>. This has been pre-setup for you so you can save some time and carry out more lab activities. Following information is included as reference only.
+
 Lets setup Webex location PSTN connection type and order PSTN DID numbers for users/phones.
 
 1. Continuing in the browser tab where you are logged in to Collaboration Control Hub, go to **SERVICES** > **PSTN & Routing**.
@@ -74,6 +76,8 @@ Lets setup Webex location PSTN connection type and order PSTN DID numbers for us
     ![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-012.png)
 
 ### **Module 1c: Assigning Webex Calling Licenses and PSTN Numbers to users in Webex Calling**
+
+**Note:** If you are following this lab guide as part of a live proctored lab at Webex One 2026, you should skip this step and directly <a href="../lab-1-setup/#module-1d-adding-98xx-devices-to-users">go to Module 1.d - Adding 98XX devices to users</a>. This has been pre-setup for you so you can save some time and carry out more lab activities. Following information is included as reference only.
 
 Use the following Control Hub steps to assign Webex Calling licenses, PSTN
 numbers, extensions, and outbound calling access to both users.
