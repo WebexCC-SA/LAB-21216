@@ -1,8 +1,8 @@
-# Lab 14: ThousandEyes
+# Bonus Lab 1: ThousandEyes
 
 With ThousandEyes, you can get deeper visibility into your networks and see hop by hop network path for the calls on the desk phone. ThousandEyes endpoint agent is supported on Cisco Desk Phone 9861, 9871 and Video Phone 8875.
 
-### **Module 14a: Accessing ThousandEyes Portal**
+### **Module 1a: Accessing ThousandEyes Portal**
 
 1. In the browser tab where you have dCloud Session View open, initiate a **Web Remote Desktop (Web RDP)** session to **User Workstation 1**.
       1. Click on **topology** icon.
@@ -38,7 +38,7 @@ With ThousandEyes, you can get deeper visibility into your networks and see hop 
     ![alt text](assets/image-68.png)
 
 
-### **Module 14b: Enabling ThousandEyes in Collaboration Control Hub**
+### **Module 1b: Enabling ThousandEyes in Collaboration Control Hub**
 
 1. Continuing in the ThousandEyes portal, navigate to **Endpoint Experience** -> **Agent Settings**.
 
@@ -67,7 +67,7 @@ With ThousandEyes, you can get deeper visibility into your networks and see hop 
     ![alt text](assets/image-80.png)
 
 
-### **Module 14c: Setting up the tests on ThousandEyes portal**
+### **Module 1c: Setting up the tests on ThousandEyes portal**
 
 1. Continuing in the browser tab where you are logged in to Collaboration Control Hub, navigate to **Services** -> **Meetings** -> **Sites** and click on the **Site Name** listed there.
     ![alt text](assets/image-69.png)
@@ -109,7 +109,7 @@ With ThousandEyes, you can get deeper visibility into your networks and see hop 
 
     ![alt text](assets/image-85.png)
 
-### **Module 14d: Setting up API access to ThousandEyes in Collaboration Control Hub**
+### **Module 1d: Setting up API access to ThousandEyes in Collaboration Control Hub**
 
 1. Continuing in the ThousandEyes portal, click on the arrow next to the user / account information shown in the top right corner.
 
@@ -140,7 +140,7 @@ With ThousandEyes, you can get deeper visibility into your networks and see hop 
     ![alt text](assets/image-92.png)
 
 
-### **Module 14e: Test call and validation**
+### **Module 1e: Test call and validation**
 
 1. Dial Smart Audio DID number <copy>**<w class="SmartAudioDid">Enter the Smart Audio DID in <a href="../overview#lab-access">Overview &gt; Lab Access</a></w>**</copy>. You can use the speed dial that you created in earlier step.
 2. Keep the call on for a couple of minutes. Hang up the call after that.

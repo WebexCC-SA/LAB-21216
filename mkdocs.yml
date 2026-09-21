@@ -109,8 +109,10 @@ nav:
       - Lab 11 - Closed captions: lab-11-closed-captions.md
       - Lab 12 - Device statuses on Control Hub: lab-12-control-hub-statuses.md
       - Lab 13 - Cisco AI Assistant: lab-13-cisco-ai-assistant.md
-      - Lab 14 - ThousandEyes: lab-14-thousandeyes.md
       - Learn more: learn-more.md
+  - Bonus Lab:
+      - Bonus Lab 1 - ThousandEyes: bonus-lab-1-thousandeyes.md
+      - Bonus Lab 2 - Action button multiple service triggers: bonus-lab-2-action-button-multiple-service-triggers.md
   - Utilities: utilities.md
   #- Topologies: topologies.md
   #- How to use this guide:

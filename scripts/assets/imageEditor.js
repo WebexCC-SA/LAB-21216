@@ -198,13 +198,17 @@
         if (!labLink) {
             return;
         }
+        const bonusLabLink = [...tabList.querySelectorAll("a.md-tabs__link")]
+            .find((link) => link.textContent.trim() === "Bonus Lab");
+        const insertionItem =
+            bonusLabLink?.closest("li") || labLink.closest("li");
 
         let editorItem = existingEditor;
         if (!editorItem) {
             editorItem = labLink.closest("li").cloneNode(true);
             editorItem.dataset.labImageEditorTab = "true";
-            labLink.closest("li").after(editorItem);
         }
+        insertionItem.after(editorItem);
         const editorLink = editorItem.querySelector("a.md-tabs__link");
         const target = editorUrl(labLink.href);
         if (!editorLink || !target) {
@@ -235,6 +239,9 @@
         editorItem.classList.toggle("md-tabs__item--active", editing);
         if (editing) {
             labLink.closest("li").classList.remove("md-tabs__item--active");
+            bonusLabLink
+                ?.closest("li")
+                ?.classList.remove("md-tabs__item--active");
         }
     }
 

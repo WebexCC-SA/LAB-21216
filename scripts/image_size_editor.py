@@ -61,7 +61,9 @@ MARGIN_LEFT_VALUE_RE = re.compile(
     r"(?:^|;)\s*margin-left\s*:\s*(?P<offset>\d+)px\s*;?",
     re.IGNORECASE,
 )
-LAB_NAV_RE = re.compile(r"^(?P<indent>\s*)-\s+Lab:\s*(?:#.*)?$")
+EDITABLE_NAV_RE = re.compile(
+    r"^(?P<indent>\s*)-\s+(?:Lab|Bonus Lab):\s*(?:#.*)?$"
+)
 NAV_ITEM_RE = re.compile(r"^\s*-\s+[^:]+:\s*(?P<page>[^\s#]+\.md)\s*(?:#.*)?$")
 HEADING_RE = re.compile(r"^#{1,6}\s+")
 ORDERED_LIST_RE = re.compile(
@@ -101,26 +103,30 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def load_lab_pages(config_path: Path) -> List[str]:
+def load_editable_pages(config_path: Path) -> List[str]:
     pages: List[str] = []
-    lab_indent: Optional[int] = None
+    section_indent: Optional[int] = None
     for line in config_path.read_text(encoding="utf-8").splitlines():
-        if lab_indent is None:
-            match = LAB_NAV_RE.match(line)
-            if match:
-                lab_indent = len(match.group("indent"))
+        section_match = EDITABLE_NAV_RE.match(line)
+        if section_match:
+            section_indent = len(section_match.group("indent"))
             continue
 
+        if section_indent is None:
+            continue
         stripped = line.lstrip()
         indentation = len(line) - len(stripped)
-        if stripped.startswith("- ") and indentation <= lab_indent:
-            break
+        if stripped.startswith("- ") and indentation <= section_indent:
+            section_indent = None
+            continue
         page_match = NAV_ITEM_RE.match(line)
         if page_match:
             pages.append(page_match.group("page"))
 
     if not pages:
-        raise ValueError('No pages were found under the "Lab" navigation entry.')
+        raise ValueError(
+            'No pages were found under the "Lab" or "Bonus Lab" navigation entries.'
+        )
     return pages
 
 
@@ -336,7 +342,9 @@ class LabMarkdownUpdater:
         height: int,
     ) -> Dict[str, object]:
         if page not in self.allowed_pages:
-            raise ValueError("The requested page is not in the Lab navigation.")
+            raise ValueError(
+                "The requested page is not in the editable lab navigation."
+            )
         if occurrence < 0:
             raise ValueError("Image occurrence must be zero or greater.")
         if not (
@@ -391,7 +399,9 @@ class LabMarkdownUpdater:
         self, page: str, source: str, occurrence: int, direction: str
     ) -> Dict[str, object]:
         if page not in self.allowed_pages:
-            raise ValueError("The requested page is not in the Lab navigation.")
+            raise ValueError(
+                "The requested page is not in the editable lab navigation."
+            )
         if occurrence < 0:
             raise ValueError("Image occurrence must be zero or greater.")
         if direction not in {"right", "left"}:
@@ -461,7 +471,9 @@ class LabMarkdownUpdater:
         self, page: str, selected_indices: List[int], direction: str
     ) -> Dict[str, object]:
         if page not in self.allowed_pages:
-            raise ValueError("The requested page is not in the Lab navigation.")
+            raise ValueError(
+                "The requested page is not in the editable lab navigation."
+            )
         if direction not in {"right", "left"}:
             raise ValueError("List direction must be either right or left.")
         if (
@@ -902,7 +914,7 @@ def build_handler(
 
 def main() -> None:
     args = parse_args()
-    pages = load_lab_pages(MKDOCS_CONFIG)
+    pages = load_editable_pages(MKDOCS_CONFIG)
     token = secrets.token_urlsafe(32)
     updater = LabMarkdownUpdater(pages)
     handler = build_handler(pages, token, updater)
