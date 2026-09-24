@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<CiscoIPPhoneMenu>
+  <Title>Retail Example</Title>
+  <Prompt>Lunch Menu</Prompt>
+  <MenuItem>
+    <Name>Soup of the day = 6.50 [7 left]</Name>
+  </MenuItem>
+  <MenuItem>
+    <Name>Smoked Mackrel Pate = 7.50 [10 left]</Name>
+  </MenuItem>
+  <MenuItem>
+    <Name>Garlic Mushrooms = 7.00 [21 left]</Name>
+  </MenuItem>
+  <MenuItem>
+    <Name>B.L.T. = 9.50 [15 left]</Name>
+  </MenuItem>
+  <MenuItem>
+    <Name>Sausage = 9.50 [12 left]</Name>
+  </MenuItem>
+  <MenuItem>
+    <Name>Smashed Avocado = 9.50 [27 left] </Name>
+  </MenuItem>
+  <MenuItem>
+    <Name>Fish Finger = 9.50 [45 left]</Name>
+  </MenuItem>
+  <MenuItem>
+    <Name>Update</Name>
+    <URL>Softkey:Update</URL>
+  </MenuItem>
+</CiscoIPPhoneMenu>

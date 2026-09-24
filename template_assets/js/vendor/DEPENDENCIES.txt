@@ -1,0 +1,10 @@
+qrcode-generator 2.0.4
+Source: https://github.com/kazuhikoarase/qrcode-generator/releases/tag/js2.0.4
+License: MIT (qrcode-generator-LICENSE.txt)
+qrcode-generator-2.0.4.js SHA-256:
+79ec86f82856005b1c887905cfccfcfbec3821ca61c7fd5a952faa5f778f791c
+qrcode-generator-LICENSE.txt SHA-256:
+3a850fa5f08101db6f40676c2786e10bd2cd5fff7b12ffdf1e0c434d4e49d90c
+
+The library is served locally so activation codes and DeviceFX URLs are not
+sent to an external QR-generation service.
