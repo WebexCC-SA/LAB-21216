@@ -23,5 +23,8 @@ You can use Cisco AI assistant available in the Collaboration control hub to sea
     ![alt text](assets/image-59.png)
 
 6. Find out more about **Workspaces** connector capabilities by asking <copy>**What all can you do?**</copy>. Please note that at the time of drafting this lab, it can not make any changes. It can only read, compare, and summarize. The exact response you get may differ from the example given below.
-
     ![alt text](assets/image-61.png)
+
+7. Close the Cisco AI Assistant side panel once done.
+
+    

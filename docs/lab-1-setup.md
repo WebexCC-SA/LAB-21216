@@ -193,7 +193,7 @@ Use the workflow below to generate a Webex activation code and transfer it to a 
 
     ![alt text](assets/image-36.png){ width="326" height="1515" }
 
-7. Follow the instructions in the app. When prompted, tap and hold the mobile phone over the desk phone's NFC area (right side of the navigation keys) until the activation code writing completes fully. Notice the app updates the status as it moves through various steps.
+7. Follow the instructions in the app. When prompted, tap and hold the mobile phone over the desk phone's NFC area (right side of the navigation keys ![alt text](assets/image-103.png){ width="32" height="34" }) until the activation code writing completes fully. Notice the app updates the status as it moves through various steps.
 
     ![alt text](assets/image-43.png){ style="border: 1px solid var(--md-default-fg-color--lighter);" }    ![alt text](assets/image-44.png){ style="border: 1px solid var(--md-default-fg-color--lighter);" }    ![alt text](assets/image-45.png){ width="287" height="253" style="border: 1px solid var(--md-default-fg-color--lighter);" }
 

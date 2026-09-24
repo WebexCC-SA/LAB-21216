@@ -4,22 +4,23 @@ The menu customization feature allows administrators to enhance usability by dis
 
 1. Before we customize the Setting Menu on phone, go to the phone and navigate to **Settings** > **Network and service** and verify that you **DO** see **Network Settings**. Then navigate to **Settings** > **Restart and reset** and verify you **DO** see **Factory Reset** option.
 
-Now we will customize the Settings Menu to hide **Network Settings** and **Factory Reset** option.
+    Now we will customize the Settings Menu to hide **Network Settings** and **Factory Reset** option.
 
-2. In the browser tab where you are logged in to Collaboration Control Hub, navigate to **MANAGEMENT > Devices.** It will list the phone you registered above. Select your **Cisco 98XX** phone**.** On the device Overview page go to **Configuration** > **All configurations.**
-3. It will bring up **Device Configuration** page. Scroll down and go to **Phone** > **MenuCustomization**.
+2. Continuing in the browser tab where you are logged in to Collaboration Control Hub, verify you are on the device overview page. If not, navigate to **MANAGEMENT > Devices.** It will list the phone you registered above. Select your **Cisco 98XX** phone. 
+3. On the device Overview page go to **Configuration** > **All configurations.**
+4. It will bring up **Device Configuration** page. Scroll down and go to **Phone** > **MenuCustomization**.
 
     ![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-074.png)
 
-4. Under **MenuCustomization**, expand the drop down options for **FactoryReset** & **NetworkSettings** and choose **Hide** option. Click **Next**.
+5. Under **MenuCustomization**, expand the drop down options for **FactoryReset** & **NetworkSettings** and choose **Hide** option. Click **Next**.
 
     ![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-075.png)
 
-5. On the next page it will list the parameters we selected to update. Click **Apply**. Click **Close**.
+6. On the next page it will list the parameters we selected to update. Click **Apply**. Click **Close**.
 
     ![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-076.png)
 
-1. Now, go to the phone and navigate to **Settings** > **Network and service** and verify that you **DO NOT** see **Network Settings**. Then navigate to **Settings** > **Restart and reset** and verify you do not see **Factory Reset** option.
+7. Now, go to the phone and navigate to **Settings** > **Network and service** and verify that you **DO NOT** see **Network Settings**. Then navigate to **Settings** > **Restart and reset** and verify you do not see **Factory Reset** option.
 
     ![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-077.png){ width="523" height="357" } ![A screen shot of a computer AI-generated content may be incorrect.](assets/docx-image-078.png){ width="523" height="313" }
 

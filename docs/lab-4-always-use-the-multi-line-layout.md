@@ -1,6 +1,6 @@
 # Lab 4: Always use the multi-line layout
 
-This feature is only available on Cisco Desk Phone **9841**, **9851**, and **9861**. It ensures a consistent user experience by forcing the phone to always display the multi-line layout.
+This feature is only available on Cisco Desk Phone **9841**, **9851**, and **9861**. It ensures a consistent user experience with legacy phones by forcing the phone to always display the multi-line layout.
 
 By default, the phone displays the multi-line interface only when multiple lines or other line key features are configured. When Always Use Multi-line Mode is enabled, the phone uses the multi-line layout even if only a single line is configured.
 
@@ -10,9 +10,10 @@ Before we configure this feature let's observe current lines layout on your Cisc
 
     ![A screenshot of a phone AI-generated content may be incorrect.](assets/docx-image-060.png){ width="698" height="458" }
 
-1. In the browser tab where you are logged in to Collaboration Control Hub, navigate to **MANAGEMENT > Devices.** It will list the phone you registered. Select your **Cisco 9841 or 9851 or 9861** phone**.** On the device Overview page, go to **Configuration** > **All configurations.**
-2. It will bring up **Device Configurations** page. Search for key word <copy>**AlwaysUseMultilineMode**</copy>. Select **Phone** > **LineKeySettings** > **AlwaysUseMultilineMode** from the available options.
-3. Drop down the option for **Cisco 98XX** phone and choose **Enabled** for **Configuration value** and click **Next**.
+1. Continuing in the browser tab where you are logged in to Collaboration Control Hub, verify you are on the device overview page. If not, navigate to **MANAGEMENT > Devices.** It will list the phone you registered above. Select your **Cisco 98XX** phone.  
+2. On the device Overview page, go to **Configuration** > **All configurations.**
+3. It will bring up **Device Configurations** page. Search for key word <copy>**AlwaysUseMultilineMode**</copy>. Select **Phone** > **LineKeySettings** > **AlwaysUseMultilineMode** from the available options.
+4. Drop down the option for **Cisco 98XX** phone and choose **Enabled** for **Configuration value** and click **Next**.
 
     ![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-061.png)
 

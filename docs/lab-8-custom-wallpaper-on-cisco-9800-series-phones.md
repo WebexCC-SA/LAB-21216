@@ -15,14 +15,13 @@ To get the best experience, keep the following tips in mind when choosing or des
 
 For more information about wall paper/logo and resolution requirement visit the following URL: <https://help.webex.com/en-us/article/nq1xuwo/Custom-wallpaper-and-logo-for-9800/8875-(Control-Hub)#reference-template_d08f9f2c-36a0-4ef6-b069-e3bccdadae7f>
 
-1. In the browser tab where you are logged in to Collaboration Control Hub, navigate to **MANAGEMENT > Devices** on the left. It will list the Cisco 98XX phone registered.
-2. Select **Cisco 98XX** from the list.
-3. On the Device page go to **Configurations** > **All configurations**
-4. On the Device configuration page search for key word <copy>**CustomWallpaper**</copy>. From the filtered list choose **User > Screen > CustomWallpaper > CustomWallpaperDownloadURL[1]**
+1. Continuing in the browser tab where you are logged in to Collaboration Control Hub, verify you are on the device overview page. If not, navigate to **MANAGEMENT > Devices.** It will list the phone you registered above. Select your **Cisco 98XX** phone. 
+2. On the Device page go to **Configurations** > **All configurations**
+3. On the Device configuration page search for key word <copy>**CustomWallpaper**</copy>. From the filtered list choose **User > Screen > CustomWallpaper > CustomWallpaperDownloadURL[1]**
 
     ![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-082.png)
 
-5. On the Custom Wallpaper Download URL[1] page configure the following and click **Next**.
+4. On the Custom Wallpaper Download URL[1] page configure the following and click **Next**.
 
     <copy>**serv**=https://webexcc-sa.github.io/LAB-21216/lab-assets/;**image**=WX1_26_Wallpaper.png;**thumbnail**=WX1_26_Thumbnail.png;theme=dark;</copy>
 
@@ -32,8 +31,8 @@ For more information about wall paper/logo and resolution requirement visit the 
 
     ![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-083.png)
 
-6. On the next page click **Apply**. Click **Close**.
-7. Now go to the phone for which you have configured custom wall paper and navigate on the phone to **Settings** > **User preferences** > **Screen** > **Appearance** > **Custom wallpaper**, select the custom wallpaper and click **Apply**.
+5. On the next page click **Apply**. Click **Close**.
+6. Now go to the phone for which you have configured custom wall paper and navigate on the phone to **Settings** > **User preferences** > **Screen** > **Appearance** > **Custom wallpaper**, select the custom wallpaper and click **Apply**.
 
 
     ![alt text](assets/image.png)

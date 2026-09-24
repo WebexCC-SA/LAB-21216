@@ -65,7 +65,7 @@ This lab uses your Cisco dCloud session details to populate the credentials you 
 
     ![The DNS section of the dCloud Info panel with the session domain highlighted](./assets/ch-access/docx-image-001.png){ width="700" }
 
-4. In the same fly-out panel, expand **Phone Numbers**. Find the entry whose **Description** is **Smart Audio** and note its **External (DID)** number.
+4. In the same fly-out panel, expand **Phone Numbers**. Find the entry whose **Description** is **Smart Audio** and copy its **External (DID)** number to enter below.
 
     <div class="lab-access-inline-entry">
       <div class="lab-access-field">

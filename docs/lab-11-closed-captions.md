@@ -25,4 +25,6 @@ When enabled, the closed captions will display just above the softkeys or soft b
 
     Up to 4 rows can be displayed in the closed captions on the phone screen.
 
-6. End the call.
+6. Turn off the captions when done.
+
+7. End the call.

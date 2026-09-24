@@ -50,7 +50,8 @@ You can configure the Action button to connect to multiple services and assign e
         ![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-054.png)
 
 15. On the next page, it will list the changes that we are going make to the device. Click **Apply.** Click **Close**, on the next page. It will take you to Device phone on Collaboration Control Hub.
-16. Now go to the phone and press
+16. Once the configuration is applied, observe that on Cisco 98XX phone, **Action button guide** pops up in blue. Press **Got it**.
+17. Now go to the phone and press
     1.  **Single Press** > It should place call to the number you configured. Make sure call gets connected, then hangup the call after few seconds.
     2.  **Press Three Times** > It should display the Corporate Directory you configured.
     3.  **Long Press** > It should display the Evacuation Map.

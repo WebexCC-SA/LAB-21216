@@ -6,20 +6,18 @@ You can search, list, and show status values from a specific device directly on 
 
     ![alt text](assets/image-12.png)
 
-2. In the browser tab where you are logged in to Collaboration Control Hub, navigate to **MANAGEMENT > Devices** on the left. It will list the Cisco 98XX phone registered.
+2. Continuing in the browser tab where you are logged in to Collaboration Control Hub, verify you are on the device overview page. If not, navigate to **MANAGEMENT > Devices.** It will list the phone you registered above. Select your **Cisco 98XX** phone.  
 
-3. Select **Cisco 98XX** from the list.
-
-4. On the Device page, scroll all the way down to see the **Statuses Overview** panel. Click on **View all statuses**.
+3. On the Device page, scroll all the way down to see the **Statuses Overview** panel. Click on **View all statuses**.
 
     ![alt text](assets/image-19.png)
 
-5. Scroll down in the left panel listing various statuses and select Line.
+4. Scroll down in the left panel listing various statuses and select Line.
 
     ![alt text](assets/image-20.png)
 
-6. Notice various call statistics related to the active call.
+5. Notice various call statistics related to the active call.
 
-7. Explore other statuses. Once done, close the **Statuses** screen.
+6. Explore other statuses. Once done, close the **Statuses** screen.
 
-8. Hang up the call on the phone.
+7. Hang up the call on the phone.

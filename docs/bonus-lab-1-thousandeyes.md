@@ -48,21 +48,25 @@ With ThousandEyes, you can get deeper visibility into your networks and see hop 
 
     ![alt text](assets/image-76.png)
 
-3. Copy the **Connection String**. You will use this in a later step.
+3. Close the **Get started with Endpoint Experience** window if shown.
+   
+    ![alt text](assets/image-72.png)
+
+4.  Copy the **Connection String**. You will use this in a later step.
 
     ![alt text](assets/image-77.png)
 
-4. Switch back to the browser tab where you are logged into the Collaboration Control Hub.
+5. Switch back to the browser tab where you are logged into the Collaboration Control Hub.
    
-5. Navigate to **Management** -> **Devices** -> **Settings** -> **Settings**.
+6. Navigate to **Management** -> **Devices** -> **Settings** -> **Settings**.
 
     ![alt text](assets/image-78.png)
 
-6. Scroll down to the ThousandEyes section. Toggle the switch for **Enable ThousandEyes Agent** to ON and click on **+ Add** button.
+7. Scroll down to the ThousandEyes section. Toggle the switch for **Enable ThousandEyes Agent** to ON and click on **+ Add** button.
 
     ![alt text](assets/image-79.png)
 
-7. Paste the Connection String you copied from ThousandEyes Portal into the **Configure ThousandEyes Agents** window and click **Save**.
+8. Paste the Connection String you copied from ThousandEyes Portal into the **Configure ThousandEyes Agents** window and click **Save**.
 
     ![alt text](assets/image-80.png)
 
@@ -77,13 +81,11 @@ With ThousandEyes, you can get deeper visibility into your networks and see hop 
 
     ![alt text](assets/image-70.png)
 
-3.  Switch back to the ThousandEyes Portal browser tab on Workstation 1 Web RDP session. Navigate to **Endpoint Experience** -> **Test Settings**.
+3.  Switch back to the ThousandEyes Portal browser tab on Workstation 1 Web RDP session. If connection string screen is still open, close it.
+   
+4.  Navigate to **Endpoint Experience** -> **Test Settings**.
 
     ![alt text](assets/image-71.png)
-
-4.  Close the **Get started with Endpoint Experience** window if shown.
-   
-    ![alt text](assets/image-72.png)
 
 5.  Click on **+ Monitor Application** button.
    
@@ -115,11 +117,11 @@ With ThousandEyes, you can get deeper visibility into your networks and see hop 
 
     ![alt text](assets/image-86.png)
 
-2. From the expanded user / account information panel, click on Profile button.
+2. From the expanded user / account information panel, click on **Profile** button.
 
     ![alt text](assets/image-87.png)
 
-3. Once User and Roles page opens, scroll down to the User API Tokens section and click on Create button next to OAuth Beater Token. 
+3. Once User and Roles page opens, scroll down to the **User API Tokens** section and click on Create button next to **OAuth Beater Token**. 
 
     ![alt text](assets/image-88.png)
 
@@ -143,13 +145,13 @@ With ThousandEyes, you can get deeper visibility into your networks and see hop 
 ### **Module 1e: Test call and validation**
 
 1. Dial Smart Audio DID number <copy>**<w class="SmartAudioDid">Enter the Smart Audio DID in <a href="../overview#lab-access">Overview &gt; Lab Access</a></w>**</copy>. You can use the speed dial that you created in earlier step.
-2. Keep the call on for a couple of minutes. Hang up the call after that.
+2. Keep the call on for a couple of minutes. Notice the time and duration of the call. Hang up the call after that.
 3. In the browser tab where you are logged in to Collaboration Control Hub, navigate to **MANAGEMENT > Devices.** It will list the phone that you used to make a phone call. Select your **Cisco 98XX** device. 
 4. On the device Overview page, scroll down to the **Support** section. Click on **Meetings & Calls** to navigate to **Troubleshooting** section.
 
     ![alt text](assets/image-93.png)
 
-5. On the Troubleshooting page, scroll down to see the call that you made AFTER you enabled ThousandEyes.
+5. On the Troubleshooting page, scroll down to see the call that you made AFTER you enabled ThousandEyes matching the duration and time stamp.
     
     **Note:** It may take a few minutes for the end of call statistics to appear after the call ends. Wait for a few minutes or try out one of the bonus lab module in the meanwhile and return back to this.
 

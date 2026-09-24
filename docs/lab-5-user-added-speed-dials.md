@@ -22,7 +22,7 @@ End user can add speed dials using Webex User hub and those show up on their des
 
 6. When phone performs next resync to get the latest configurations, this speed dial will show up on the phone. For the purpose of this lab, continue with the following steps to update it immediately.
 
-7. In the browser tab where you are logged in to Collaboration Control Hub, navigate to **MANAGEMENT > Devices** on the left. It will list the Cisco 98XX phone registered. Select **Cisco 98XX** from the list.
+7. Continuing in the browser tab where you are logged in to Collaboration Control Hub, verify you are on the device overview page. If not, navigate to **MANAGEMENT > Devices.** It will list the phone you registered above. Select your **Cisco 98XX** phone.
 
 8. On the device page, click on **Actions** -> **Apply changes**. Acknowledge the dialog popup and click on "Apply changes" button on the dialog.
 
