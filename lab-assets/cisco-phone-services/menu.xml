@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<CiscoIPPhoneMenu>
+  <Title>Welcome to ACME Corp!</Title>
+  <Prompt>Home Page</Prompt>
+  <MenuItem>
+    <Name>Main Offices</Name>
+    <URL>https://webexcc-sa.github.io/LAB-21216/lab-assets/cisco-phone-services/CiscoIPPhoneDirectory.xml</URL>
+  </MenuItem>
+  <MenuItem>
+    <Name>Security</Name>
+    <URL>https://webexcc-sa.github.io/LAB-21216/lab-assets/cisco-phone-services/CiscoIPPhoneDirectory2.xml</URL>
+  </MenuItem>
+  <MenuItem>
+    <Name>Retail and Hospitality Sample</Name>
+    <URL>https://webexcc-sa.github.io/LAB-21216/lab-assets/cisco-phone-services/CiscoIPPhoneRetail.xml</URL>
+  </MenuItem>
+  <MenuItem>
+    <Name>Floor Plan Image</Name>
+    <URL>https://webexcc-sa.github.io/LAB-21216/lab-assets/cisco-phone-services/tornado.xml</URL>
+  </MenuItem>
+  <MenuItem>
+    <Name>Update</Name>
+    <URL>Softkey:Update</URL>
+  </MenuItem>
+</CiscoIPPhoneMenu>
