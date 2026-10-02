@@ -26,7 +26,7 @@ The Desk Phone 9800 Series is the first desk phone in the industry to have a red
     ![alt text](assets/image-101.png){ width="737" height="456" }
 
 6. Click the **Action Button** (the red button on top of the device) on Cisco 9861, and observe that there is pop up in red “<**Service Name> Calling <The number you have configured> in 5 seconds**”. That 5 seconds will count down to 1 and the call will be placed. Call will be answered by automated system and will play pre-recorded message that is meant for smart audio demo.
-7. You may reduce the speaker volume to very low to not disturb other lab attendees. You may Hang up the call after few seconds.
+7. You may reduce the speaker volume to very low or lift the handset to not disturb other lab attendees. You may hang up the call after few seconds.
 
 <!--
 
@@ -97,8 +97,8 @@ If you want to try out Dial Out Delay:
 
 - Click **Next**. Click **Apply**, on next page. Click **Close**, on next page.
 - Once the configuration is applied, observe that on selected Cisco 98XX device **Action button guide** pops up in blue. Press **Got it**.
-- Press the action button on the phone and make sure that the configured **Dial Out Delay** works.
-- Hangup the call after few seconds.
+- Press the action button on the phone and make sure that the configured **Dial Out Delay** works. You may reduce the speaker volume to very low or lift the handset to not disturb other lab attendees.
+- Hang up the call after few seconds.
 
 
 
@@ -124,7 +124,8 @@ If you want to try out a different service trigger:
 
 - Click **Next**. Click **Apply**, on next page. Click **Close**, on next page.
 - Once the applied the configuration, observe that on selected Cisco 98XX device **Action button guide** pops up in blue. Press **Got it**.
-- Press the action button (the way you configured either **Long Press** or **Press 3 times**), on the phone and make sure that it works. Hangup the call after few seconds.
+- Press the action button (the way you configured either **Long Press** or **Press 3 times**), on the phone and make sure that it works. You may reduce the speaker volume to very low or lift the handset to not disturb other lab attendees. 
+- Hang up the call after few seconds.
 
 Thus, you have options such as **Dial Out Delay** and **Service Trigger** configurations to avoid the accidental press of Action button to avoid unnecessary trigger of alerts.
 
@@ -168,6 +169,11 @@ You can trigger multiple events with single trigger as well. Like when you press
     NOTE: Make sure you follow the format of **tel:+XXXXXXXXXX + URL** when you create your own destination (including the country code).
 
 10. On the next page, it will list the changes that we are going make to the device. Click **Apply.** Click **Close**, on the next page.
-11. Click the **Action Button** (the red button on top of the device) on Cisco 98XX, and observe that there is pop up in red “**Sending** <**Service Name> and calling <The number you have configured> in 5 seconds**”. That 5 seconds will count down to 1 and the call will be placed. Answer the call on your other Cisco 98XX phone. Make sure the call gets connected. Also observe that on caller phone it displays Evacuation map. Hang up the call after few seconds & click Back soft key on phone to go to phone Home screen.
+11. Click the **Action Button** (the red button on top of the device) on Cisco 98XX, and observe that there is pop up in red “**Sending** <**Service Name> and calling <The number you have configured> in 5 seconds**”. That 5 seconds will count down to 1 and the call will be placed. Answer the call on your other Cisco 98XX phone. Make sure the call gets connected. You may reduce the speaker volume to very low or lift the handset to not disturb other lab attendees.
+12. Also observe that on caller phone it displays Evacuation map. 
 
     ![A screenshot of a phone AI-generated content may be incorrect.](assets/docx-image-048.png){ width="558" height="365" }
+
+13. Hang up the call after few seconds & click Back soft key on phone to go to phone Home screen.
+
+    

@@ -4,6 +4,8 @@ The menu customization feature allows administrators to enhance usability by dis
 
 1. Before we customize the Setting Menu on phone, go to the phone and navigate to **Settings** > **Network and service** and verify that you **DO** see **Network Settings**. Then navigate to **Settings** > **Restart and reset** and verify you **DO** see **Factory Reset** option.
 
+    ![alt text](assets/image-106.png){ width="476" height="331" }  ![alt text](assets/image-107.png){ width="474" height="283" }
+
     Now we will customize the Settings Menu to hide **Network Settings** and **Factory Reset** option.
 
 2. Continuing in the browser tab where you are logged in to Collaboration Control Hub, verify you are on the device overview page. If not, navigate to **MANAGEMENT > Devices.** It will list the phone you registered above. Select your **Cisco 98XX** phone. 

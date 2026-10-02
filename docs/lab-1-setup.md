@@ -112,7 +112,9 @@ Use the workflow below to generate a Webex activation code and transfer it to a 
 
     ![alt text](assets/image-32.png)
 
-2. Install the DeviceFX NFC App from the Google Play Store or Apple App Store. For more information, visit [DeviceFX NFC](https://nfc.devicefx.com/){ target="_blank" rel="noopener noreferrer" }.
+2. Install the DeviceFX NFC App from the Google Play Store or Apple App Store. For more information, visit [DeviceFX NFC](https://nfc.devicefx.com/){ target="_blank" rel="noopener noreferrer" }. If you already have an app installed, make sure to update it and exit the app.
+   
+   ![alt text](assets/image-104.png)   ![alt text](assets/image-105.png)
 
 3. If you saved your bearer token under **Lab > Overview > Lab Access**, it appears below. If not, navigate to <a href="../overview/#lab-access">Lab access setup</a>, follow the instructions there to save the bearer token, and then return here.
 

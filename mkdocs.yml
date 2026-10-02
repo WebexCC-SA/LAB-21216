@@ -111,6 +111,7 @@ nav:
       - Lab 13 - Cisco AI Assistant: lab-13-cisco-ai-assistant.md
       - Learn more: learn-more.md
   - Bonus Lab:
+      - Overview: bonus-lab-overview.md
       - Bonus Lab 1 - ThousandEyes: bonus-lab-1-thousandeyes.md
       - Bonus Lab 2 - Action button multiple service triggers: bonus-lab-2-action-button-multiple-service-triggers.md
   - Utilities: utilities.md
