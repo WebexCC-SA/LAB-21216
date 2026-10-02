@@ -169,7 +169,7 @@ You can trigger multiple events with single trigger as well. Like when you press
     NOTE: Make sure you follow the format of **tel:+XXXXXXXXXX + URL** when you create your own destination (including the country code).
 
 10. On the next page, it will list the changes that we are going make to the device. Click **Apply.** Click **Close**, on the next page.
-11. Click the **Action Button** (the red button on top of the device) on Cisco 98XX, and observe that there is pop up in red “**Sending** <**Service Name> and calling <The number you have configured> in 5 seconds**”. That 5 seconds will count down to 1 and the call will be placed. Answer the call on your other Cisco 98XX phone. Make sure the call gets connected. You may reduce the speaker volume to very low or lift the handset to not disturb other lab attendees.
+11. Click the **Action Button** (the red button on top of the device) on Cisco 98XX, and observe that there is pop up in red “**Sending** <**Service Name> and calling <The number you have configured> in 5 seconds**”. That 5 seconds will count down to 1 and the call will be placed. You may reduce the speaker volume to very low or lift the handset to not disturb other lab attendees.
 12. Also observe that on caller phone it displays Evacuation map. 
 
     ![A screenshot of a phone AI-generated content may be incorrect.](assets/docx-image-048.png){ width="558" height="365" }

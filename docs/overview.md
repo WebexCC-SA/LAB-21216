@@ -1,6 +1,6 @@
-# Overview
+# **Overview**
 
-## Learning Objectives
+## **Learning Objectives**
 
 The Desk Phone 9800 series is designed for the modern office and optimized for IT and facility’s needs.
 
@@ -8,15 +8,32 @@ The Desk Phone 9800 series is uniquely positioned as the most cost-effective sol
 
 This lab will walk you through the setup, customization and management of the Desk Phone 9800 series when deployed with Webex Calling.
 
-## Disclaimer
+## **Disclaimer**
 
 Although the lab design and configuration examples could be used as a reference, for design related questions please contact your representative at Cisco, or a Cisco partner.
 
-## Lab Access
+## **Lab Access**
+
+### **Get dCloud session**
+
+1. Open a web browser tab and go to the [dCloud event page for LAB-21216](https://www.ciscodcloud.com/apps/expo/cjpgjcgqa4qtq2oq69dw1y1a8){ target="_blank" rel="noopener noreferrer" }.   
+2. From the lab session information page click on **Explore**.
+
+    ![alt text](assets/image-108.png)
+
+3. On the popup screen, enter your **email**, review and **agree to terms and conditions**, click on **Launch**.
+
+    ![alt text](assets/image-109.png)
+
+4. It should open the lab event session page. Click on **View Session** to open dCloud session details page and continue to follow the instructions in the next section. 
+
+    ![alt text](assets/image-110.png)
+
+### **Populate access credentials**
 
 This lab uses your Cisco dCloud session details to populate the credentials you will use to access Collaboration Control Hub. These credentials will be populated automatically in the lab instructions so it is important that you complete this step.
 
-1. Open your dCloud session and select the **Info** tab.
+1. On the dCloud session details page, select the **Info** tab.
 
     ![alt text](assets/image-7.png)
 
