@@ -1,6 +1,6 @@
-# **Overview**
+# Overview
 
-## **Learning Objectives**
+## Learning Objectives
 
 The Desk Phone 9800 series is designed for the modern office and optimized for IT and facility’s needs.
 
@@ -8,11 +8,11 @@ The Desk Phone 9800 series is uniquely positioned as the most cost-effective sol
 
 This lab will walk you through the setup, customization and management of the Desk Phone 9800 series when deployed with Webex Calling.
 
-## **Disclaimer**
+## Disclaimer
 
 Although the lab design and configuration examples could be used as a reference, for design related questions please contact your representative at Cisco, or a Cisco partner.
 
-## **Lab Access**
+## Lab Access
 
 ### **Get dCloud session**
 
