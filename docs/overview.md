@@ -33,11 +33,11 @@ Although the lab design and configuration examples could be used as a reference,
 
 This lab uses your Cisco dCloud session details to populate the credentials you will use to access Collaboration Control Hub. These credentials will be populated automatically in the lab instructions so it is important that you complete this step.
 
-1. On the dCloud session details page, select the **Info** tab.
+1. On the dCloud session details page, select the **Info** tab as shown in the example screenshot below.
 
     ![alt text](assets/image-7.png)
 
-2. In the fly-out panel, expand **Session Information** and find your **Session Id**.
+2. In the fly-out panel on left side, expand **Session Information** and find your **Session Id**. Example screenshot is provided below for your reference.
 
     <div class="lab-access-inline-entry">
       <div class="lab-access-field">
@@ -61,7 +61,7 @@ This lab uses your Cisco dCloud session details to populate the credentials you 
     ![The Session Information section of the dCloud Info panel with the session ID highlighted](./assets/ch-access/docx-image-002.png){ width="700" }
 
 
-3. In the same fly-out panel, expand **DNS**. Copy the domain beginning with `cb` from one of the DNS names. For example, copy `cb122.dc-01.com` from `mail1.cb122.dc-01.com`.
+3. In the same fly-out panel, expand **DNS**. Copy the domain beginning with `cb` from one of the DNS names. For example, copy `cb122.dc-01.com` from `mail1.cb122.dc-01.com`.  Example screenshot is provided below for your reference.
 
     <div class="lab-access-inline-entry">
       <div class="lab-access-field">
