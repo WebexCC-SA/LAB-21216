@@ -160,7 +160,7 @@ The username is `cholland@` followed by your dCloud domain. The password is `dCl
 
     ![alt text](assets/image-22.png)
 
-8. Enter your copied bearer token below. You can use it during various lab modules for up to 12 hours.
+8. Enter your copied bearer token below. Make sure to click on **Save token for 12 hours** button. This bearer token will be available for various lab modules to use for up to 12 hours.
 
 <section id="webex-access-card" class="lab-access-card lab-access-nested" aria-labelledby="webex-access-heading">
   <div class="lab-access-card-header">

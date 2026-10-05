@@ -96,7 +96,6 @@ numbers, extensions, and outbound calling access to both users.
 
     **![A screenshot of a computer AI-generated content may be incorrect.](assets/docx-image-015.png)**
 
-6. Go back to **MANAGEMENT** > **Users** again and on users page choose **Anita Perez** and repeat steps 2 through 7, assign the Webex Calling license and DID number, and enable the Cisco Calling Plan.
 
 ### **Module 1d: Adding 98XX devices to users**
 
@@ -116,7 +115,9 @@ Use the workflow below to generate a Webex activation code and transfer it to a 
    
    ![alt text](assets/image-104.png)   ![alt text](assets/image-105.png)
 
-3. If you saved your bearer token under **Lab > Overview > Lab Access**, it appears below. If not, navigate to <a href="../overview/#lab-access">Lab access setup</a>, follow the instructions there to save the bearer token, and then return here.
+3. After installing the app, navigate to the home screen on your mobile phone.
+   
+4. If you saved your bearer token under **Lab > Overview > Lab Access**, it appears below. If not, navigate to <a href="../overview/#lab-access">Lab access setup</a>, follow the instructions there to save the bearer token, and then return here.
 
 <div class="devicefx-activation-card lab-access-nested">
   <p class="devicefx-help">Use the bearer token from <strong>Lab &gt; Overview &gt; Lab Access</strong>, or enter it here.</p>
@@ -132,7 +133,7 @@ Use the workflow below to generate a Webex activation code and transfer it to a 
   </div>
 </div>
 
-4. With the bearer token saved, click **Load calling users**, select a calling user, and select **Desk Phone 9861**. **Charles Holland** is selected automatically when available. Click **Generate activation code**.
+5. With the bearer token saved, click **Load calling users**, select a calling user, and select **Desk Phone 9861**. **Charles Holland** is selected automatically when available. Click **Generate activation code**.
 
 <div id="devicefx-activation-app" class="devicefx-activation-card lab-access-nested">
 
@@ -158,7 +159,7 @@ Use the workflow below to generate a Webex activation code and transfer it to a 
   <p id="devicefx-status" class="devicefx-status" role="status" aria-live="polite"></p>
 </div>
 
-5. Wait for confirmation that the DeviceFX QR code was generated.
+6. Wait for confirmation that the DeviceFX QR code was generated.
 
 <section id="devicefx-result" class="devicefx-result devicefx-activation-card lab-access-nested" aria-labelledby="devicefx-result-heading" hidden>
   <h4 id="devicefx-result-heading">DeviceFX QR code</h4>
@@ -189,34 +190,37 @@ Use the workflow below to generate a Webex activation code and transfer it to a 
   </div>
 </section>
 
-6. Scan the displayed QR code with your mobile phone. The DeviceFX onboarding link opens the DeviceFX NFC App and supplies the activation code. Click on "Save" button.
+7. Scan the displayed QR code with your mobile phone. The DeviceFX onboarding link opens the DeviceFX NFC App and supplies the activation code. Click on "Save" button.
 
     Note: If you do not see the activation code displayed like in the screenshot below, exit the app and scan the QR code again.
 
     ![alt text](assets/image-36.png){ width="326" height="1515" }
 
-7. Follow the instructions in the app. When prompted, tap and hold the mobile phone over the desk phone's NFC area (right side of the navigation keys ![alt text](assets/image-103.png){ width="32" height="34" }) until the activation code writing completes fully. Notice the app updates the status as it moves through various steps.
+8. Follow the instructions in the app. When prompted, tap and hold the mobile phone over the desk phone's NFC area (right side of the navigation keys ![alt text](assets/image-103.png){ width="32" height="34" }) until the activation code writing completes fully. Notice the app updates the status as it moves through various steps.
 
     ![alt text](assets/image-43.png){ style="border: 1px solid var(--md-default-fg-color--lighter);" }    ![alt text](assets/image-44.png){ style="border: 1px solid var(--md-default-fg-color--lighter);" }    ![alt text](assets/image-45.png){ width="287" height="253" style="border: 1px solid var(--md-default-fg-color--lighter);" }
 
-8.  Desk phone will show the status as "Activating".
+9.  Desk phone will show the status as "Activating".
 
     ![alt text](assets/image-33.png)
 
-9.  Wait 2–3 minutes for the phone to register. In Webex Control Hub, navigate to **MANAGEMENT > Devices** and verify that the phone shows **Online**.
+10.  Wait 2–3 minutes for the phone to register. In Webex Control Hub, navigate to **MANAGEMENT > Devices** and verify that the phone shows **Online**.
 
     ![alt text](assets/image-30.png)
 
-10. Click on the phone and you will get details about phone, like **MAC address**, **IP address**, **firmware** and **Software** channel etc.
+11. Click on the phone and you will get details about phone, like **MAC address**, **IP address**, **firmware** and **Software** channel etc.
 
     ![alt text](assets/image-31.png)
 
 
 **NOTE:** The phone may upgrade its firmware and restart if a newer version is available from the Webex cloud.
 
+As you setup your phone already, you can skip following alternate method of setting up the phone and directly <a href="../lab-1-setup/#module-1e-adjust-phone-time-zone">go to Module 1.e - Adjust phone time zone</a>.
+
 ### **Module 1d.2: Adding 98XX devices to users using Webex Control Hub**
 
-**NOTE:** Only continue these steps if you skipped adding 98XX phone via NFC app in Module 1d.1.
+**NOTE:** Only continue these steps if you skipped adding 98XX phone via NFC app in Module 1d.1. If you setup your phone already, directly <a href="../lab-1-setup/#module-1e-adjust-phone-time-zone">go to Module 1.e - Adjust phone time zone</a>.
+
 
 1. Continue on the browser tab where you have Collaboration Control Hub logged in. Go back to **MANAGEMENT** > **Devices**. On the **Devices** page drop down **Add device** option and choose **Add device**.
 2. In the **Add device** page, select **Add a device to a user** > **Next**
@@ -254,3 +258,33 @@ Use the workflow below to generate a Webex activation code and transfer it to a 
 <!--
 9. Once you see both phones registered, place a test call between phones. Go to one of the Cisco 98XX phone (assigned to Anita or Charles), click the **Contacts** physical button. Type other user name **Anita (or Charles)** and you should see **Anita Perez (or Charles Holland)** displayed from the **Webex Directory**. Select **user** you searched for from the directory and press the softkey **Call** to place a call. Answer the call and verify that call gets connected.
 -->
+
+### **Module 1e: Adjust phone time zone**
+
+Your phone may be displaying a different time zone than the location you are in. Follow the steps below on your phone to adjust the time zone.
+
+1. Open the settings menu and navigate to **User Preferences**.
+
+    ![alt text](assets/image-111.png)
+
+2. From **User Preferences** menu, navigate to **Language and region**. 
+
+    ![alt text](assets/image-112.png)
+
+3. From **Language and region** menu, navigate to **Time settings**.
+
+    ![alt text](assets/image-113.png)
+
+4. From **Time settings** menu, navigate to **Time zone**.
+
+    ![alt text](assets/image-114.png)
+
+5. In **Time zone** menu, scroll down to select **GMT-06:00** option and click **Apply** soft key.
+
+    ![alt text](assets/image-115.png)
+
+6. Verify that the **Time settings** screen now reflects **Time zone** updated to **GMT-06:00**.
+
+    ![alt text](assets/image-116.png)
+
+7. Exit out of the settings menu.
