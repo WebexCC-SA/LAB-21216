@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CiscoIPPhoneDirectory>
+  <Title>Welcome!</Title>
+  <Prompt>Directory</Prompt>
+  <DirectoryEntry>
+    <Name>Bakery</Name>
+    <Telephone>5555</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Beauty &amp; Body Care</Name>
+    <Telephone>5556</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Beer, Wine &amp; Spirits</Name>
+    <Telephone>5557</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Bulk</Name>
+    <Telephone>5558</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Cheese</Name>
+    <Telephone>5559</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Floral</Name>
+    <Telephone>5560</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Grocery</Name>
+    <Telephone>5561</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Grocery</Name>
+    <Telephone>5562</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Prepared Foods</Name>
+    <Telephone>5563</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Produce</Name>
+    <Telephone>5564</Telephone>
+  </DirectoryEntry>
+  <DirectoryEntry>
+    <Name>Seafood</Name>
+    <Telephone>5565</Telephone>
+  </DirectoryEntry>
+</CiscoIPPhoneDirectory>
