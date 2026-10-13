@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<CiscoIPPhoneMenu>
+  <Title>Retail Example</Title>
+  <Prompt>Select Menu</Prompt>
+  <MenuItem>
+    <Name>Main Menu</Name>
+    <URL>https://webexcc-sa.github.io/LAB-21216/lab-assets/cisco-phone-services/CiscoIPPhoneRetail2.xml</URL>
+  </MenuItem>
+  <MenuItem>
+    <Name>Dessert</Name>
+    <URL>https://webexcc-sa.github.io/LAB-21216/lab-assets/cisco-phone-services/CiscoIPPhoneRetail2.xml</URL>
+  </MenuItem>
+  <MenuItem>
+    <Name>Sides</Name>
+    <URL>https://webexcc-sa.github.io/LAB-21216/lab-assets/cisco-phone-services/CiscoIPPhoneRetail2.xml</URL>
+  </MenuItem>
+  <MenuItem>
+    <Name>Beverage</Name>
+    <URL>https://webexcc-sa.github.io/LAB-21216/lab-assets/cisco-phone-services/CiscoIPPhoneRetail2.xml</URL>
+  </MenuItem>
+  <MenuItem>
+    <Name>Update</Name>
+    <URL>Softkey:Update</URL>
+  </MenuItem>
+</CiscoIPPhoneMenu>

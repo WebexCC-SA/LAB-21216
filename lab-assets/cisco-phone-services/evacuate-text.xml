@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<CiscoIPPhoneText>
+  <Title>Tornado Alert</Title>
+  <Prompt>Proceed to the nearest shelter.</Prompt>
+  <Text>Take shelter immediately!</Text>
+  <SoftKeyItem>
+    <Position>4</Position>
+    <URL>SoftKey:Exit</URL>
+    <Name>Exit</Name>
+  </SoftKeyItem>
+</CiscoIPPhoneText>

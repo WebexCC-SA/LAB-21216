@@ -1,0 +1,79 @@
+{
+  "entryPoints": [
+    "menu.xml",
+    "tornado.xml"
+  ],
+  "excludedReferences": [
+    {
+      "filename": "CiscoIPPhoneInput.xml",
+      "reason": "Its form posts to http://127.0.0.1/admin/addContact, which cannot be provided by GitHub Pages."
+    }
+  ],
+  "hostedFiles": [
+    {
+      "contentType": "application/xml",
+      "filename": "CiscoIPPhoneDirectory.xml",
+      "hostedBytes": 1943,
+      "hostedSha256": "7196360ae8f5393a82ebf69f54d8b9cf212dd31f6f3beedc4a73aeb7c0903b3b",
+      "sourceBytes": 2262,
+      "sourceSha256": "ab3f29440715f951f25710ad11546550e4705c500ef556727537e12022a8b6e3",
+      "sourceUrl": "https://www.cisco.com/c/dam/en/us/td/docs/voice_ip_comm/phv/dxml/CiscoIPPhoneDirectory.xml"
+    },
+    {
+      "contentType": "application/xml",
+      "filename": "CiscoIPPhoneDirectory2.xml",
+      "hostedBytes": 1452,
+      "hostedSha256": "d22eabb762f314f867ec18f5ebaf310a17f246a17a9b729da131872a7cb1f073",
+      "sourceBytes": 1572,
+      "sourceSha256": "c0dc1088e36c2b0dc695427720f93fff8ae08616b659ef85f22e5c6b1642f504",
+      "sourceUrl": "https://www.cisco.com/c/dam/en/us/td/docs/voice_ip_comm/phv/dxml/CiscoIPPhoneDirectory2.xml"
+    },
+    {
+      "contentType": "application/xml",
+      "filename": "CiscoIPPhoneRetail.xml",
+      "hostedBytes": 871,
+      "hostedSha256": "6c653fccb3440c043a4b64f60a75ea1b06ceef70c64cd5a5067ea8a69161ce91",
+      "sourceBytes": 786,
+      "sourceSha256": "48e2d32a3faa3695e7baede5b4aba4f6220f4edd3a5d93684b3595a949a060c8",
+      "sourceUrl": "https://www.cisco.com/c/dam/en/us/td/docs/voice_ip_comm/phv/dxml/CiscoIPPhoneRetail.xml"
+    },
+    {
+      "contentType": "application/xml",
+      "filename": "CiscoIPPhoneRetail2.xml",
+      "hostedBytes": 744,
+      "hostedSha256": "99893bc35edddfde73fecb0471b5a1a23479d552ecdb82bdc999311ce2819087",
+      "sourceBytes": 676,
+      "sourceSha256": "54c12e3afd0e3937dcec5b47d040fb09162b5bbd43cc397d1c85eaa818838d85",
+      "sourceUrl": "https://www.cisco.com/c/dam/en/us/td/docs/voice_ip_comm/phv/dxml/CiscoIPPhoneRetail2.xml"
+    },
+    {
+      "contentType": "application/xml",
+      "filename": "menu.xml",
+      "hostedBytes": 904,
+      "hostedSha256": "b3662696c4b088aee275f842adeb04e5d206bb8e00271d8cb41ab441bf5236c2",
+      "sourceBytes": 959,
+      "sourceSha256": "5cdce802feaf16dc12f788ace769dfa6ba4199a962fce4c69ef37fd432da144e",
+      "sourceUrl": "https://www.cisco.com/c/dam/en/us/td/docs/voice_ip_comm/phv/dxml/menu.xml"
+    },
+    {
+      "contentType": "image/png",
+      "filename": "tornado.png",
+      "hostedBytes": 13100,
+      "hostedSha256": "73f7cff6da0d3adf7697645ce29cd753765a97f09fe087f0d2eb064ccef06c07",
+      "sourceBytes": 13100,
+      "sourceSha256": "73f7cff6da0d3adf7697645ce29cd753765a97f09fe087f0d2eb064ccef06c07",
+      "sourceUrl": "https://www.cisco.com/c/dam/en/us/td/docs/voice_ip_comm/phv/dxml/tornado.png"
+    },
+    {
+      "contentType": "application/xml",
+      "filename": "tornado.xml",
+      "hostedBytes": 239,
+      "hostedSha256": "58e15448a59be299a8ee883d14ec4b9823bf9926096f361ed5330784e654bd35",
+      "sourceBytes": 221,
+      "sourceSha256": "dfcbe9caa941d77efe35d2c9e06ec1a396f512e4cf1c36caab856a43996f36d7",
+      "sourceUrl": "https://www.cisco.com/c/dam/en/us/td/docs/voice_ip_comm/phv/dxml/tornado.xml"
+    }
+  ],
+  "publicBaseUrl": "https://webexcc-sa.github.io/LAB-21216/lab-assets/cisco-phone-services/",
+  "sourceRoot": "https://www.cisco.com/c/dam/en/us/td/docs/voice_ip_comm/phv/dxml/"
+}
